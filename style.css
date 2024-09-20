@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template:"header header" 0.1fr
+                  "main aside" 1fr
+                  /*"footer footer" 0.1fr*/
+/ 0.6fr 0.4fr;
+    min-height: 100vh;
+    font-family: "Instrument Serif";
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 20px;
+    grid-area: header;
+    border-bottom: black solid 1px;
+    font-size: 20px;
+}
+
+.linkTo {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+ #button {
+     height: 25px;
+     width: 50px;
+     background-color: white;
+     border: black solid 1px;
+ }
+
+ #button:hover {
+     background-color: darkgray;
+ }
+
+ #button:active {
+     background-color: black;
+     color: white;
+ }
+
+main {
+    display: flex;
+    align-items: end;
+    grid-area: main;
+    padding: 0 0 20px 50px;
+}
+
+main h1 {
+    font-size: 225px;
+}
+
+aside {
+    display: flex;
+    align-items: end;
+    grid-area: aside;
+    padding: 0 0 40px 20px;
+    border-left: black solid 1px;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+/*footer {*/
+/*    grid-area: footer;*/
+/*}*/
+
+@media screen and (max-width: 800px) {
+    body {
+        display: grid;
+        grid-template:"header" 0.1fr
+                      "main" 0.5fr
+                      "aside" 0.5fr
+        / 1fr;
+    }
+    main h1 {
+        font-size: 150px
+    }
+}
