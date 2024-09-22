@@ -55,9 +55,9 @@ a:hover {
 
 main {
     display: flex;
-    align-items: end;
+    align-items: center;
     grid-area: main;
-    padding: 0 0 20px 50px;
+    padding-left: 50px;
 }
 
 main h1 {
@@ -78,7 +78,7 @@ aside {
 
 
 .profilePic {
-    width: 15%;
+    width: auto;
     height: 35%;
     position: absolute;
     z-index: 1;
@@ -96,7 +96,7 @@ footer {
     grid-area: footer;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     body {
         display: grid;
         grid-template:"header" 0.1fr
@@ -105,7 +105,7 @@ footer {
         / 1fr;
     }
     main {
-        height: 70vh;
+        height: 60vh;
     }
     main h1 {
         font-size: 15vw;
@@ -114,7 +114,7 @@ footer {
         border-top: 1px black solid;
         border-left: none;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-direction: row;
     }
 }
