@@ -8,7 +8,7 @@ function changeColor() {
     let bColor = ["white", "black"];
     document.getElementById("body").style.backgroundColor = color[a];
     document.getElementById("body").style.color = textColor[b];
-    document.getElementById("body").style.borderColor = bColor[c];
+    document.getElementById("body").style.border = bColor[c];
     a++;
     b++;
     c++;
