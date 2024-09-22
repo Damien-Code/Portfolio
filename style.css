@@ -10,7 +10,7 @@ body {
                   /*"footer footer" 0.1fr*/
 / 0.6fr 0.4fr;
     min-height: 100vh;
-    font-family: "Instrument Serif";
+    font-family: "Instrument Serif", serif;
 
 }
 
@@ -69,28 +69,32 @@ aside {
     justify-content: space-between;
     flex-direction: column;
     grid-area: aside;
-    padding: 0 0 40px 20px;
+    padding: 10% 0 40px 20px;
     border-left: black solid 1px;
     font-size: 20px;
     line-height: 50px;
 }
 
+
+
 .profilePic {
-    width: 50%;
-    height: 70%;
-    margin: 20% 0 0 10%;
-    border-radius: 15px;
+    width: 20%;
+    height: 40%;
+    position: absolute;
+    z-index: 1;
+    margin: 3% 0 0 3%;
 }
 
-/*.borderPic {*/
-/*    width: 50%;*/
-/*    height: 70%;*/
-/*    border: black 1px solid;*/
-/*    display: inline;*/
-/*}*/
-/*footer {*/
-/*    grid-area: footer;*/
-/*}*/
+.borderPic {
+    width: 20%;
+    height: 40%;
+    border: black 1px solid;
+    position: absolute;
+    margin-left: 7%;
+}
+footer {
+    grid-area: footer;
+}
 
 @media screen and (max-width: 800px) {
     body {
@@ -100,12 +104,18 @@ aside {
                       "aside" 0.5fr
         / 1fr;
     }
+    main {
+        height: 70vh;
+    }
     main h1 {
-        font-size: 150px
+        font-size: 15vw;
     }
     aside {
         border-top: 1px black solid;
         border-left: none;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
     }
 }
 
