@@ -7,7 +7,7 @@ body {
     display: grid;
     grid-template:"header header" 0.1fr
                   "main aside" 1fr
-                  /*"footer footer" 0.1fr*/
+                  "footer footer" 0.1fr
 / 0.6fr 0.4fr;
     min-height: 100vh;
     font-family: "Instrument Serif", serif;
@@ -83,7 +83,12 @@ aside {
     position: absolute;
     z-index: 1;
     margin: 3% 0 0 3%;
+
 }
+
+/*.profilePic:hover {*/
+/*    transform: scale(1.15);*/
+/*}*/
 
 .borderPic {
     width: 15%;
@@ -93,7 +98,12 @@ aside {
     margin-left: 7%;
 }
 footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
     grid-area: footer;
+    padding-right: 10%;
+    border-top: black solid 1px;
 }
 
 @media screen and (max-width: 1000px) {
