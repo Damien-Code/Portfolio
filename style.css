@@ -112,6 +112,7 @@ footer {
         grid-template:"header" 0.1fr
                       "main" 0.5fr
                       "aside" 0.5fr
+                      "footer" 0.1fr
         / 1fr;
     }
     main {
@@ -128,6 +129,8 @@ footer {
         flex-direction: row;
     }
 }
+
+
 
 .mainAbout {
     display: flex;

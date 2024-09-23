@@ -19,6 +19,8 @@ function changeColor() {
 
 
 
+
+
 // function changeTextColor() {
 //     let textColor = ["white", "black"];
 //     document.getElementById("body").style.color = textColor[b];
