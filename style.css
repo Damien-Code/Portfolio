@@ -153,3 +153,36 @@ footer {
     height: auto;
     width: 90%;
 }
+
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#game1 {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+#input {
+    width: 50%;
+    font-size: 20px;
+    font-family: "Instrument Serif", serif;
+}
+
+.buttonGame {
+    width: 25%;
+    height: 30px;
+    border: black solid 1px;
+    background-color: white;
+}
+
+.buttonGame:hover {
+    background-color: darkgray;
+}
+
+#result {
+
+}

@@ -17,6 +17,59 @@ function changeColor() {
     if(c ==bColor.length) c = 0;
 }
 
+const getUserChoice = userInput => {
+    userInput = userInput.toLowerCase();
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
+        return userInput;
+    } else {
+        console.log('Error');
+    }
+}
+
+console.log(getUserChoice('rock'));
+
+function getComputerChoice() {
+    const randomNumber = Math.floor(Math.random() * 3)
+    if (randomNumber == 0) {
+        return 'rock';
+    } else if (randomNumber == 1) {
+        return 'paper';
+    } else if (randomNumber == 2) {
+        return 'scissors';
+    } else {
+        console.log('error')
+    }
+}
+
+function determineWinner(userChoice, computerChoice) {
+    if (userChoice == undefined) {
+        return "error"
+    }
+    if (userChoice == computerChoice) {
+        return "The game was a tie";
+    }
+    if (
+        (userChoice == "rock" && computerChoice == "paper") ||
+        (userChoice == "paper" && computerChoice == "scissors") ||
+        (userChoice == "scissors" && computerChoice == "rock")
+    ) {
+        return "Computer has won";
+    }
+    return "User has won";
+}
+
+playGame();
+
+function playGame() {
+    let x = document.getElementById('input').value;
+    let userChoice = getUserChoice(x);
+    let result = document.getElementById('result')
+    result.innerText = `your choice: ${userChoice}\n`;
+    let computerChoice = getComputerChoice();
+    result.innerText += `computers choice: ${computerChoice}\n`;
+    result.innerText += `result: ${determineWinner(userChoice, computerChoice)}`
+}
+
 
 
 
