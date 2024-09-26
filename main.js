@@ -21,11 +21,18 @@
 // }
 
 // Nieuwe functie voor darkmode. Dit werkt veel makkelijker want ik switch nu twee CSS code blocks.
-function darkMode(){
+function darkMode() {
     document.body.classList.toggle('dark-mode');
 }
-
-
+// function darkMode() {
+//     let isDark = document.body.classList.toggle('dark-mode');
+//     localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+// }
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     if (localStorage.getItem('darkMode') === 'enabled') {
+//         document.body.classList.add('dark-mode');
+//     }
+// });
 
 
 // Rock paper scissors
@@ -78,6 +85,7 @@ function determineWinner(userChoice, computerChoice) {
 
 // Hier call ik de functie om het spel te spelen.
 // De button heeft een onclick met deze functie
+
 playGame();
 
 // Een functie waar ik de inputs van het spel laat zien op de website.
@@ -94,9 +102,6 @@ function playGame() {
     result.innerText += `computers choice: ${computerChoice}\n`;
     result.innerText += `result: ${determineWinner(userChoice, computerChoice)}`
 }
-
-
-
 
 
 // function changeTextColor() {
