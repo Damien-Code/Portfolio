@@ -1,6 +1,5 @@
 let a = 0
 let b = 0
-let c = 0
 
 function changeColor() {
     let color = ["black", "white"];
@@ -8,10 +7,9 @@ function changeColor() {
     let bColor = ["white", "black"];
     document.getElementById("body").style.backgroundColor = color[a];
     document.getElementById("body").style.color = textColor[b];
-    document.getElementById("body").style.border = bColor[c];
+    document.getElementById("body").style.border = bColor[b];
     a++;
     b++;
-    c++;
     if (a == color.length) a = 0;
     if(b == textColor.length) b = 0;
     if(c ==bColor.length) c = 0;
@@ -43,7 +41,7 @@ function getComputerChoice() {
 
 function determineWinner(userChoice, computerChoice) {
     if (userChoice == undefined) {
-        return "error"
+        return "error";
     }
     if (userChoice == computerChoice) {
         return "The game was a tie";

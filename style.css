@@ -106,7 +106,7 @@ footer {
     border-top: black solid 1px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
     body {
         display: grid;
         grid-template:"header" 0.1fr
@@ -116,7 +116,8 @@ footer {
         / 1fr;
     }
     main {
-        height: 60vh;
+        height: 70vh;
+
     }
     main h1 {
         font-size: 15vw;
@@ -127,7 +128,12 @@ footer {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
+        height: 60vh;
     }
+}
+
+@media screen and (max-width: 770px) {
+
 }
 
 
