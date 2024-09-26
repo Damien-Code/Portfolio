@@ -1,20 +1,28 @@
 let a = 0
 let b = 0
+let c = 0
 
+// Button om te switchen naar Dark mode.
+// Text en Background color werken.
+// border werkt nog niet.
 function changeColor() {
     let color = ["black", "white"];
     let textColor = ["white", "black"];
     let bColor = ["white", "black"];
     document.getElementById("body").style.backgroundColor = color[a];
     document.getElementById("body").style.color = textColor[b];
-    document.getElementById("body").style.border = bColor[b];
+    document.getElementById("body").style.border = bColor[c];
     a++;
     b++;
+    c++;
     if (a == color.length) a = 0;
     if(b == textColor.length) b = 0;
     if(c ==bColor.length) c = 0;
 }
 
+
+// Rock paper scissors
+// Een functie waar ik de input naar kleine letters verander, zodat het spel daar niet op kan vastlopen.
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
     if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
@@ -24,8 +32,10 @@ const getUserChoice = userInput => {
     }
 }
 
-console.log(getUserChoice('rock'));
+// test
+// console.log(getUserChoice('rock'));
 
+// Een functie waar ik een random nummer koppel aan een bepaalde waarde. van 0 tot 2.
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3)
     if (randomNumber == 0) {
@@ -39,6 +49,9 @@ function getComputerChoice() {
     }
 }
 
+// Een nieuwe functie met vorige variabelen als parameters.
+// Hier heb ik de opties gemaakt wanneer de computer zou winnen en wanneer user wint.
+// Eerst had ik veel else if statements, maar Mischa heeft mij geholpen deze in te korten.
 function determineWinner(userChoice, computerChoice) {
     if (userChoice == undefined) {
         return "error";
@@ -56,8 +69,15 @@ function determineWinner(userChoice, computerChoice) {
     return "User has won";
 }
 
+// Hier call ik de functie om het spel te spelen.
+// De button heeft een onclick met deze functie
 playGame();
 
+// Een functie waar ik de inputs van het spel laat zien op de website.
+// userChoice stel ik gelijk aan de functie getUserChoice met parameter X.
+// Het resultaat wil ik in een div laten zien. Die heeft een ID van result.
+// Daarna zeg ik wat er in moet komen te staan.
+// Hetzelfde doe ik met de computerChoice en de functie met wie de winnaar is.
 function playGame() {
     let x = document.getElementById('input').value;
     let userChoice = getUserChoice(x);

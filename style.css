@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+/*Layout van de website*/
 body {
     display: grid;
     grid-template:"header header" 0.1fr
@@ -14,6 +15,7 @@ body {
 
 }
 
+/*Layout header*/
 header {
     display: flex;
     justify-content: space-between;
@@ -22,7 +24,7 @@ header {
     border-bottom: black solid 1px;
     font-size: 20px;
 }
-
+/*Layout link*/
 .linkTo {
     display: flex;
     justify-content: space-evenly;
@@ -37,6 +39,8 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+ /*Opmaak van de darkmode button*/
  #button {
      height: 25px;
      width: 50px;
@@ -53,17 +57,19 @@ a:hover {
      color: white;
  }
 
+/*Layout main*/
 main {
     display: flex;
     align-items: center;
     grid-area: main;
     padding-left: 50px;
 }
-
+/*main titel*/
 main h1 {
     font-size: 15vw;
 }
 
+/*Layout aside*/
 aside {
     display: flex;
     justify-content: space-between;
@@ -75,8 +81,7 @@ aside {
     line-height: 50px;
 }
 
-
-
+/*Profielfoto*/
 .profilePic {
     width: auto;
     height: 35%;
@@ -90,6 +95,7 @@ aside {
 /*    transform: scale(1.15);*/
 /*}*/
 
+/*Rand om de profielfoto*/
 .borderPic {
     width: 15%;
     height: 35%;
@@ -97,6 +103,8 @@ aside {
     position: absolute;
     margin-left: 7%;
 }
+
+/*Layout footer*/
 footer {
     display: flex;
     justify-content: end;
@@ -105,6 +113,8 @@ footer {
     padding-right: 10%;
     border-top: black solid 1px;
 }
+
+/*Media query Tablet landscape*/
 
 @media screen and (max-width: 1050px) {
     body {
@@ -131,14 +141,18 @@ footer {
         height: 60vh;
     }
 }
-
+/*Media query tablet portrait*/
 @media screen and (max-width: 770px) {
 
 }
 
+/*Media query mobile*/
+@media screen and (max-width: 400px) {
 
+}
 
-.mainAbout {
+/*Layout main van de pagina's about, work, process*/
+.main {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -146,38 +160,41 @@ footer {
     padding-bottom: 10%;
     padding-right: 5%;
 }
-
+/*Titel van de pagina's about, work en process*/
 .pageTitle {
     font-size: 6vw;
     text-decoration: underline;
 }
 
-
-
-
+/*Afbeelding pagina work*/
 .codePic {
     height: auto;
     width: 90%;
 }
 
+/*Rock, paper and scissors spel*/
+/*Layout aside process*/
+#asideGame {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+/*Layout spel*/
 .game {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-#game1 {
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-}
-
+/*Text Field*/
 #input {
     width: 50%;
     font-size: 20px;
     font-family: "Instrument Serif", serif;
 }
 
+/*Spel button*/
 .buttonGame {
     width: 25%;
     height: 30px;
@@ -187,8 +204,4 @@ footer {
 
 .buttonGame:hover {
     background-color: darkgray;
-}
-
-#result {
-
 }
