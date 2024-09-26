@@ -12,8 +12,40 @@ body {
 / 0.6fr 0.4fr;
     min-height: 100vh;
     font-family: "Instrument Serif", serif;
+    background-color: white;
+    background-color: white;
+    color: black;
+    border-color: black;
 
 }
+/*Darkmode body*/
+.dark-mode {
+    color: white;
+    background-color: black;
+}
+
+/*Darkmode voor links*/
+.dark-mode a {
+    color: white;
+}
+
+/*Darkmode voor de borders, want border-color in .dark-mode werkt niet*/
+.dark-mode header {
+    border-bottom: white solid 1px;
+}
+
+.dark-mode aside {
+    border-left: white solid 1px;
+}
+
+.dark-mode footer {
+    border-top: white solid 1px;
+}
+
+.dark-mode .borderPic {
+    border: white 1px solid;
+}
+
 
 /*Layout header*/
 header {

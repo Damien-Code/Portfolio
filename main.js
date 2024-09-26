@@ -1,24 +1,31 @@
-let a = 0
-let b = 0
-let c = 0
+// let a = 0
+// let b = 0
+// let c = 0
+//
+// // Button om te switchen naar Dark mode.
+// // Text en Background color werken.
+// // border werkt nog niet.
+// function changeColor() {
+//     let color = ["black", "white"];
+//     let textColor = ["white", "black"];
+//     let bColor = ["white", "black"];
+//     document.getElementById("body").style.backgroundColor = color[a];
+//     document.getElementById("body").style.color = textColor[b];
+//     document.getElementById("body").style.border = bColor[c];
+//     a++;
+//     b++;
+//     c++;
+//     if (a == color.length) a = 0;
+//     if(b == textColor.length) b = 0;
+//     if(c ==bColor.length) c = 0;
+// }
 
-// Button om te switchen naar Dark mode.
-// Text en Background color werken.
-// border werkt nog niet.
-function changeColor() {
-    let color = ["black", "white"];
-    let textColor = ["white", "black"];
-    let bColor = ["white", "black"];
-    document.getElementById("body").style.backgroundColor = color[a];
-    document.getElementById("body").style.color = textColor[b];
-    document.getElementById("body").style.border = bColor[c];
-    a++;
-    b++;
-    c++;
-    if (a == color.length) a = 0;
-    if(b == textColor.length) b = 0;
-    if(c ==bColor.length) c = 0;
+// Nieuwe functie voor darkmode. Dit werkt veel makkelijker want ik switch nu twee CSS code blocks.
+function darkMode(){
+    document.body.classList.toggle('dark-mode');
 }
+
+
 
 
 // Rock paper scissors
