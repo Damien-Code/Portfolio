@@ -20,19 +20,19 @@
 //     if(c ==bColor.length) c = 0;
 // }
 
-// Nieuwe functie voor darkmode. Dit werkt veel makkelijker want ik switch nu twee CSS code blocks.
-function darkMode() {
-    document.body.classList.toggle('dark-mode');
-}
+// // Nieuwe functie voor darkmode. Dit werkt veel makkelijker want ik switch nu twee CSS code blocks.
 // function darkMode() {
-//     let isDark = document.body.classList.toggle('dark-mode');
-//     localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+//     document.body.classList.toggle('dark-mode');
 // }
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     if (localStorage.getItem('darkMode') === 'enabled') {
-//         document.body.classList.add('dark-mode');
-//     }
-// });
+function darkMode() {
+    let isDark = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled'); //
+}
+document.addEventListener('DOMContentLoaded', (event) => {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+});
 
 
 // Rock paper scissors
