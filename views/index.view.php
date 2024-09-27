@@ -8,11 +8,9 @@ require './views/layout/header.php';
 <!--          Aside               -->
 <aside>
     <!--    Profielfoto   -->
-    <section class="pic">
-        <img class="profilePic" src="../asset/C48F775B-DE43-43C9-87A3-CAE7CB48997A_1_105_c.jpeg">
-        <div class="borderPic"></div>
+    <section>
+        <img src="./asset/profielfoto.jpeg" class="profilePic">
     </section>
-    <!--    Text          -->
     <section>
         <p>Specialized in Web Development <br> and languages HTML, CSS and JavaScript.</p>
     </section>

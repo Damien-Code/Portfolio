@@ -7,13 +7,13 @@
 body {
     display: grid;
     grid-template:"header header" 0.1fr
-                  "main aside" 1fr
+                  "main aside" 0.8fr
                   "footer footer" 0.1fr
 / 0.6fr 0.4fr;
-    min-height: 100vh;
     font-family: "Instrument Serif", serif;
     background-color: white;
     color: black;
+    min-height: 100vh;
 }
 /*Darkmode body*/
 .dark-mode {
@@ -48,7 +48,8 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 0 20px;
+    align-items: center;
+    padding-left: 20px;
     grid-area: header;
     border-bottom: black solid 1px;
     font-size: 20px;
@@ -90,7 +91,7 @@ a:hover {
 /*Layout main*/
 main {
     display: flex;
-    align-items: center;
+    align-items: end;
     grid-area: main;
     padding-left: 50px;
 }
@@ -114,25 +115,16 @@ aside {
 
 /*Profielfoto*/
 .profilePic {
-    width: auto;
-    height: 35%;
-    position: absolute;
-    z-index: 1;
+    height: auto;
+    width: 35%;
     margin: 3% 0 0 3%;
-
+    transition: all ease-in 0.5s;
 }
 
-/*.profilePic:hover {*/
-/*    transform: scale(1.15);*/
-/*}*/
 
-/*Rand om de profielfoto*/
-.borderPic {
-    width: 15%;
-    height: 35%;
-    border: black 1px solid;
-    position: absolute;
-    margin-left: 7%;
+
+.profilePic:hover {
+    transform: scale(1.15);
 }
 
 /*Layout footer*/
@@ -146,34 +138,37 @@ footer {
 }
 
 /*Media query Tablet landscape*/
-
-@media screen and (max-width: 1050px) {
-    body {
-        display: grid;
-        grid-template:"header" 0.1fr
-                      "main" 0.5fr
-                      "aside" 0.5fr
-                      "footer" 0.1fr
-        / 1fr;
-    }
-    main {
-        height: 70vh;
-
-    }
-    main h1 {
-        font-size: 15vw;
-    }
-    aside {
-        border-top: 1px black solid;
-        border-left: none;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        height: 60vh;
+@media screen and (max-width: 950px) {
+    .profilePic {
+        width: 50%;
+        height: auto;
     }
 }
 /*Media query tablet portrait*/
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 620px) {
+    body {
+        display: grid;
+        grid-template:
+                      "header" 0.1fr
+                      "main" 0.4fr
+                      "aside" 0.4fr
+                      "footer" 0.1fr
+    / 1fr;
+    }
+    main {
+        height: 50vh;
+    }
+    main h1 {
+        font-size: 20vw;
+    }
+    aside {
+        border-left: none;
+        border-top: black solid 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding-right: 5%;
+    }
 
 }
 
