@@ -30,7 +30,7 @@ require './views/layout/header.php';
     </section>
 </main>
 <!--            Aside           -->
-<aside>
+<aside class="aside-work">
     <!--fotos van recente projecten met animate on scroll of een knop dat je kan switchen tussen fotos-->
 
     <img src="../asset/Codeafbeelding.png" class="codePic">

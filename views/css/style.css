@@ -93,7 +93,7 @@ main {
     display: flex;
     align-items: end;
     grid-area: main;
-    padding-left: 50px;
+    padding-left: 2rem;
 }
 
 /*main titel*/
@@ -168,6 +168,10 @@ footer {
         justify-content: space-between;
         flex-direction: row;
         padding-right: 5%;
+    }
+    .aside-work {
+        display: flex;
+        justify-content: center;
     }
 
 }

@@ -9,7 +9,7 @@ require './views/layout/header.php';
 <aside>
     <!--    Profielfoto   -->
     <section>
-        <img src="./asset/profielfoto.jpeg" class="profilePic">
+        <img src="asset/profielfoto.jpeg" alt="Profile picture" class="profilePic">
     </section>
     <section>
         <p>Specialized in Web Development <br> and languages HTML, CSS and JavaScript.</p>
