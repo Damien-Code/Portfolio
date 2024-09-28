@@ -11,9 +11,9 @@
         $hour = date("H-i");
         if ($hour < "04-59") {
             echo "Good night!";
-        } elseif ($hour <= "11:59") {
+        } elseif ($hour <= "11-59") {
             echo "Good morning!";
-        } elseif ($hour <= "17:59") {
+        } elseif ($hour <= "17-59") {
             echo "Good afternoon!";
         } elseif ($hour < "20-59") {
             echo "Good evening!";
