@@ -1,5 +1,5 @@
 <?php
-switch ($_SERVER = ['REQUEST_URI']) {
+switch ($_SERVER['REQUEST_URI']) {
     case '/':
         require 'views/index.view.php';
         break;
@@ -16,6 +16,5 @@ switch ($_SERVER = ['REQUEST_URI']) {
         echo 'Error 404';
 }
 
-echo getcwd();
-
+?>
 
