@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Damiën</title>
-    <meta name="author" content="Damiën vd IJssel">
+    <link rel="icon" type="image/x-icon" href="../asset/favicon.png">
+    <meta name="author" content="Damiën van den IJssel">
     <link rel="stylesheet" href="./views/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

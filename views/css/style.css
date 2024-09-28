@@ -15,6 +15,7 @@ body {
     color: black;
     min-height: 100vh;
 }
+
 /*Darkmode body*/
 .dark-mode {
     color: white;
@@ -54,6 +55,7 @@ header {
     border-bottom: black solid 1px;
     font-size: 20px;
 }
+
 /*Layout link*/
 .linkTo {
     display: flex;
@@ -75,22 +77,22 @@ a:hover {
     text-decoration: underline;
 }
 
- /*Opmaak van de darkmode button*/
- #button {
-     height: 25px;
-     width: 50px;
-     background-color: white;
-     border: black solid 1px;
- }
+/*Opmaak van de darkmode button*/
+#button {
+    background-color: white;
+    border: black solid 1px;
+    font-family: 'Instrument Serif', serif;
+    padding: 5px
+}
 
- #button:hover {
-     background-color: darkgray;
- }
+#button:hover {
+    background-color: darkgray;
+}
 
- #button:active {
-     background-color: black;
-     color: white;
- }
+#button:active {
+    background-color: black;
+    color: white;
+}
 
 /*Layout main*/
 main {
@@ -126,10 +128,23 @@ aside {
     transition: all ease-in 0.5s;
 }
 
-
-
 .profilePic:hover {
     transform: scale(1.15);
+}
+
+.scroll-container {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.scroll-container img {
+    padding: 10px;
+}
+
+.js-logo {
+    max-height: 60%;
+    width: auto;
 }
 
 /*Layout footer*/
@@ -150,6 +165,7 @@ footer {
         height: auto;
     }
 }
+
 /*Media query tablet portrait*/
 @media screen and (max-width: 620px) {
     body {
@@ -161,12 +177,15 @@ footer {
                       "footer" 0.1fr
     / 1fr;
     }
+
     main {
         padding-top: 7%;
     }
+
     main h1 {
         font-size: 20vw;
     }
+
     aside {
         border-left: none;
         border-top: black solid 1px;
@@ -175,6 +194,7 @@ footer {
         flex-direction: row;
         padding-right: 5%;
     }
+
     .aside-work {
         display: flex;
         justify-content: center;
@@ -196,6 +216,7 @@ footer {
     padding-bottom: 10%;
     padding-right: 5%;
 }
+
 /*Titel van de pagina's about, work en process*/
 .pageTitle {
     font-size: 6vw;
