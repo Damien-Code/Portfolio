@@ -18,8 +18,8 @@
 <!--          Header             -->
 <header>
     <!--    Titel    -->
-    <section class="name">
-        <p>Damiën van den IJssel</p>
+    <section>
+        <a href="/" id="headerTitle"><p>Damiën van den IJssel</p></a>
     </section>
     <!--    Links    -->
     <section class="linkTo">

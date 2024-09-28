@@ -61,6 +61,10 @@ header {
     width: 60%;
 }
 
+#headerTitle:hover {
+    text-decoration: none;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -134,8 +138,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     grid-area: footer;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 20px;
+    padding-right: 20px;
     border-top: black solid 1px;
 }
 

@@ -8,31 +8,27 @@
 // function changeColor() {
 //     let color = ["black", "white"];
 //     let textColor = ["white", "black"];
-//     let bColor = ["white", "black"];
 //     document.getElementById("body").style.backgroundColor = color[a];
 //     document.getElementById("body").style.color = textColor[b];
-//     document.getElementById("body").style.border = bColor[c];
 //     a++;
 //     b++;
-//     c++;
 //     if (a == color.length) a = 0;
 //     if(b == textColor.length) b = 0;
-//     if(c ==bColor.length) c = 0;
 // }
 
 // // Nieuwe functie voor darkmode. Dit werkt veel makkelijker want ik switch nu twee CSS code blocks.
-// function darkMode() {
-//     document.body.classList.toggle('dark-mode');
-// }
 function darkMode() {
-    let isDark = document.body.classList.toggle('dark-mode');
-    localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled'); //
+    document.body.classList.toggle('dark-mode');
 }
-document.addEventListener('DOMContentLoaded', (event) => {
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        document.body.classList.add('dark-mode');
-    }
-});
+// function darkMode() {
+//     let isDark = document.body.classList.toggle('dark-mode');
+//     localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled'); //
+// }
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     if (localStorage.getItem('darkMode') === 'enabled') {
+//         document.body.classList.add('dark-mode');
+//     }
+// });
 
 
 // Rock paper scissors
@@ -104,12 +100,6 @@ function playGame() {
 }
 
 
-// function changeTextColor() {
-//     let textColor = ["white", "black"];
-//     document.getElementById("body").style.color = textColor[b];
-//     b++;
-//     if (b == textColor.length) b = 0;
-// }
 
 
 
