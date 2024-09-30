@@ -1,21 +1,27 @@
 <?php
 global $i;
 switch ($_SERVER['REQUEST_URI']) {
+//    home page
     case '/':
         require 'views/index.view.php';
         break;
+//        about page
     case '/about':
         require 'views/about.view.php';
         break;
+//        process page
     case '/process':
         require 'views/process.view.php';
         break;
+//        work page
     case '/work':
         require 'views/work.view.php';
         break;
     case '/blog':
+//        blog page
         require 'views/blog.view.php';
         break;
+//        als de pagina niet bestaat
     default:
         echo 'Error 404';
 }

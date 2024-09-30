@@ -1,6 +1,5 @@
 <?php
 require './views/layout/header.php';
-
 ?>
     <!--          Main                -->
     <main>
@@ -16,7 +15,7 @@ require './views/layout/header.php';
             </a>
         </section>
         <section>
-            <p>Specialized in Web Development <br> and languages HTML, CSS and JavaScript.</p>
+            <p>Specialized in Web Development and <br> languages like HTML, CSS, JavaScript and PHP.</p>
         </section>
     </aside>
     <!--           Footer            -->
