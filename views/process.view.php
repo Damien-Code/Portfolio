@@ -34,12 +34,13 @@ require './views/layout/header.php';
 <!--            Game            -->
     <section class="game">
         <input type="text" name="input" id="input">
-        <button onclick="playGame()" class="buttonGame">Play Game</button>
+        <button class="buttonGame" onclick="playGame()">Play game</button>
     </section>
 <!--            Game result         -->
     <section>
         <div id="result"></div>
     </section>
+
 </aside>
 <!--            Footer          -->
 <?php

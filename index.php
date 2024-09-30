@@ -13,6 +13,9 @@ switch ($_SERVER['REQUEST_URI']) {
     case '/work':
         require 'views/work.view.php';
         break;
+    case '/blog':
+        require 'views/blog.view.php';
+        break;
     default:
         echo 'Error 404';
 }

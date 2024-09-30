@@ -28,7 +28,7 @@
         <a href="/about">About</a>
         <a href="/work">Work</a>
         <a href="/process">Process</a>
-        <a href="#">Drop me a line</a>
+        <a href="/blog">Blog</a>
         <button type="button" onclick="darkMode()" id="button">Change</button>
     </section>
 </header>
