@@ -132,6 +132,20 @@ aside {
     transform: scale(1.15);
 }
 
+.homepage {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.homepage button {
+    height: 2rem;
+    width: 35%;
+    margin: 5% 0 0 3%;
+    background: white;
+    border: black 1px solid;
+}
+
 .scroll-container {
     overflow: auto;
     white-space: nowrap;
@@ -145,6 +159,7 @@ aside {
 .js-logo {
     max-height: 60%;
 }
+
 /*Layout main Blog*/
 
 /*Layout footer*/
@@ -158,54 +173,6 @@ footer {
     border-top: black solid 1px;
 }
 
-/*Media query Tablet landscape*/
-@media screen and (max-width: 950px) {
-    .profilePic {
-        width: 50%;
-        height: auto;
-    }
-}
-
-/*Media query tablet portrait*/
-@media screen and (max-width: 620px) {
-    body {
-        display: grid;
-        grid-template:
-                      "header" 0.1fr
-                      "main" 0.4fr
-                      "aside" 0.4fr
-                      "footer" 0.1fr
-    / 1fr;
-    }
-
-    main {
-        padding-top: 7%;
-    }
-
-    main h1 {
-        font-size: 20vw;
-    }
-
-    aside {
-        border-left: none;
-        border-top: black solid 1px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        padding-right: 5%;
-    }
-
-    .aside-work {
-        display: flex;
-        justify-content: center;
-    }
-
-}
-
-/*Media query mobile*/
-@media screen and (max-width: 400px) {
-
-}
 
 /*Layout main van de pagina's about, work, process*/
 .main {
@@ -262,4 +229,54 @@ footer {
 
 .buttonGame:hover {
     background-color: darkgray;
+}
+
+
+/*Media query Tablet landscape*/
+@media screen and (max-width: 950px) {
+    .profilePic {
+        width: 50%;
+        height: auto;
+    }
+}
+
+/*Media query tablet portrait*/
+@media screen and (max-width: 620px) {
+    body {
+        display: grid;
+        grid-template:
+                      "header" 0.1fr
+                      "main" 0.4fr
+                      "aside" 0.4fr
+                      "footer" 0.1fr
+    / 1fr;
+    }
+
+    main {
+        padding-top: 7%;
+    }
+
+    main h1 {
+        font-size: 20vw;
+    }
+
+    aside {
+        border-left: none;
+        border-top: black solid 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding-right: 5%;
+    }
+
+    .aside-work {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+/*Media query mobile*/
+@media screen and (max-width: 400px) {
+
 }

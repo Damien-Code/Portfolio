@@ -9,13 +9,12 @@ require './views/layout/header.php';
             <input type="text">
             <p>Username</p>
             <input type="text">
+            <button type="button">Add User</button>
         </form>
     </main>
     <aside>
         <form></form>
     </aside>
-
-
 <?php
 require './views/layout/footer.php';
 ?>
