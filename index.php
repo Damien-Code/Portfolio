@@ -6,7 +6,6 @@ include './controller/ProcessController.php';
 include './controller/BlogController.php';
 include './controller/IndexController.php';
 
-
 switch ($_SERVER['REQUEST_URI']) {
 
 //    home page
