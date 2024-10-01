@@ -201,6 +201,10 @@ footer {
     width: 90%;
 }
 
+aside form {
+    padding-bottom: 20%;
+}
+
 /*Rock, paper and scissors spel*/
 /*Layout aside process*/
 #asideGame {

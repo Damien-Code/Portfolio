@@ -1,12 +1,12 @@
 <?php
-global $i;
 switch ($_SERVER['REQUEST_URI']) {
+
 //    home page
     case '/':
         require 'views/index.view.php';
         break;
 //        about page
-    case '/about':
+    case '/about-index':
         require 'views/about.view.php';
         break;
 //        process page
@@ -26,7 +26,6 @@ switch ($_SERVER['REQUEST_URI']) {
         echo 'Error 404';
 }
 //var_dump($_SERVER['REQUEST_URI']);
-
 ?>
 
 
