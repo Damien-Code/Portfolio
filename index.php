@@ -1,25 +1,42 @@
 <?php
+include './controller/Controller.php';
+include './controller/AboutController.php';
+include './controller/WorkController.php';
+include './controller/ProcessController.php';
+include './controller/BlogController.php';
+
+
 switch ($_SERVER['REQUEST_URI']) {
 
 //    home page
     case '/':
-        require 'controller/IndexController.php';
+//        require 'controller/IndexController.php;
+        $route = new Controller();
+        $route->redirect('index');
         break;
 //        about page
     case '/about':
-        require 'controller/AboutController.php';
+//        require 'controller/AboutController.php';
+        $route = new AboutController();
+        $route->redirect('about');
         break;
 //        process page
     case '/process':
-        require 'controller/ProcessController.php';
+//        require 'controller/ProcessController.php';
+        $route = new Controller();
+        $route->redirect('process');
         break;
 //        work page
     case '/work':
-        require 'controller/WorkController.php';
+//        require 'controller/WorkController.php';
+        $route = new Controller();
+        $route->redirect('work');
         break;
     case '/blog':
 //        blog page
-        require 'controller/BlogController.php';
+//        require 'controller/BlogController.php';
+        $route = new Controller();
+        $route->redirect('blog');
         break;
 //        als de pagina niet bestaat
     default:

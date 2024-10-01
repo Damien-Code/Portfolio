@@ -1,3 +1,6 @@
 <?php
-require './views/blog.view.php';
+//
+class BlogController extends Controller {
+
+}
 ?>

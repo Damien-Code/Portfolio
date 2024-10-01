@@ -1,3 +1,5 @@
 <?php
-require './views/about.view.php';
+class AboutController extends Controller {
+
+}
 ?>
