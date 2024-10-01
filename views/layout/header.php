@@ -25,7 +25,7 @@
     <!--    Links    -->
     <section class="linkTo">
         <a href="/">Home</a>
-        <a href="/about-index">About</a>
+        <a href="/about">About</a>
         <a href="/work">Work</a>
         <a href="/process">Process</a>
         <a href="/blog">Blog</a>

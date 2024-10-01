@@ -3,29 +3,30 @@ switch ($_SERVER['REQUEST_URI']) {
 
 //    home page
     case '/':
-        require 'views/index.view.php';
+        require 'controller/index.controller.php';
         break;
 //        about page
-    case '/about-index':
-        require 'views/about.view.php';
+    case '/about':
+        require 'controller/about.controller.php';
         break;
 //        process page
     case '/process':
-        require 'views/process.view.php';
+        require 'controller/process.controller.php';
         break;
 //        work page
     case '/work':
-        require 'views/work.view.php';
+        require 'controller/work.controller.php';
         break;
     case '/blog':
 //        blog page
-        require 'views/blog.view.php';
+        require 'controller/blog.controller.php';
         break;
 //        als de pagina niet bestaat
     default:
         echo 'Error 404';
 }
 //var_dump($_SERVER['REQUEST_URI']);
+
 ?>
 
 
