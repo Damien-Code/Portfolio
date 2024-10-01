@@ -3,23 +3,23 @@ switch ($_SERVER['REQUEST_URI']) {
 
 //    home page
     case '/':
-        require 'controller/index.controller.php';
+        require 'controller/IndexController.php';
         break;
 //        about page
     case '/about':
-        require 'controller/about.controller.php';
+        require 'controller/AboutController.php';
         break;
 //        process page
     case '/process':
-        require 'controller/process.controller.php';
+        require 'controller/ProcessController.php';
         break;
 //        work page
     case '/work':
-        require 'controller/work.controller.php';
+        require 'controller/WorkController.php';
         break;
     case '/blog':
 //        blog page
-        require 'controller/blog.controller.php';
+        require 'controller/BlogController.php';
         break;
 //        als de pagina niet bestaat
     default:
