@@ -2,13 +2,14 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="nl" class="focus-outline-visible">
+<html lang="nl" class="focus-outline-visible" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Damiën</title>
     <link rel="icon" type="image/x-icon" href="../asset/favicon.png">
     <meta name="author" content="Damiën van den IJssel">
+<!--    font ingeladen-->
     <link rel="stylesheet" href="./views/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +30,7 @@
         <a href="/work">Work</a>
         <a href="/process">Process</a>
         <a href="/blog">Blog</a>
+<!--        koppel de functie in JS met onclick zodat er geswitched kan worden naar darkmode-->
         <button type="button" onclick="darkMode()" id="button">Change</button>
     </section>
 </header>

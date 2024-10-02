@@ -4,6 +4,7 @@ require './views/layout/header.php';
     <!--            Main            -->
     <main class="main">
         <!--            Main titel      -->
+<!--        echo de titel die ik in de controller definieer-->
         <h2 class="pageTitle"><?php echo $title ?></h2>
         <!--            Main text        -->
         <section>
