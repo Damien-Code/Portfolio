@@ -3,13 +3,13 @@ require './views/layout/header.php';
 ?>
     <!--          Main                -->
     <main>
-        <h1>Web <br>Developer</h1>
+        <h1><?php echo $title?></h1>
     </main>
     <!--          Aside               -->
     <aside>
         <!--    Profielfoto   -->
         <section class="homepage">
-            <img src="asset/profielfoto.jpeg" alt="Profile picture" class="profilePic">
+            <img src="./asset/profielfoto.jpeg" alt="Profile picture" class="profilePic">
             <a href="/about">
                 <button>About me!</button>
             </a>

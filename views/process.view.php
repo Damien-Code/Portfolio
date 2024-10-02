@@ -4,7 +4,7 @@ require './views/layout/header.php';
 <!--            Main            -->
 <main class="main">
 <!--            Main titel      -->
-    <h2 class="pageTitle">Process</h2>
+    <h2 class="pageTitle"><?php echo $title ?></h2>
 <!--            Main text       -->
     <section>
         <p>Who am I?</p>
