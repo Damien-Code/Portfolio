@@ -106,10 +106,34 @@ main {
     padding-left: 2rem;
 }
 
-/*main titel*/
-main h1 {
+/*main titel met typewriter animatie. Mijn oude styling van H1 weggehaald want dat was overbodig met deze nieuwe style*/
+/*uiteindelijk wat divs weggehaald want die hadden blijkbaar geen functie. */
+/*Ik moet er op letten dat ik niet teveel code herhaal.*/
+.typewriter h1 {
     font-size: 15vw;
     font-weight: normal;
+    margin-inline: auto;
+    overflow: hidden;
+    /*De zwarte lijn achter de tekst*/
+    border-right: 1px solid;
+    animation: typing 3s steps(12) forwards,
+    blink 1s step-end infinite;
+}
+/*zorgt ervoor dat de typing animatie van 0 naar 100% verloopt*/
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+
+    }
+}
+/*zorgt ervoor dat hij 50% van de 'blink' tijd transparant is*/
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 /*Layout aside*/
@@ -241,6 +265,7 @@ aside form {
 .buttonGame:hover {
     background-color: darkgray;
 }
+
 
 
 /*Media query Tablet landscape*/

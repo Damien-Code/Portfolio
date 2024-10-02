@@ -4,7 +4,9 @@ require './views/layout/header.php';
     <!--          Main                -->
     <main>
 <!--        echo de titel die ik in de controller definieer-->
-        <h1><?php echo $title?></h1>
+        <div class="typewriter">
+                <h1><?php echo $title?></h1>
+        </div>
     </main>
     <!--          Aside               -->
     <aside>

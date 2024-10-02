@@ -27,7 +27,7 @@ switch ($_SERVER['REQUEST_URI']) {
         require 'controller/BlogController.php';
         blogController();
         break;
-//        als de pagina niet bestaat
+//        als de request pagina niet bestaat
     default:
         echo 'Error 404';
 }
