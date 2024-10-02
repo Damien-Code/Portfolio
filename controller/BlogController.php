@@ -1,6 +1,5 @@
 <?php
 
-class BlogController extends Controller {
-
+function blogController(){
+    require "views/blog.view.php";
 }
-?>

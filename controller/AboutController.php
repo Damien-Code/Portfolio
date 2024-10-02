@@ -1,5 +1,4 @@
 <?php
-class AboutController extends Controller {
-
+function aboutController(){
+    require "views/about.view.php";
 }
-?>

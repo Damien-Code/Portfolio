@@ -21,7 +21,7 @@ function darkMode() {
     document.body.classList.toggle('dark-mode');
 }
 
-// Uitzoeken hoe localStorage werkt, dan blijft dark mode aan na reload.
+//Uitzoeken hoe localStorage werkt, dan blijft dark mode aan na reload.
 // function darkMode() {
 //     let isDark = document.body.classList.toggle('dark-mode');
 //     localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled'); //

@@ -1,6 +1,5 @@
 <?php
 //require './views/process.view.php';
-class ProcessController extends Controller {
-
+function processController(){
+    require "./views/process.view.php";
 }
-?>
