@@ -2,7 +2,7 @@
 require './views/layout/header.php';
 ?>
     <main class="main">
-<!--        echo de titel die ik in de controller definieer-->
+        <!--        echo de titel die ik in de controller definieer-->
         <h2 class="pageTitle"><?php echo $title ?></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi culpa dignissimos
             ducimus excepturi hic ipsa, maxime molestias nam officia porro possimus qui quos rem sequi vitae. Id,

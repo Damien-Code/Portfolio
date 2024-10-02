@@ -75,6 +75,7 @@ a:hover {
     background-color: black;
     color: white;
 }
+
 /*Hier geef ik aan wat er moet gebeuren nadat mijn JS darkmode functie wordt uitgevoerd.*/
 /*Ik toggle mijn JS met deze css class want dat bespaard veel code*/
 /*Ik moet wel aangegeven dat ook mijn a etc moeten veranderen. Anders werkt het niet*/
@@ -129,6 +130,7 @@ main {
     animation: typing 3s steps(12) forwards,
     blink 1s step-end infinite;
 }
+
 /*zorgt ervoor dat de typing animatie van width 0 naar 100% verloopt*/
 /*80% zorgt ervoor dat niet de gehele tekst wordt getoond*/
 @keyframes typing {
@@ -140,6 +142,7 @@ main {
 
     }
 }
+
 /*zorgt ervoor dat op 50% van de 'blink' tijd transparant wordt*/
 @keyframes blink {
     50% {
@@ -183,6 +186,7 @@ aside {
     padding: 10% 0 40px 20px;
     line-height: 50px;
 }
+
 /*indeling van de profielfoto en about me button.*/
 .home-section {
     display: flex;
@@ -284,7 +288,6 @@ aside form {
 .buttonGame:hover {
     background-color: darkgray;
 }
-
 
 
 /*Media query Tablet landscape*/
