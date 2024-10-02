@@ -9,9 +9,9 @@ require './views/layout/header.php';
         </div>
     </main>
     <!--          Aside               -->
-    <aside>
+    <aside class="homepage">
         <!--    Profielfoto   -->
-        <section class="homepage">
+        <section class="home-section">
             <img src="./asset/profielfoto.jpeg" alt="Profile picture" class="profilePic">
             <a href="/about">
                 <button>About me!</button>

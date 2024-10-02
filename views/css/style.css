@@ -4,6 +4,7 @@
 }
 
 /*Layout van de website*/
+/*min-height aangegeven want anders vult hij niet het hele scherm*/
 body {
     display: grid;
     grid-template:"header header" 0.1fr
@@ -16,36 +17,9 @@ body {
     min-height: 100vh;
 }
 
-/*Darkmode body*/
-.dark-mode {
-    color: white;
-    background-color: black;
-}
-
-/*Darkmode voor links*/
-.dark-mode a {
-    color: white;
-}
-
-/*Darkmode voor de borders, want border-color in .dark-mode werkt niet*/
-.dark-mode header {
-    border-bottom: white solid 1px;
-}
-
-.dark-mode aside {
-    border-left: white solid 1px;
-}
-
-.dark-mode footer {
-    border-top: white solid 1px;
-}
-
-.dark-mode .borderPic {
-    border: white 1px solid;
-}
-
-
 /*Layout header*/
+
+/*verticaal gecentreerd en met space-between maximale ruimte er tussen gegeven.*/
 header {
     display: flex;
     justify-content: space-between;
@@ -56,12 +30,15 @@ header {
     font-size: 20px;
 }
 
-/*Layout link*/
+/*Layout links*/
+/*Een width van 60% gegeven zodat de links genoeg ruimte hebben.*/
 .linkTo {
     display: flex;
     justify-content: space-evenly;
     width: 60%;
 }
+
+/*Transition hier gedefinieerd zodat wanneer je pointer er niet meer overheen hovert hij ook een transition heeft */
 #headerTitle {
     transition: all ease-in-out 0.5s;
 }
@@ -71,6 +48,7 @@ header {
     font-size: larger;
 }
 
+/*Underline weggehaald want ik wil graag dat hij bij hover het juist laat zien*/
 a {
     text-decoration: none;
     color: black;
@@ -97,13 +75,45 @@ a:hover {
     background-color: black;
     color: white;
 }
+/*Hier geef ik aan wat er moet gebeuren nadat mijn JS darkmode functie wordt uitgevoerd.*/
+/*Ik toggle mijn JS met deze css class want dat bespaard veel code*/
+/*Ik moet wel aangegeven dat ook mijn a etc moeten veranderen. Anders werkt het niet*/
+/*Darkmode body*/
+.dark-mode {
+    color: white;
+    background-color: black;
+}
+
+/*Darkmode voor links*/
+.dark-mode a {
+    color: white;
+}
+
+/*Darkmode voor de borders*/
+.dark-mode header {
+    border-bottom: white solid 1px;
+}
+
+.dark-mode aside {
+    border-left: white solid 1px;
+}
+
+.dark-mode footer {
+    border-top: white solid 1px;
+}
+
+.dark-mode .borderPic {
+    border: white 1px solid;
+}
+
 
 /*Layout main*/
+
 main {
     display: flex;
     align-items: end;
     grid-area: main;
-    padding-left: 2rem;
+    padding-left: 20px;
 }
 
 /*main titel met typewriter animatie. Mijn oude styling van H1 weggehaald want dat was overbodig met deze nieuwe style*/
@@ -119,7 +129,8 @@ main {
     animation: typing 3s steps(12) forwards,
     blink 1s step-end infinite;
 }
-/*zorgt ervoor dat de typing animatie van 0 naar 100% verloopt*/
+/*zorgt ervoor dat de typing animatie van width 0 naar 100% verloopt*/
+/*80% zorgt ervoor dat niet de gehele tekst wordt getoond*/
 @keyframes typing {
     from {
         width: 0;
@@ -129,7 +140,7 @@ main {
 
     }
 }
-/*zorgt ervoor dat hij 50% van de 'blink' tijd transparant is*/
+/*zorgt ervoor dat op 50% van de 'blink' tijd transparant wordt*/
 @keyframes blink {
     50% {
         border-color: transparent;
@@ -137,15 +148,19 @@ main {
 }
 
 /*Layout aside*/
+/*Hier moet ik nog even kijken hoe dit ik mooier kan maken*/
+/*Ik heb deze indeling gemaakt kijkend naar mijn homepage maar dit heeft invloed op elke aside. Niet zo handig*/
+/*Misschien mijn aside op mijn homepage een class geven en die met padding etc sturen. Dan kan ik dat bij deze tag weghalen.*/
+/*Werkt inderdaad beter! Wel een beetje padding behouden. Geen specifieke style meer.*/
 aside {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     grid-area: aside;
-    padding: 10% 0 40px 20px;
     border-left: black solid 1px;
     font-size: 20px;
-    line-height: 50px;
+    padding: 5%;
+
 }
 
 /*Profielfoto*/
@@ -163,13 +178,19 @@ aside {
     transform: scale(1.15);
 }
 
+/*Styling voor de aside op de homepage.*/
 .homepage {
+    padding: 10% 0 40px 20px;
+    line-height: 50px;
+}
+/*indeling van de profielfoto en about me button.*/
+.home-section {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
 }
 
-.homepage button {
+.home-section button {
     height: 2rem;
     width: 35%;
     margin: 5% 0 0 8%;
@@ -177,6 +198,7 @@ aside {
     border: black 1px solid;
 }
 
+/*Scroll container voor de Work page.*/
 .scroll-container {
     overflow: auto;
     white-space: nowrap;
@@ -191,21 +213,18 @@ aside {
     max-height: 60%;
 }
 
-/*Layout main Blog*/
-
 /*Layout footer*/
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     grid-area: footer;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px 0 20px;
     border-top: black solid 1px;
 }
 
 
-/*Layout main van de pagina's about, work, process*/
+/*Layout main van de pagina's about, work, process en blog*/
 .main {
     display: flex;
     justify-content: space-between;
@@ -292,10 +311,6 @@ aside form {
         padding-top: 7%;
     }
 
-    main h1 {
-        font-size: 20vw;
-    }
-
     aside {
         border-left: none;
         border-top: black solid 1px;
@@ -313,6 +328,8 @@ aside form {
 }
 
 /*Media query mobile*/
+/*Hier moet ik de hamburger menu gaan maken.*/
+/*Ik weet alleen nog niet goed hoe het moet.*/
 @media screen and (max-width: 400px) {
 
 }
