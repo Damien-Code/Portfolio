@@ -34,16 +34,13 @@ require './views/layout/header.php';
         </section>
     </main>
     <!--            Aside           -->
-    <aside id="asideGame">
-        <!--            Game            -->
-        <section class="game">
-            <input type="text" name="input" id="input">
-            <button class="buttonGame" onclick="playGame()">Play game</button>
-        </section>
-        <!--            Game result         -->
-        <section>
-            <div id="result"></div>
-        </section>
+    <aside>
+        <!--fotos van recente projecten met animate on scroll of een knop dat je kan switchen tussen fotos-->
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+
+        </form>
 
     </aside>
     <!--            Footer          -->
