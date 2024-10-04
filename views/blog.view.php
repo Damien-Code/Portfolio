@@ -4,14 +4,14 @@ require './views/layout/header.php';
     <main class="main">
         <!--        echo de titel die ik in de controller definieer-->
         <h2 class="pageTitle"><?php echo $title ?></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi culpa dignissimos
-            ducimus excepturi hic ipsa, maxime molestias nam officia porro possimus qui quos rem sequi vitae. Id,
-            vero.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, mollitia voluptas! Dignissimos, dolor, odit.
-            A alias corporis eaque impedit ipsum itaque maiores, reiciendis repudiandae vel veritatis. At distinctio
-            fuga magni.
-        </p>
+        <section class="blogs">
+            <div class="input-div">
+
+            </div>
+            <div class="input-div">
+
+            </div>
+        </section>
     </main>
     <aside>
         <section>

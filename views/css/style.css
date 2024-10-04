@@ -289,6 +289,19 @@ aside form {
     background-color: darkgray;
 }
 
+.blogs {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 80%;
+    width: 100%;
+}
+
+.input-div {
+    width: 45%;
+    height: 100%;
+    border: 1px solid black;
+}
 
 /*Media query Tablet landscape*/
 @media screen and (max-width: 950px) {
