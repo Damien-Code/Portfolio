@@ -103,7 +103,7 @@ a:hover {
     border-top: white solid 1px;
 }
 
-.dark-mode .borderPic {
+.dark-mode .profilePic {
     border: white 1px solid;
 }
 
@@ -347,5 +347,7 @@ aside form {
 /*Hier moet ik de hamburger menu gaan maken.*/
 /*Ik weet alleen nog niet goed hoe het moet.*/
 @media screen and (max-width: 400px) {
-
+    aside {
+        margin-right: 5%;
+    }
 }
