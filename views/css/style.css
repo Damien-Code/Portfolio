@@ -78,7 +78,7 @@ a:hover {
 
 /*Hier geef ik aan wat er moet gebeuren nadat mijn JS darkmode functie wordt uitgevoerd.*/
 /*Ik toggle mijn JS met deze css class want dat bespaard veel code*/
-/*Ik moet wel aangegeven dat ook mijn a etc moeten veranderen. Anders werkt het niet*/
+/*Ik moet wel aangegeven dat ook mijn a-tags etc moeten veranderen. Anders werkt het niet*/
 /*Darkmode body*/
 .dark-mode {
     color: white;
@@ -103,6 +103,7 @@ a:hover {
     border-top: white solid 1px;
 }
 
+/*Profielfoto niet vergeten anders blijft de border zwart*/
 .dark-mode .profilePic {
     border: white 1px solid;
 }

@@ -1,4 +1,5 @@
 <?php
+//session_start();
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +34,7 @@
         <a href="/process">Process</a>
         <a href="/blog">Blog</a>
 <!--        koppel de functie in JS met onclick zodat er geswitched kan worden naar darkmode-->
+<!--        <button type="submit" name="button1">Change--><?php //$_SESSION['backgroundColor'] = 'black'; ?><!--</button>-->
         <button type="button" onclick="darkMode()" id="button">Change</button>
     </section>
 </header>
