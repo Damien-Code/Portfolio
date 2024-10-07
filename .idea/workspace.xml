@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d558ce59-cfb0-4a08-9be3-f1310458456c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitignore/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +59,7 @@
     &quot;Node.js.main.js.executor&quot;: &quot;Run&quot;,
     &quot;PHP Script.about.view.php.executor&quot;: &quot;Run&quot;,
     &quot;PHP Script.blog.view.php.executor&quot;: &quot;Run&quot;,
+    &quot;PHP Script.header.php.executor&quot;: &quot;Debug&quot;,
     &quot;PHP Script.index.php.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -74,12 +75,22 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/views" />
       <recent name="$PROJECT_DIR$/gitignore" />
       <recent name="$PROJECT_DIR$/views/javascript" />
       <recent name="$PROJECT_DIR$/views/css" />
-      <recent name="$PROJECT_DIR$/asset" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="header.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/views/layout/header.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.header.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -112,7 +123,8 @@
       <workItem from="1727604781396" duration="10670000" />
       <workItem from="1727716913866" duration="28261000" />
       <workItem from="1727854766222" duration="19781000" />
-      <workItem from="1727967937819" duration="7404000" />
+      <workItem from="1727967937819" duration="11992000" />
+      <workItem from="1728323440693" duration="4000" />
     </task>
     <servers />
   </component>
