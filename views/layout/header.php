@@ -31,7 +31,7 @@
     <section class="linkTo">
         <a href="/">Home</a>
         <a href="/portfolio">Portfolio</a>
-        <a href="/profile">My Profile</a>
+        <a href="/login">My Profile</a>
         <a href="/about">About</a>
         <a href="/blog">Blog</a>
 <!--        koppel de functie in JS met onclick zodat er geswitched kan worden naar darkmode-->

@@ -1,26 +1,32 @@
 <?php
 
 switch ($_SERVER['REQUEST_URI']) {
-
 //    home page
     case '/':
         require 'controller/IndexController.php';
         indexController();
         break;
-//        about page
-    case '/about':
-        require 'controller/AboutController.php';
-        aboutController();
+    //        portfolio page
+    case '/portfolio':
+        require 'controller/PortfolioController.php';
+        portfolioController();
+        break;
+//        login scherm
+// Wanneer je naar de pagina profile gaat, moet je eerst inloggen.
+//Je krijgt eerst een inlog scherm en na het inloggen wordt je verwezen naar de profile pagina
+    case '/login':
+        require 'controller/LoginController.php';
+        LoginController();
         break;
 //        process page
     case '/profile':
         require 'controller/ProfileController.php';
         ProfileController();
         break;
-//        work page
-    case '/portfolio':
-        require 'controller/PortfolioController.php';
-        portfolioController();
+//        about page
+    case '/about':
+        require 'controller/AboutController.php';
+        aboutController();
         break;
     case '/blog':
 //        blog page
