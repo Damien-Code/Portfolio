@@ -15,23 +15,12 @@ require './views/layout/header.php';
     </main>
     <aside>
         <section>
-            <form>
-                <p>Name</p>
-                <input type="text">
-                <p>Username</p>
-                <input type="text">
-                <button type="button">Add User</button>
-            </form>
+            <p>What's on your mind?</p>
         </section>
-        <section>
-            <form>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                </ul>
+            <form class="blog-form">
+                <input type="text">
+                <input type="text">
             </form>
-        </section>
 
     </aside>
 <?php

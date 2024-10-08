@@ -63,7 +63,7 @@ a:hover {
 #button {
     background-color: white;
     border: black solid 1px;
-    padding: 5px
+    padding: 5px;
 }
 
 #button:hover {
@@ -298,6 +298,7 @@ aside form {
 #input {
     width: 50%;
     font-size: 20px;
+    font-family: "Instrument Serif", serif;
 }
 
 /*Spel button*/
@@ -341,6 +342,17 @@ aside form {
     border: 1px solid black;
 }
 
+.blog-form {
+    display: flex;
+    justify-content: space-between;
+    height: 65%;
+    width: 100%;
+}
+
+.blog-form input {
+    width: 45%;
+}
+
 /*Main indeling van de work pagina*/
 #work-page {
     display: flex;
@@ -350,6 +362,7 @@ aside form {
 
 .profile-description {
     width: 95%;
+    margin-top: 5%;
 }
 
 .profile-description th {
@@ -359,19 +372,11 @@ aside form {
 .profile-description tr {
     height: 4rem;
 }
+
 table, th, td {
     border: black 1px solid;
     border-collapse: collapse;
     text-align: center;
-}
-
-
-/*Media query Tablet landscape*/
-@media screen and (max-width: 950px) {
-    .profilePic {
-        width: 50%;
-        height: auto;
-    }
 }
 
 /*Indeling Login pagina*/
@@ -441,27 +446,35 @@ table, th, td {
     font-family: "Instrument Serif", serif;
     font-size: 20px;
 }
+
 .login-page button:hover {
     background-color: steelblue;
+}
+
+button {
+    font-family: "Instrument Serif", serif;
 }
 
 button:hover {
     cursor: pointer;
 }
+
 /*Media query tablet portrait*/
 @media screen and (max-width: 620px) {
     body {
         display: grid;
         grid-template:
                       "header" 0.1fr
-                      "main" 0.4fr
-                      "aside" 0.4fr
+                      "main" 0.6fr
+                      "aside" 0.2fr
                       "footer" 0.1fr
     / 1fr;
     }
 
+
     main {
         padding-top: 7%;
+        height: 60vh;
     }
 
     aside {
@@ -473,10 +486,6 @@ button:hover {
         padding-right: 5%;
     }
 
-    .aside-work {
-        display: flex;
-        justify-content: center;
-    }
 }
 
 /*Media query mobile*/
