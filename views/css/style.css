@@ -202,20 +202,8 @@ aside {
     background: white;
     border: black 1px solid;
 }
-
-/*Scroll container voor de Work page.*/
-.scroll-container {
-    overflow: auto;
-    white-space: nowrap;
-    padding: 10px;
-}
-
-.scroll-container img {
-    padding: 10px;
-}
-
-.js-logo {
-    max-height: 60%;
+.login-pic {
+    width: 50%
 }
 
 /*Layout footer*/
@@ -238,12 +226,25 @@ footer {
     padding-bottom: 10%;
     padding-right: 5%;
 }
-
+.main form {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.main input {
+    height: 100%;
+}
+.main button {
+    width: 100%;
+    height: 10%;
+}
 /*Titel van de pagina's about, work en process*/
 .pageTitle {
     font-size: 6vw;
     text-decoration: underline;
     font-weight: normal;
+    width: 100%;
 }
 
 /*Afbeelding pagina work*/
@@ -303,6 +304,30 @@ aside form {
     height: 100%;
     border: 1px solid black;
 }
+
+/*Main indeling van de work pagina*/
+#work-page{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.profile-description {
+    width: 100%;
+
+}
+.profile-description th {
+    text-align: start;
+    border-bottom: black 1px solid;
+}
+.profile-description tr {
+    height: 4rem;
+    border-bottom: black 1px solid;
+}
+
+.profile-description td {
+    border-bottom: black 1px solid;
+}
+
 
 /*Media query Tablet landscape*/
 @media screen and (max-width: 950px) {

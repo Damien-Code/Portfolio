@@ -1,27 +1,53 @@
 <?php
 require './views/layout/header.php';
 ?>
-    <!--          Main                -->
-    <main>
-<!--        echo de titel die ik in de controller definieer-->
-        <div class="typewriter">
-                <h1><?php echo $title?></h1>
-        </div>
+    <!--            Main            -->
+    <main id="work-page">
+        <!--            Main titel      -->
+        <!--        echo de titel die ik in de controller definieer-->
+        <h2 class="pageTitle"><?php echo $title ?></h2>
+        <!--            Main text        -->
+        <table class="profile-description">
+            <tr>
+                <th>Author:</th>
+                <th>Title:</th>
+                <th>Degree:</th>
+                <th>Projects:</th>
+                <th>Languages:</th>
+            </tr>
+            <tr>
+                <td>Damiën</td>
+                <td>Web Developer</td>
+                <td>ADSD</td>
+                <td>Web Application</td>
+                <td>HTML, PHP and SQL</td>
+                <td><button>Select:</button></td>
+            </tr>
+            <tr>
+                <td>Mischa Sasse</td>
+                <td>Full stack Engineer</td>
+                <td>ADSD</td>
+                <td>Portfolio's</td>
+                <td>Javascript, Typescript and Three.JS</td>
+                <td><button>Select:</button></td>
+            </tr>
+            <tr>
+                <td>Lucas Pesiwarissa</td>
+                <td>Back-end developer</td>
+                <td>ADSD</td>
+                <td>Database for Oracle</td>
+                <td>MySQL, SQLite and MongoDB</td>
+                <td><button>Select:</button></td>
+            </tr>
+        </table>
     </main>
-    <!--          Aside               -->
-    <aside class="homepage">
-        <!--    Profielfoto   -->
-        <section class="home-section">
-            <img src="./asset/profielfoto.jpeg" alt="Profile picture" class="profilePic">
-            <a href="/about">
-                <button>About me!</button>
-            </a>
-        </section>
-        <section>
-            <p>Specialized in Web Development and <br> languages like HTML, CSS, JavaScript and PHP.</p>
-        </section>
+    <!--            Aside           -->
+    <aside class="aside-work">
+        <!--fotos van recente projecten met animate on scroll of een knop dat je kan switchen tussen fotos-->
+        <img src="./asset/login.pic.png" alt="Login picture" class="login-pic">
+
     </aside>
-    <!--           Footer            -->
+    <!--            Footer          -->
 <?php
 require './views/layout/footer.php';
 ?>

@@ -30,9 +30,9 @@
     <!--    Links    -->
     <section class="linkTo">
         <a href="/">Home</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/profile">My Profile</a>
         <a href="/about">About</a>
-        <a href="/work">Work</a>
-        <a href="/process">Process</a>
         <a href="/blog">Blog</a>
 <!--        koppel de functie in JS met onclick zodat er geswitched kan worden naar darkmode-->
 <!--        Uitzoeken hoe session_start precies werkt en hoe ik dit met de darkmode functie moet toepassen-->
@@ -40,7 +40,6 @@
         <button type="button" onclick="darkMode()" id="button">Change</button>
 <!--        <button>--><?php //$bg_color = 'black';
 //            echo "<body style='background-color:" . $bg_color . "'></body>";
-//
 //            ?><!--</button>-->
     </section>
 </header>

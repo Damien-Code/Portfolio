@@ -13,14 +13,14 @@ switch ($_SERVER['REQUEST_URI']) {
         aboutController();
         break;
 //        process page
-    case '/process':
-        require 'controller/ProcessController.php';
-        processController();
+    case '/profile':
+        require 'controller/ProfileController.php';
+        ProfileController();
         break;
 //        work page
-    case '/work':
-        require 'controller/WorkController.php';
-        workController();
+    case '/portfolio':
+        require 'controller/PortfolioController.php';
+        portfolioController();
         break;
     case '/blog':
 //        blog page
