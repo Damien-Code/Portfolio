@@ -39,7 +39,7 @@ require './views/layout/header.php';
         <!--            Game            -->
         <section class="game">
             <input type="text" name="input" id="input">
-            <button class="buttonGame" onclick="playGame()">Play game</button>
+            <button class="buttonGame" onclick="playGame()">Play!</button>
         </section>
         <!--            Game result         -->
         <section>

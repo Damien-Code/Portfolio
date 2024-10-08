@@ -18,19 +18,21 @@
 <body class="login-page">
 <!--Een simpel login scherm-->
 <header class="login-header">
-    <p>Titel</p>
+    <h1>Web App</h1>
 </header>
 <main class="login-main">
-        <form class="login-form">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-        </form>
-        <!--Wanneer er op de knop gedrukt wordt, wordt je doorgestuurd naar je eigen profielpagina-->
+    <form class="login-form">
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+    </form>
+    <!--Wanneer er op de knop gedrukt wordt, wordt je doorgestuurd naar je eigen profielpagina-->
     <section class="login-buttons">
         <a href="/profile">
             <button>Log In</button>
         </a>
-        <button>Create Account</button>
+        <a href="#">
+            <button>Sign up</button>
+        </a>
     </section>
 </main>
 </body>

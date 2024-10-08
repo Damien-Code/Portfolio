@@ -13,7 +13,7 @@ require './views/layout/header.php';
                 <th>Title:</th>
                 <th>Degree:</th>
                 <th>Projects:</th>
-                <th>Languages:</th>
+                <th colspan="2">Languages:</th>
             </tr>
             <tr>
                 <td>Damiën</td>
