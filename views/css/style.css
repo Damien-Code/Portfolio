@@ -216,7 +216,8 @@ footer {
 }
 
 
-/*Layout main van de pagina's about, work, process en blog*/
+/*Layout main van de pagina's portfolio, my profile, about en blog*/
+
 .main {
     display: flex;
     justify-content: space-between;
@@ -265,6 +266,7 @@ footer {
 
 .profile-input input {
     width: 18%;
+    text-align: start;
 }
 
 aside form {
@@ -303,7 +305,15 @@ aside form {
 .buttonGame:hover {
     background-color: darkgray;
 }
-
+.profile-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-aside button {
+    margin-top: 25%;
+}
 .blogs {
     display: flex;
     justify-content: space-between;
@@ -348,6 +358,49 @@ aside form {
         width: 50%;
         height: auto;
     }
+}
+
+/*Indeling Login pagina*/
+.login-page {
+    display: grid;
+    grid-template: "header" 0.1fr
+                   "main" 0.9fr
+/ 1fr;
+}
+/*Header login pagina*/
+.login-header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+/*main login pagina*/
+.login-main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Username en Password form*/
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 40%;
+
+}
+/*Username en password apart*/
+.login-form input {
+    margin: 5%;
+    height: 10%;
+    border-radius: 4rem;
+    text-align: center;
+}
+.login-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 2rem;
 }
 
 /*Media query tablet portrait*/

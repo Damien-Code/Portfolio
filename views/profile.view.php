@@ -14,6 +14,7 @@ require './views/layout/header.php';
             <p>What are your recent projects?</p>
             <p>What are the programming languages that you use?</p>
         </section>
+<!--        input velden waar je je profiel kunt updaten-->
         <form class="profile-input">
             <input type="text">
             <input type="text">
@@ -24,13 +25,10 @@ require './views/layout/header.php';
         <button>Save</button>
     </main>
     <!--            Aside           -->
-    <aside>
-        <!--fotos van recente projecten met animate on scroll of een knop dat je kan switchen tussen fotos-->
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
-
-        </form>
+    <aside class="profile-aside">
+<!--       Profielfoto van gebruiker die je kan aanpassen-->
+        <img src="./asset/login.pic.png" alt="Profile picture" class="login-pic">
+        <button>Choose new picture</button>
 
     </aside>
     <!--            Footer          -->

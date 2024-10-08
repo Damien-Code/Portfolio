@@ -15,14 +15,24 @@
     <!--    js hier ingeladen want als ik hem in de footer inlaadt geeft hij al zonder input een result aan. -->
     <script src="./views/javascript/main.js"></script>
 </head>
-<body>
+<body class="login-page">
 <!--Een simpel login scherm-->
-<form>
-    <input type="text">
-    <input type="text">
-</form>
-<!--Wanneer er op de knop gedrukt wordt, wordt je doorgestuurd naar je eigen profielpagina-->
-<a href="/profile"><button>Log In</button></a>
+<header class="login-header">
+    <p>Titel</p>
+</header>
+<main class="login-main">
+        <form class="login-form">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+        </form>
+        <!--Wanneer er op de knop gedrukt wordt, wordt je doorgestuurd naar je eigen profielpagina-->
+    <section class="login-buttons">
+        <a href="/profile">
+            <button>Log In</button>
+        </a>
+        <button>Create Account</button>
+    </section>
+</main>
 </body>
 </html>
 
