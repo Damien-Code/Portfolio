@@ -63,7 +63,6 @@ a:hover {
 #button {
     background-color: white;
     border: black solid 1px;
-    font-family: 'Instrument Serif', serif;
     padding: 5px
 }
 
@@ -247,10 +246,25 @@ footer {
     width: 100%;
 }
 
-/*Afbeelding pagina work*/
-.codePic {
-    height: auto;
-    width: 90%;
+.profiletext {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.profiletext p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18%;
+}
+
+.profile-input {
+    width: 100%;
+}
+
+.profile-input input {
+    width: 18%;
 }
 
 aside form {
@@ -276,7 +290,6 @@ aside form {
 #input {
     width: 50%;
     font-size: 20px;
-    font-family: "Instrument Serif", serif;
 }
 
 /*Spel button*/

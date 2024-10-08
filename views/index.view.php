@@ -21,7 +21,7 @@ require './views/layout/header.php';
                 <td>ADSD</td>
                 <td>Web Application</td>
                 <td>HTML, PHP and SQL</td>
-                <td><button>Select:</button></td>
+                <td><a href="./portfolio"><button>Select:</button></a></td>
             </tr>
             <tr>
                 <td>Mischa Sasse</td>
