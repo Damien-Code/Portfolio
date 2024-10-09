@@ -5,27 +5,29 @@ function ProfileController()
 {
     $title = "My Profile";
     $data = '';
-    if(!empty($_GET['action'])) {
+    if (!empty($_GET['action'])) {
         switch ($_GET['action']) {
             case 'save':
                 save($_POST['id']);
                 break;
             case 'delete':
                 delete($_GET['id']);
-                require 'controller/IndexController.php';
-                indexController();
+//                require 'controller/IndexController.php';
+//                indexController();
                 break;
             case 'update':
                 $data = update($_GET['id']);
                 break;
-            case 'list':
+            case 'view':
+                view($_GET['id']);
                 break;
         }
     }
     require "./views/profile.view.php";
 }
 
-function delete($id){
+function delete($id)
+{
     include "database.php";
     try {
         $sql = "DELETE FROM posts WHERE id = $id";
@@ -33,8 +35,10 @@ function delete($id){
     } catch (PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }
-};
-function save($id='')
+}
+
+;
+function save($id = '')
 {
     global $conn;
     if (!empty($_POST['title'])) {
@@ -57,23 +61,35 @@ function save($id='')
             echo $sql . "<br>" . $e->getMessage();
         }
     }
-    }
+}
 
-    function update($id=null)
-    {
-        include "database.php";
-        $ret = '';
-        try {
-            $sql = "SELECT * FROM posts WHERE id = $id";
-            $sth = $conn->prepare($sql);
-            $sth->execute();
-            $ret = $sth->fetch(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            echo $sql . "<br>" . $e->getMessage();
+function update($id = null)
+{
+    global $conn;
+    include "database.php";
+    $ret = '';
+    try {
+        $sql = "SELECT * FROM posts WHERE id = $id";
+        $sth = $conn->prepare($sql);
+        $sth->execute();
+        $ret = $sth->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
+    return $ret;
+}
+
+
+function view($id = null): void
+{
+    global $conn;
+    include "database.php";
+        $stmt = $conn->prepare("SELECT Author, Title, Degree, Projects, Languages FROM Posts WHERE id = $id");
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        foreach ($stmt->fetchAll() as $row) {
+            foreach ($row as $key => $value) {
+                echo $value . '<br>';
+            }
         }
-
-        return $ret;
     }
-
-
-

@@ -40,6 +40,8 @@ require './views/layout/header.php';
                         }
                         echo "<td>$value</td>";
                         echo "<td><a href='/profile?action=update&id=". $row['id']."'>Update</a></td>";
+                        echo "<td><a href='/profile?action=delete&id=". $row['id']."'>Delete</a></td>";
+                        echo "<td><a href='/profile?action=view&id=". $row['id']."'>View</a></td>";
                         echo "</tr>\n";
                     }
 
