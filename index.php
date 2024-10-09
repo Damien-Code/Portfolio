@@ -1,6 +1,6 @@
 <?php
-
-switch ($_SERVER['REQUEST_URI']) {
+$defaultUser = '';
+switch ($_SERVER['PATH_INFO'] ?? '/') {
 //    home page
     case '/':
         require 'controller/IndexController.php';
@@ -39,7 +39,11 @@ switch ($_SERVER['REQUEST_URI']) {
 }
 //var_dump($_SERVER['REQUEST_URI']);
 
+
+
 ?>
+
+
 
 
 
