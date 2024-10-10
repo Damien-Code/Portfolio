@@ -10,6 +10,7 @@ switch ($_SERVER['PATH_INFO'] ?? '/') {
     case '/portfolio':
         require 'controller/PortfolioController.php';
         portfolioController();
+
         break;
 //        login scherm
 // Wanneer je naar de pagina profile gaat, moet je eerst inloggen.
@@ -38,10 +39,6 @@ switch ($_SERVER['PATH_INFO'] ?? '/') {
         echo 'Error 404';
 }
 //var_dump($_SERVER['REQUEST_URI']);
-
-
-
-
 ?>
 
 
