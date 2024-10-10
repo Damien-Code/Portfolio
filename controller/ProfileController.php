@@ -3,7 +3,11 @@
 // Ook definieer ik een titel die ik in profile.view.php echo
 function ProfileController()
 {
-    $title = 'My profile';
+    global $title;
+    global $degree;
+    global $author;
+    global $lang;
+    global $projects;
     $data = '';
     if (!empty($_GET['action'])) {
         switch ($_GET['action']) {
@@ -18,23 +22,23 @@ function ProfileController()
                 break;
             case 'view':
                 view($_GET['id']);
-                require 'controller/PortfolioController.php';
-                portfolioController();
+//                require 'controller/PortfolioController.php';
+//                portfolioController();
                 break;
         }
     }
-            if ($_GET== 'save') {
-                require "./views/profile.view.php";
-            } elseif ($_GET['action'] == 'delete') {
-                $title = 'Working with';
-                require "./views/index.view.php";
-            } elseif ($_GET == 'update') {
-                require "./views/profile.view.php";
-            } elseif ($_GET['action'] == 'view') {
-                require "./views/portfolio.view.php";
-            } else {
-                require "./views/profile.view.php";
-            }
+    if ($_GET == 'save') {
+        require "./views/profile.view.php";
+    } elseif ($_GET['action'] == 'delete') {
+        $title = 'Working with';
+        require "./views/index.view.php";
+    } elseif ($_GET == 'update') {
+        require "./views/profile.view.php";
+    } elseif ($_GET['action'] == 'view') {
+        require "./views/portfolio.view.php";
+    } else {
+        require "./views/profile.view.php";
+    }
 
 }
 
@@ -92,28 +96,32 @@ function update($id = null)
 }
 
 
-    function view($id = null)
-    {
-        global $conn;
-        global $row;
-        include "database.php";
-        try{
-            $sql = "SELECT Author, Title, Degree, Projects, Languages FROM posts WHERE id = $id";
-            $stmt = $conn->prepare($sql);
-            $stmt->execute();
-            $ret = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-            foreach ($stmt->fetchAll() as $row) {
-                foreach ($row as $key => $value) {
-                    echo $value . '<br>';
-                }
+function view($id = null)
+{
+    global $conn;
+    global $author;
+    global $title;
+    global $degree;
+    global $projects;
+    global $lang;
+    include "database.php";
+    try {
+        $sql = "SELECT Author, Title, Degree, Projects, Languages FROM posts WHERE id = $id";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $ret = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        foreach ($stmt->fetchAll() as $row) {
+            foreach ($row as $key => $value) {
             }
-            $author = $row['Author'];
-            $title = $row['Title'];
-            $degree = $row['Degree'];
-            $projects = $row['Projects'];
-            $lang = $row['Languages'];
-
-        } catch (PDOException $e) {
-            echo $sql . "<br>" . $e->getMessage();
         }
+//        implode('', $row);
+        $author = $row['Author'];
+        $title = $row['Title'];
+        $degree = $row['Degree'];
+        $projects = $row['Projects'];
+        $lang = $row['Languages'];
+
+    } catch (PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
     }
+}

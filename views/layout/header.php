@@ -38,8 +38,5 @@
 <!--        Uitzoeken hoe session_start precies werkt en hoe ik dit met de darkmode functie moet toepassen-->
 <!--        <button type="submit" name="button1">Change--><?php //$_SESSION['.dark-mode'] = 'black'; ?><!--</button>-->
         <button type="button" onclick="darkMode()" id="button">Change</button>
-<!--        <button>--><?php //$bg_color = 'black';
-//            echo "<body style='background-color:" . $bg_color . "'></body>";
-//            ?><!--</button>-->
     </section>
 </header>
