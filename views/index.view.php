@@ -7,7 +7,7 @@ require './views/layout/header.php';
         <!--        echo de titel die ik in de controller definieer-->
         <h2 class="pageTitle"><?php echo $title ?></h2>
         <!--            Main text        -->
-        <section class =table-container>
+        <section class ="table-container">
             <table class="profile-description">
                 <tr>
                     <th>ID:</th>
@@ -16,7 +16,7 @@ require './views/layout/header.php';
                     <th>Degree:</th>
                     <th>Projects:</th>
                     <th>Languages:</th>
-                    <th>Go to profile:</th>
+                    <th colspan="3">Go to profile:</th>
                 </tr>
                 <?php
                 $servername = "localhost";
@@ -38,10 +38,10 @@ require './views/layout/header.php';
                         foreach ($row as $key => $value) {
                             echo "<td>$value</td>";
                         }
-                        echo "<td>$value</td>";
-                        echo "<td><a href='/profile?action=update&id=". $row['id']."'>Update</a></td>";
-                        echo "<td><a href='/profile?action=delete&id=". $row['id']."'>Delete</a></td>";
-                        echo "<td><a href='/profile?action=view&id=". $row['id']."'>View</a></td>";
+//                        echo "<td>$value</td>";
+                        echo "<td><a href='/profile?action=update&id=". $row['id']."'><button>Update</button></a></td>";
+                        echo "<td><a href='/profile?action=delete&id=". $row['id']."'><button>Delete</button></a></td>";
+                        echo "<td><a href='/profile?action=view&id=". $row['id']."'><button>View</button></a></td>";
                         echo "</tr>\n";
                     }
 

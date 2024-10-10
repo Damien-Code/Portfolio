@@ -12,6 +12,9 @@ require './views/layout/header.php';
     <aside class="homepage">
         <!--    Profielfoto   -->
         <section>
+            <p>My name is:</p>
+            <p><?php echo $author ?></p>
+
             <p>My coding languages are:</p>
             <p><?php echo $lang ?></p>
 

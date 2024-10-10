@@ -192,6 +192,7 @@ aside {
 .home-section {
     display: flex;
     justify-content: space-evenly;
+    align-items: end;
 }
 
 .home-section button {
@@ -357,12 +358,8 @@ aside form {
     margin-top: 5%;
 }
 
-.profile-description th {
-    text-align: start;
-}
-
 .profile-description tr {
-    height: 4rem;
+    height: 5rem;
 }
 
 table, th, td {
@@ -370,7 +367,6 @@ table, th, td {
     border-collapse: collapse;
     text-align: center;
 }
-
 
 /*Indeling Login pagina*/
 .login-page {
@@ -434,7 +430,7 @@ table, th, td {
     width: 100%;
     margin-top: 1rem;
     height: 2rem;
-    background-color: dodgerblue;
+    background-color: lightsteelblue;
     border-radius: 20px;
     font-family: "Instrument Serif", serif;
     font-size: 20px;
@@ -453,6 +449,7 @@ button {
 
 button:hover {
     cursor: pointer;
+    background-color: steelblue;
 }
 
 /*Media query tablet portrait*/
@@ -478,6 +475,9 @@ button:hover {
         justify-content: space-between;
         flex-direction: row;
         padding-right: 5%;
+    }
+    .table-container{
+        margin-right: 5%;
     }
 
 }

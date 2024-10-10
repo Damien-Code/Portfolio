@@ -4,11 +4,11 @@
 
 
 function portfolioController(){
+    $author = "Damiën";
     $title = "Web <br> Developer";
-    $lang = "- Specialized in Web Development and <br> languages like HTML, CSS, JavaScript and PHP.";
-    $degree = "- I study Software Development";
+    $lang = " HTML, CSS, JavaScript, PHP and MySQL.";
+    $degree = "I study Software Development";
     $projects = "My own web application";
-
 
     require "./views/portfolio.view.php";
 }
