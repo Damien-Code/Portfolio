@@ -1,6 +1,5 @@
 <?php
 // functie waar in de controller aanstuur. Die functie call ik in switch statement in index.php.
-// Ook definieer ik een titel die ik in profile.view.php echo
 function ProfileController()
 {
 //    Deze variabelen moet ik hier en in de view functie aangeven met global.
@@ -11,6 +10,7 @@ function ProfileController()
     global $lang;
     global $projects;
     $data = '';
+//    hier call ik de functies die ik in deze file definieer
     if (!empty($_GET['action'])) {
         switch ($_GET['action']) {
             case 'save':
@@ -30,7 +30,11 @@ function ProfileController()
         }
     }
 
-    //added if statement to prevent undefined array key 'action' error
+//    een extra if statement toegevoegd omdat ik anders steeds een undefined array key 'action' error kreeg
+//    wel heb ik in deze if statement ervoor gezorgd dat wanneer het bijvoorbeeld delete is, dat hij een andere pagina moet laden.
+//    dit heb ik zo gedaan omdat er anders 2 paginas over elkaar heen laadde.
+//    Het heeft lang geduurd voordat ik dit heb weten op te lossen.
+//
     if (!empty($_GET['action'])) {
 //        die(var_dump($_GET));
 
@@ -50,6 +54,8 @@ function ProfileController()
 
 }
 
+//een functie waarbij ik waardes uit de database kan verwijderen.
+//Ik moet wel de "database.php" includen omdat er anders geen connectie gemaakt wordt met de database.
 function delete($id)
 {
     include "database.php";
@@ -61,6 +67,8 @@ function delete($id)
     }
 }
 
+
+//een functie waarbij ik ingevoerde waardes in een form kan toevoegen aan de database.
 function save($id = '')
 {
     global $conn;
@@ -87,6 +95,8 @@ function save($id = '')
     }
 }
 
+//een functie waarbij ik de ingevoerde waardes zou kunnen updaten.
+//wel wil ik maar 1 gekozen id updated en niet alle. Daarom gebruik ik WHERE id = $id
 function update($id = null)
 {
     global $conn;
@@ -103,7 +113,11 @@ function update($id = null)
     return $ret;
 }
 
-
+//een functie waarbij ik er voor heb gezorgd dat je een portfolio kunt bekijken.
+//Ik wilde wel dat ik waardes van een id gelijk stelde aan een variabel zodat ik deze kan gebruiken op de portfolio pagina
+//door middel van global is het mij uiteindelijk gelukt om deze waardes uit deze functie te halen
+//ik roep deze variabelen in de profile functie aan zodat deze variabelen te zien zijn via de gekozen portfolio
+//anders is de portfolio pagina ingeladen met mijn eigen waardes die ik weer in PortfolioController aanroep.
 function view($id = null)
 {
     global $conn;
