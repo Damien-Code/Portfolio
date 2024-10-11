@@ -1,4 +1,6 @@
 <?php
+//hier maak ik connectie met de database
+//inplaats van in elke functie een connectie te moeten maken kan ik nu gemakkelijk deze file includen.
 $servername = "localhost";
 $username = "root";
 $password = "root";

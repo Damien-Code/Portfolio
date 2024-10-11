@@ -10,4 +10,3 @@ function portfolioController(){
 
     require "./views/portfolio.view.php";
 }
-
