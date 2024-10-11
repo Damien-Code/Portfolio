@@ -3,6 +3,8 @@
 // Ook definieer ik een titel die ik in profile.view.php echo
 function ProfileController()
 {
+//    Deze variabelen moet ik hier en in de view functie aangeven met global.
+//    Ik wil deze variabelen gebruiken zodat de portfolio pagina zich aanpast naar de userID
     global $title;
     global $degree;
     global $author;
@@ -27,15 +29,21 @@ function ProfileController()
                 break;
         }
     }
-    if ($_GET == 'save') {
-        require "./views/profile.view.php";
-    } elseif ($_GET['action'] == 'delete') {
-        $title = 'Working with';
-        require "./views/index.view.php";
-    } elseif ($_GET == 'update') {
-        require "./views/profile.view.php";
-    } elseif ($_GET['action'] == 'view') {
-        require "./views/portfolio.view.php";
+
+    //added if statement to prevent undefined array key 'action' error
+    if (!empty($_GET['action'])) {
+//        die(var_dump($_GET));
+
+        if ($_GET['action'] == 'save') {
+            require "./views/profile.view.php";
+        } elseif ($_GET['action'] == 'delete') {
+            $title = 'Working with';
+            require "./views/index.view.php";
+        } elseif ($_GET['action'] == 'update') {
+            require "./views/profile.view.php";
+        } elseif ($_GET['action'] == 'view') {
+            require "./views/portfolio.view.php";
+        }
     } else {
         require "./views/profile.view.php";
     }

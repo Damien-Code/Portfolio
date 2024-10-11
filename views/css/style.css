@@ -128,7 +128,7 @@ main {
     overflow: hidden;
     /*De zwarte lijn achter de tekst*/
     border-right: 1px solid;
-    animation: typing 3s steps(12) forwards,
+    animation: typing 3s steps(20) forwards,
     blink 1s step-end infinite;
 }
 
@@ -366,6 +366,18 @@ table, th, td {
     border: black 1px solid;
     border-collapse: collapse;
     text-align: center;
+}
+
+th {
+    background-color: lightsteelblue;
+}
+
+td {
+    background-color: ghostwhite;
+}
+
+.descr {
+    font-weight: 700;
 }
 
 /*Indeling Login pagina*/

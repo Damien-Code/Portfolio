@@ -12,16 +12,16 @@ require './views/layout/header.php';
     <aside class="homepage">
         <!--    Profielfoto   -->
         <section>
-            <p>My name is:</p>
+            <p class="descr">My name is:</p>
             <p><?php echo $author ?></p>
 
-            <p>My coding languages are:</p>
+            <p class="descr">My coding languages are:</p>
             <p><?php echo $lang ?></p>
 
-            <p>I study:</p>
+            <p class="descr">I study:</p>
             <p><?php echo $degree ?></p>
 
-            <p>My recent projects are:</p>
+            <p class="descr">My recent projects are:</p>
             <p><?php echo $projects ?></p>
         </section>
         <section class="home-section">
