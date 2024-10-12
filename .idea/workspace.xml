@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d558ce59-cfb0-4a08-9be3-f1310458456c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/PortfolioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/blog.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/blog.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/portfolio.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/portfolio.view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +132,7 @@
       <workItem from="1727854766222" duration="19781000" />
       <workItem from="1727967937819" duration="11992000" />
       <workItem from="1728323440693" duration="4000" />
-      <workItem from="1728326143894" duration="99407000" />
+      <workItem from="1728326143894" duration="104516000" />
     </task>
     <servers />
   </component>

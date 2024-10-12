@@ -25,9 +25,10 @@ require './views/layout/header.php';
                 $dbname = "pa";
 
                 try {
-
-                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//                    oude code bijgewerkt en heb de connectie met de server toegevoegd met include
+//                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+//                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    include "./controller/database.php";
                     $stmt = $conn->prepare("SELECT id, Author, Title, Degree, Projects, Languages FROM Posts");
                     $stmt->execute();
 

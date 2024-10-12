@@ -15,11 +15,14 @@ require './views/layout/header.php';
     </main>
     <aside>
         <section>
-            <p>What's on your mind?</p>
+            <p class="blog-title">What's on your mind?</p>
         </section>
             <form class="blog-form">
-                <input type="text">
-                <input type="text">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title">
+                <label for="content">Content:</label>
+                <input type="text" id="content" name="title">
+                <button>Add</button>
             </form>
 
     </aside>
