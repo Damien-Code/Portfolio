@@ -19,11 +19,10 @@ require './views/layout/header.php';
                     <th colspan="3">Go to profile:</th>
                 </tr>
                 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "root";
-                $dbname = "pa";
-
+//                $servername = "localhost";
+//                $username = "root";
+//                $password = "root";
+//                $dbname = "pa";
                 try {
 //                    oude code bijgewerkt en heb de connectie met de server toegevoegd met include
 //                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

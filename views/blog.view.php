@@ -6,7 +6,6 @@ require './views/layout/header.php';
         <h2 class="pageTitle"><?php echo $title ?></h2>
         <section class="blogs">
             <div class="input-div">
-
             </div>
             <div class="input-div">
 
@@ -17,7 +16,7 @@ require './views/layout/header.php';
         <section>
             <p class="blog-title">What's on your mind?</p>
         </section>
-            <form class="blog-form">
+            <form method="post" class="blog-form" action="/blog?action=save">
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title">
                 <label for="content">Content:</label>
