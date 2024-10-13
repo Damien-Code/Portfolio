@@ -5,11 +5,26 @@ require './views/layout/header.php';
         <!--        echo de titel die ik in de controller definieer-->
         <h2 class="pageTitle"><?php echo $title ?></h2>
         <section class="blogs">
-            <div class="input-div">
-            </div>
-            <div class="input-div">
+            <?php
+            try {
+                include "./controller/database.php";
+                $stmt = $conn->prepare("SELECT author, title, post FROM blogs");
+                $stmt->execute();
 
-            </div>
+                $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                foreach ($stmt->fetchAll() as $row) {
+                    echo '<div class="input-div">';
+                    foreach ($row as $key => $value) {
+                        echo "<p>$value</p>";
+//                        echo '<p>$key["title"]</p>';
+//                        echo '<p>$key["post"]</p>';
+                    }
+                    echo '</div>';
+                }
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            } $conn = null;
+            ?>
         </section>
     </main>
     <aside>

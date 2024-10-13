@@ -352,16 +352,16 @@ aside form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 70%;
+    height: 80%;
     width: 100%;
 }
-
-.blog-form input:nth-child(2) {
+.blog-form #author, #title {
     height: 10%;
 }
 
-.blog-form input:nth-child(4) {
+.blog-form #post {
     height: 60%;
+    margin-bottom: 5%;
 }
 
 
