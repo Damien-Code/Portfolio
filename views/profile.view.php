@@ -5,7 +5,7 @@ require './views/layout/header.php';
     <main class="main">
         <!--            Main titel      -->
         <!--    echo de titel die ik in de controller definieer-->
-        <h2 class="pageTitle"><?php echo $title ?></h2>
+        <h2 class="pageTitle"><?php echo $pagetitle ?></h2>
         <!--            Form voor een niewe portfolio       -->
         <form method="post" class="account-form" action="/profile?action=save">
             <input type="hidden" id="id" name="id" value="<?php echo (empty($data))?'':$data['id'] ?>">

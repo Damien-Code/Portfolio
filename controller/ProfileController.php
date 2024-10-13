@@ -4,6 +4,7 @@ function ProfileController()
 {
 //    Deze variabelen moet ik hier en in de view functie aangeven met global.
 //    Ik wil deze variabelen gebruiken zodat de portfolio pagina zich aanpast naar de userID
+    $pagetitle = "My Profile";
     global $title;
     global $degree;
     global $author;

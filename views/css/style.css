@@ -337,12 +337,15 @@ aside form {
     padding: 20px;
     height: 80%;
     width: 100%;
+    flex-wrap: wrap;
+    overflow-y: scroll;
 }
 
 .input-div {
     width: 45%;
     height: 100%;
     border: 1px solid black;
+    margin-bottom: 5%;
 }
 
 .blog-title {
@@ -355,7 +358,7 @@ aside form {
     height: 80%;
     width: 100%;
 }
-.blog-form #author, #title {
+.blog-form #author, .blog-form #title {
     height: 10%;
 }
 
