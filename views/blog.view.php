@@ -17,11 +17,14 @@ require './views/layout/header.php';
             <p class="blog-title">What's on your mind?</p>
         </section>
             <form method="post" class="blog-form" action="/blog?action=save">
+                <input type="hidden" id="id" name="id">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author">
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title">
-                <label for="content">Content:</label>
-                <input type="text" id="content" name="title">
-                <button>Add</button>
+                <label for="post">Content:</label>
+                <input type="text" id="post" name="post">
+                <button type="submit">Add</button>
             </form>
 
     </aside>
