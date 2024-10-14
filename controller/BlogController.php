@@ -36,3 +36,15 @@ function save($id = '') {
         }
     }
 }
+
+function delete($id) {
+    include "database.php";
+    try {
+        $sql = "DELETE FROM blogs WHERE id = '$id'";
+        $conn->exec($sql);
+        echo "Blog deleted successfully";
+
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+}
