@@ -123,6 +123,7 @@ main {
     align-items: end;
     grid-area: main;
     padding-left: 20px;
+    margin-right: 20px;
 }
 
 /*main titel met typewriter animatie. Mijn oude styling van H1 weggehaald want dat was overbodig met deze nieuwe style*/
@@ -336,15 +337,15 @@ aside form {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    height: 80%;
-    width: 100%;
+    max-height: 80%;
+    /*width: 100%;*/
     flex-wrap: wrap;
     overflow-y: scroll;
 }
 
 .input-div {
-    width: 45%;
-    height: 100%;
+    width: 40%;
+    height: 80%;
     border: 1px solid black;
     margin-bottom: 5%;
     padding: 1rem;
@@ -354,6 +355,7 @@ aside form {
 .blog-title {
     height: 6vw;
 }
+
 .blog-form {
     display: flex;
     flex-direction: column;
@@ -361,12 +363,13 @@ aside form {
     height: 80%;
     width: 100%;
 }
+
 .blog-form #author, .blog-form #title {
     height: 10%;
 }
 
 .blog-form #post {
-    height: 60%;
+    height: 20vh;
     margin-bottom: 5%;
 }
 
@@ -377,12 +380,14 @@ aside form {
     flex-direction: column;
     align-items: start;
 }
+
 .table-container {
     width: 100%;
     /*min-height: 60vh;*/
     max-height: 60vh;
     overflow-y: scroll;
 }
+
 .profile-description {
     min-width: 95%;
     margin-top: 5%;
@@ -397,15 +402,18 @@ table, th, td {
     border-collapse: collapse;
     text-align: center;
 }
+
 /*om de th sticky te maken moet ik eerst de table als relative definieren*/
 table {
     position: relative;
 }
+
 th {
     background-color: lightsteelblue;
     top: 0;
     position: sticky;
 }
+
 td {
     background-color: aliceblue;
 }
@@ -416,6 +424,7 @@ td {
     grid-template: "header" 0.1fr
                    "main" 0.9fr
 / 1fr;
+
 }
 
 /*Header login pagina*/
@@ -494,7 +503,7 @@ button:hover {
     background-color: steelblue;
 }
 
-@media  screen and (max-width: 740px ) {
+@media screen and (max-width: 740px ) {
     body {
         display: grid;
         grid-template:
@@ -504,12 +513,26 @@ button:hover {
                       "footer" 0.1fr
     / 1fr;
     }
+
+    main {
+        padding: 5%;
+    }
+
     aside {
         border-left: none;
         border-top: black solid 1px;
     }
 
-    
+    #blogpage {
+        grid-area: aside;
+        border-top: black 1px solid;
+    }
+
+    #blog-input {
+        grid-area: main;
+        height: 40vh;
+        border-top: none;
+    }
 }
 
 /*Media query tablet portrait*/
@@ -523,10 +546,12 @@ button:hover {
                       "footer" 0.1fr
     / 1fr;
     }
+
     main {
         padding-top: 7%;
         height: 50vh;
     }
+
     .typewriter h1 {
         font-size: 25vw;
     }
@@ -539,7 +564,8 @@ button:hover {
         justify-content: space-between;
         padding-right: 5%;
     }
-    .table-container{
+
+    .table-container {
         margin-right: 5%;
         margin-bottom: 5%;
         max-width: 90vw;
@@ -561,6 +587,7 @@ button:hover {
                       "footer" 0.1fr
     / 1fr;
     }
+
     main {
         height: 50vh;
     }
@@ -568,6 +595,7 @@ button:hover {
     .typewriter h1 {
         font-size: 25vw;
     }
+
     aside {
         padding-right: 5%;
     }
@@ -578,5 +606,10 @@ button:hover {
 
     a {
         font-size: 15px;
+    }
+
+    .blogs {
+        display: flex;
+        justify-content: center;
     }
 }

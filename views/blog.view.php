@@ -30,7 +30,7 @@ require './views/layout/header.php';
             ?>
         </section>
     </main>
-    <aside>
+    <aside id="blog-input">
         <section>
             <p class="blog-title">What's on your mind?</p>
         </section>
