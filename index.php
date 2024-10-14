@@ -39,7 +39,7 @@ switch ($_SERVER['PATH_INFO'] ?? '/') {
         echo 'Error 404';
 }
 //var_dump($_SERVER['REQUEST_URI']);
-?>
+
 
 
 

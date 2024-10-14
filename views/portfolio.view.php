@@ -2,7 +2,7 @@
 require './views/layout/header.php';
 ?>
     <!--          Main                -->
-    <main>
+    <main id="main-portfolio">
 <!--        echo de titel die ik in de controller definieer-->
         <div class="typewriter">
                 <h1><?php echo $title ?></h1>

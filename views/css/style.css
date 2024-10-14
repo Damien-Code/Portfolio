@@ -268,21 +268,18 @@ footer {
     font-weight: normal;
     width: 100%;
 }
-
+/*opmaak van de invoervelden van my profile*/
 .account-form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 80%;
 }
-
+/*knop van profile page*/
 .account-form button {
     margin-top: 2rem;
 }
 
-aside form {
-    padding-bottom: 20%;
-}
 
 /*Rock, paper and scissors spel*/
 /*Layout aside process*/
@@ -333,16 +330,18 @@ aside form {
     font-family: "Instrument Serif", serif;
 }
 
+/*max-height aangeven anders worden de blogs heel groot en is de website niet verhouding*/
 .blogs {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    max-height: 80%;
+    max-height: 45vh;
     /*width: 100%;*/
     flex-wrap: wrap;
     overflow-y: scroll;
 }
 
+/*opmaak van de geposte blogs*/
 .input-div {
     width: 40%;
     height: 80%;
@@ -352,10 +351,13 @@ aside form {
     background-color: aliceblue;
 }
 
+/*Titel van de aside blog*/
 .blog-title {
-    height: 6vw;
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 5%;
 }
-
+/*form van de blog*/
 .blog-form {
     display: flex;
     flex-direction: column;
@@ -363,11 +365,12 @@ aside form {
     height: 80%;
     width: 100%;
 }
-
+/*invoerveld van author en title*/
 .blog-form #author, .blog-form #title {
     height: 10%;
 }
 
+/*invoerveld van post*/
 .blog-form #post {
     height: 20vh;
     margin-bottom: 5%;
@@ -517,10 +520,16 @@ button:hover {
     main {
         padding: 5%;
     }
+    #main-portfolio {
+        height: 35vh;
+    }
 
     aside {
         border-left: none;
         border-top: black solid 1px;
+    }
+    .profilePic {
+        margin-top: 10%;
     }
 
     #blogpage {
@@ -553,7 +562,7 @@ button:hover {
     }
 
     .typewriter h1 {
-        font-size: 25vw;
+        font-size: 20vw;
     }
 
     aside {
@@ -566,10 +575,12 @@ button:hover {
     }
 
     .table-container {
-        margin-right: 5%;
         margin-bottom: 5%;
         max-width: 90vw;
         overflow-x: scroll;
+    }
+    .blog-title {
+        font-size: 7vw;
     }
 
 }
@@ -611,5 +622,8 @@ button:hover {
     .blogs {
         display: flex;
         justify-content: center;
+    }
+    .input-div {
+        width: 70vw;
     }
 }
