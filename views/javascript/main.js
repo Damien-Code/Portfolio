@@ -17,20 +17,20 @@
 // }
 
 // // Nieuwe functie voor darkmode. Dit werkt veel makkelijker want ik switch nu twee CSS code blocks.
-function darkMode() {
-    document.body.classList.toggle('dark-mode');
-}
-
-//Uitzoeken hoe localStorage werkt, dan blijft dark mode aan na reload.
 // function darkMode() {
-//     let isDark = document.body.classList.toggle('dark-mode');
-//     localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled'); //
+//     document.body.classList.toggle('dark-mode');
 // }
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     if (localStorage.getItem('darkMode') === 'enabled') {
-//         document.body.classList.add('dark-mode');
-//     }
-// });
+
+// Uitzoeken hoe localStorage werkt, dan blijft dark mode aan na reload.
+function darkMode() {
+    let isDark = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled'); //
+}
+document.addEventListener('DOMContentLoaded', (event) => {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+});
 
 
 // Rock paper scissors

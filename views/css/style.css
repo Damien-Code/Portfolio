@@ -486,8 +486,7 @@ button:hover {
     background-color: steelblue;
 }
 
-/*Media query tablet portrait*/
-@media screen and (max-width: 620px) {
+@media  screen and (max-width: 740px ) {
     body {
         display: grid;
         grid-template:
@@ -497,17 +496,39 @@ button:hover {
                       "footer" 0.1fr
     / 1fr;
     }
+    aside {
+        border-left: none;
+        border-top: black solid 1px;
+    }
+
+    
+}
+
+/*Media query tablet portrait*/
+@media screen and (max-width: 620px) {
+    body {
+        display: grid;
+        grid-template:
+                      "header" 0.1fr
+                      "main" 0.2fr
+                      "aside" 0.6fr
+                      "footer" 0.1fr
+    / 1fr;
+    }
     main {
         padding-top: 7%;
         height: 60vh;
+    }
+    .typewriter h1 {
+        font-size: 25vw;
     }
 
     aside {
         border-left: none;
         border-top: black solid 1px;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        flex-direction: row;
         padding-right: 5%;
     }
     .table-container{
@@ -520,7 +541,27 @@ button:hover {
 /*Hier moet ik de hamburger menu gaan maken.*/
 /*Ik weet alleen nog niet goed hoe het moet.*/
 @media screen and (max-width: 400px) {
+    body {
+        display: grid;
+        grid-template:
+                      "header" 0.1fr
+                      "main" 0.1fr
+                      "aside" 0.7fr
+                      "footer" 0.1fr
+    / 1fr;
+    }
+    main {
+        height: 40vh;
+    }
+
+    .typewriter h1 {
+        font-size: 30vw;
+    }
     aside {
         padding-right: 5%;
+    }
+
+    .table-container {
+        overflow-x: scroll;
     }
 }
