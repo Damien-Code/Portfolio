@@ -397,9 +397,14 @@ table, th, td {
     border-collapse: collapse;
     text-align: center;
 }
-
+/*om de th sticky te maken moet ik eerst de table als relative definieren*/
+table {
+    position: relative;
+}
 th {
     background-color: lightsteelblue;
+    top: 0;
+    position: sticky;
 }
 td {
     background-color: aliceblue;
