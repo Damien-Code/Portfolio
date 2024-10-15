@@ -1,13 +1,15 @@
 <?php
 
 include "database.php";
-class profileModel extends Database{
+
+class profileModel extends Database
+{
     private $conn;
 
-    function __construct(){
-    $this->conn = new Database();
+    function __construct()
+    {
+        $this->conn = new Database();
     }
-
 
 
     public function ProfileRouter()
@@ -22,6 +24,19 @@ class profileModel extends Database{
         global $projects;
         $data = '';
 //    hier call ik de functies die ik in deze file definieer
+//        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//            $this->save($_POST['id']);
+//        } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
+//            $this->delete($_POST['id']);
+//        } elseif ($_SERVER["REQUEST_METHOD"] == "GET") {
+//            $this->update($_GET['id']);
+//        } elseif ($_SERVER["REQUEST_METHOD"] == "GET") {
+//            $this->view($_GET['id']);
+//        } else
+//            require "./views/profileView.php";
+
+
+
         if (!empty($_GET['action'])) {
             switch ($_GET['action']) {
                 case 'save':
@@ -40,7 +55,7 @@ class profileModel extends Database{
 //                portfolioController();
                     break;
             }
-        }
+    }
 
 //    een extra if statement toegevoegd omdat ik anders steeds een undefined array key 'action' error kreeg
 //    wel heb ik in deze if statement ervoor gezorgd dat wanneer het bijvoorbeeld delete is, dat hij een andere pagina moet laden.
@@ -67,7 +82,6 @@ class profileModel extends Database{
     }
 
 
-
     public function delete($id)
 //        include "database.php";
     {
@@ -80,8 +94,6 @@ class profileModel extends Database{
             echo $sql . "<br>" . $e->getMessage();
         }
     }
-
-
 
 
     public function save($id = '')
@@ -112,9 +124,6 @@ class profileModel extends Database{
     }
 
 
-
-
-
     public function update($id = null)
     {
 //        global $conn;
@@ -132,9 +141,6 @@ class profileModel extends Database{
         }
         return $ret;
     }
-
-
-
 
 
     public function view($id = null)
