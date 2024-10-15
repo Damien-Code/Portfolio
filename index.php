@@ -22,7 +22,7 @@ switch ($_SERVER['PATH_INFO'] ?? '/') {
 //        process page
     case '/profile':
         require 'controller/ProfileController.php';
-        ProfileController();
+        ProfileModel();
         break;
 //        about page
     case '/about':

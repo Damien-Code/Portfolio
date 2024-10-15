@@ -7,7 +7,7 @@ require './views/layout/header.php';
         <section class="blogs">
             <?php
             try {
-                include "./controller/database.php";
+                include "./models/database.php";
                 $stmt = $conn->prepare("SELECT id, author, title, post FROM blogs");
                 $stmt->execute();
 
