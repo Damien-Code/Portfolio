@@ -41,7 +41,7 @@ require './views/layout/header.php';
 //                        echo "<td>$value</td>";
                         echo "<td><a href='/profile?action=update&id=". $row['id']."'><button>Update</button></a></td>";
                         echo "<td><a href='/profile?action=delete&id=". $row['id']."'><button>Delete</button></a></td>";
-                        echo "<td><a href='/profile?action=view&id=". $row['id']."'><button>View</button></a></td>";
+                        echo "<td><a href='/portfolio?action=view&id=". $row['id']."'><button>View</button></a></td>";
                         echo "</tr>\n";
                     }
 
