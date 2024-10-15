@@ -1,4 +1,5 @@
 <?php
+//global $conn;
 require './views/layout/header.php';
 ?>
     <!--            Main            -->
@@ -28,7 +29,8 @@ require './views/layout/header.php';
 //                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 //                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     include "./models/database.php";
-                    $stmt = $conn->prepare("SELECT id, Author, Title, Degree, Projects, Languages FROM Posts");
+                    $conn = new Database();
+                    $stmt = $conn->pdo->prepare("SELECT id, Author, Title, Degree, Projects, Languages FROM Posts");
                     $stmt->execute();
 
                     // set the resulting array to associative

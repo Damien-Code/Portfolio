@@ -57,7 +57,7 @@ include "./models/profileModel.php";
 //}
 function profileModel(){
     $profileModel = new profileModel();
-    $profileModel->ProfileController();
+    $profileModel->ProfileRouter();
     return $profileModel;
 
 }

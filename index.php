@@ -1,5 +1,5 @@
 <?php
-$defaultUser = '';
+//include "./models/database.php";
 switch ($_SERVER['PATH_INFO'] ?? '/') {
 //    home page
     case '/':

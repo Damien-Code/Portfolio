@@ -1,8 +1,8 @@
 <?php
 
-
-class profileModel {
-    public function ProfileController()
+include_once "database.php";
+class profileModel extends Database{
+    public function ProfileRouter()
     {
 //    Deze variabelen moet ik hier en in de view functie aangeven met global.
 //    Ik wil deze variabelen gebruiken zodat de portfolio pagina zich aanpast naar de userID
@@ -57,8 +57,8 @@ class profileModel {
 
     }
     public function delete($id)
+//        include "database.php";
     {
-        include "database.php";
         try {
             $sql = "DELETE FROM posts WHERE id = $id";
             $conn->exec($sql);
@@ -68,9 +68,9 @@ class profileModel {
     }
     public function save($id = '')
     {
-        global $conn;
+//        global $conn;
         if (!empty($_POST['title'])) {
-            include "database.php";
+//            include "database.php";
             try {
                 $title = $_POST['title'];
                 $degree = $_POST['degree'];
@@ -94,8 +94,9 @@ class profileModel {
     function update($id = null)
     {
         global $conn;
-        include "database.php";
+//        include "database.php";
         $ret = '';
+//        $conn = new Database();
         try {
             $sql = "SELECT * FROM posts WHERE id = $id";
             $sth = $conn->prepare($sql);
@@ -108,16 +109,17 @@ class profileModel {
     }
     function view($id = null)
     {
-        global $conn;
+//        global $conn;
         global $author;
         global $title;
         global $degree;
         global $projects;
         global $lang;
-        include "database.php";
+//        include "database.php";
         try {
             $sql = "SELECT Author, Title, Degree, Projects, Languages FROM posts WHERE id = $id";
-            $stmt = $conn->prepare($sql);
+            $conn = new Database();
+            $stmt = $conn->pdo->prepare($sql);
             $stmt->execute();
             $ret = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             foreach ($stmt->fetchAll() as $row) {
