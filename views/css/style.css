@@ -12,8 +12,9 @@ body {
                   "footer footer" 0.1fr
 / 0.6fr 0.4fr;
     font-family: "Instrument Serif", serif;
-    background-color: #12403C;
-    color: #DED5CB;
+    /*background-color: #12403C;*/
+    /*color: #DED5CB;*/
+
     min-height: 100vh;
     letter-spacing: .15rem;
 }
@@ -27,7 +28,7 @@ header {
     align-items: center;
     padding-left: 20px;
     grid-area: header;
-    border-bottom: #DED5CB solid 1px;
+    border-bottom: black solid 1px;
     font-size: 20px;
 }
 

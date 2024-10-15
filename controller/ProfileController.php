@@ -1,65 +1,12 @@
 <?php
 // functie waar in de controller aanstuur. Die functie call ik in switch statement in index.php.
 include "./models/profileModel.php";
-//function ProfileController()
-//{
-////    Deze variabelen moet ik hier en in de view functie aangeven met global.
-////    Ik wil deze variabelen gebruiken zodat de portfolio pagina zich aanpast naar de userID
-//    $pagetitle = "My Profile";
-//    global $title;
-//    global $degree;
-//    global $author;
-//    global $lang;
-//    global $projects;
-//    $data = '';
-////    hier call ik de functies die ik in deze file definieer
-//    if (!empty($_GET['action'])) {
-//        switch ($_GET['action']) {
-//            case 'save':
-//                save($_POST['id']);
-//                break;
-//            case 'delete':
-//                delete($_GET['id']);
-//                break;
-//            case 'update':
-//                $data = update($_GET['id']);
-//                break;
-//            case 'view':
-//                view($_GET['id']);
-////                require 'controller/PortfolioController.php';
-////                portfolioController();
-//                break;
-//        }
-//    }
-//
-////    een extra if statement toegevoegd omdat ik anders steeds een undefined array key 'action' error kreeg
-////    wel heb ik in deze if statement ervoor gezorgd dat wanneer het bijvoorbeeld delete is, dat hij een andere pagina moet laden.
-////    dit heb ik zo gedaan omdat er anders 2 paginas over elkaar heen laadde.
-////    Het heeft lang geduurd voordat ik dit heb weten op te lossen.
-////
-//    if (!empty($_GET['action'])) {
-////        die(var_dump($_GET));
-//
-//        if ($_GET['action'] == 'save') {
-//            require "./views/profile.view.php";
-//        } elseif ($_GET['action'] == 'delete') {
-//            $title = 'Working with';
-//            require "./views/index.view.php";
-//        } elseif ($_GET['action'] == 'update') {
-//            require "./views/profile.view.php";
-//        } elseif ($_GET['action'] == 'view') {
-//            require "./views/portfolio.view.php";
-//        }
-//    } else {
-//        require "./views/profile.view.php";
-//    }
-//
-//}
-function profileModel(){
+
+function profileModel(): profileModel
+{
     $profileModel = new profileModel();
     $profileModel->ProfileRouter();
     return $profileModel;
-
 }
 
 //een functie waarbij ik waardes uit de database kan verwijderen.
@@ -67,7 +14,6 @@ function profileModel(){
 function delete($id){
     $delete = new profileModel();
     $delete->delete($id);
-
 }
 
 

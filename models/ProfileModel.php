@@ -1,7 +1,15 @@
 <?php
 
-include_once "database.php";
+include "database.php";
 class profileModel extends Database{
+    private $conn;
+
+    function __construct(){
+    $this->conn = new Database();
+    }
+
+
+
     public function ProfileRouter()
     {
 //    Deze variabelen moet ik hier en in de view functie aangeven met global.
@@ -27,6 +35,7 @@ class profileModel extends Database{
                     break;
                 case 'view':
                     view($_GET['id']);
+
 //                require 'controller/PortfolioController.php';
 //                portfolioController();
                     break;
@@ -37,7 +46,7 @@ class profileModel extends Database{
 //    wel heb ik in deze if statement ervoor gezorgd dat wanneer het bijvoorbeeld delete is, dat hij een andere pagina moet laden.
 //    dit heb ik zo gedaan omdat er anders 2 paginas over elkaar heen laadde.
 //    Het heeft lang geduurd voordat ik dit heb weten op te lossen.
-//
+
         if (!empty($_GET['action'])) {
 //        die(var_dump($_GET));
 
@@ -56,16 +65,25 @@ class profileModel extends Database{
         }
 
     }
+
+
+
     public function delete($id)
 //        include "database.php";
     {
         try {
-            $sql = "DELETE FROM posts WHERE id = $id";
-            $conn->exec($sql);
+            $sql = "UPDATE posts SET isDeleted = true WHERE id = $id";
+//            $conn = new Database();
+            return $this->conn->pdo->exec($sql);
+
         } catch (PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
     }
+
+
+
+
     public function save($id = '')
     {
 //        global $conn;
@@ -83,7 +101,8 @@ class profileModel extends Database{
                 } else {
                     $sql = "UPDATE posts SET Title = '$title', Degree = '$degree', Author = '$author', Projects = '$projects', Languages = '$lang' WHERE id = $id";
                 }
-                $conn->exec($sql);
+//                $conn = new Database();
+                $this->conn->pdo->exec($sql);
                 echo "New record created successfully";
 
             } catch (PDOException $e) {
@@ -91,15 +110,21 @@ class profileModel extends Database{
             }
         }
     }
-    function update($id = null)
+
+
+
+
+
+    public function update($id = null)
     {
-        global $conn;
+//        global $conn;
 //        include "database.php";
         $ret = '';
 //        $conn = new Database();
         try {
             $sql = "SELECT * FROM posts WHERE id = $id";
-            $sth = $conn->prepare($sql);
+//            $conn = new Database();
+            $sth = $this->conn->pdo->prepare($sql);
             $sth->execute();
             $ret = $sth->fetch(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
@@ -107,7 +132,12 @@ class profileModel extends Database{
         }
         return $ret;
     }
-    function view($id = null)
+
+
+
+
+
+    public function view($id = null)
     {
 //        global $conn;
         global $author;
@@ -118,8 +148,8 @@ class profileModel extends Database{
 //        include "database.php";
         try {
             $sql = "SELECT Author, Title, Degree, Projects, Languages FROM posts WHERE id = $id";
-            $conn = new Database();
-            $stmt = $conn->pdo->prepare($sql);
+//            $conn = new Database();
+            $stmt = $this->conn->pdo->prepare($sql);
             $stmt->execute();
             $ret = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             foreach ($stmt->fetchAll() as $row) {

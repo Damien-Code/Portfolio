@@ -8,7 +8,8 @@ require './views/layout/header.php';
             <?php
             try {
                 include "./models/database.php";
-                $stmt = $conn->prepare("SELECT id, author, title, post FROM blogs");
+                $conn = new Database();
+                $stmt = $conn->pdo->prepare("SELECT id, author, title, post FROM blogs");
                 $stmt->execute();
 
                 $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);

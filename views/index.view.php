@@ -30,7 +30,7 @@ require './views/layout/header.php';
 //                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     include "./models/database.php";
                     $conn = new Database();
-                    $stmt = $conn->pdo->prepare("SELECT id, Author, Title, Degree, Projects, Languages FROM Posts");
+                    $stmt = $conn->pdo->prepare("SELECT id, Author, Title, Degree, Projects, Languages FROM Posts WHERE isDeleted = 0");
                     $stmt->execute();
 
                     // set the resulting array to associative
@@ -41,9 +41,9 @@ require './views/layout/header.php';
                             echo "<td>$value</td>";
                         }
 //                        echo "<td>$value</td>";
-                        echo "<td><a href='/profile?action=update&id=". $row['id']."'><button>Update</button></a></td>";
-                        echo "<td><a href='/profile?action=delete&id=". $row['id']."'><button>Delete</button></a></td>";
-                        echo "<td><a href='/profile?action=view&id=". $row['id']."'><button>View</button></a></td>";
+                        echo "<td><form action='/profile' method='post'><button>Update</button></form></td>";
+                        echo "<td><form action='/' method='post'><button>Delete</button></form></td>";
+                        echo "<td><form action='/portfolio' method='get'><button>View</button></form></td>";
                         echo "</tr>\n";
                     }
 

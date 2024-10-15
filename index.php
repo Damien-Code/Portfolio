@@ -1,6 +1,8 @@
 <?php
 //include "./models/database.php";
-switch ($_SERVER['PATH_INFO'] ?? '/') {
+$request = $_SERVER['PATH_INFO'] ?? '/';
+
+switch ($request) {
 //    home page
     case '/':
         require 'controller/IndexController.php';
@@ -10,7 +12,6 @@ switch ($_SERVER['PATH_INFO'] ?? '/') {
     case '/portfolio':
         require 'controller/PortfolioController.php';
         portfolioController();
-
         break;
 //        login scherm
 // Wanneer je naar de pagina profile gaat, moet je eerst inloggen.
@@ -19,7 +20,7 @@ switch ($_SERVER['PATH_INFO'] ?? '/') {
         require 'controller/LoginController.php';
         LoginController();
         break;
-//        process page
+//        profile page
     case '/profile':
         require 'controller/ProfileController.php';
         ProfileModel();

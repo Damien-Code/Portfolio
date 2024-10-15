@@ -3,7 +3,6 @@
 //inplaats van in elke functie een connectie te moeten maken kan ik nu gemakkelijk deze file includen.
 class Database
 {
-
     public PDO $pdo;
 
     public function __construct()

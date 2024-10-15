@@ -10,8 +10,9 @@
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/ProfileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ProfileModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/blog.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/blog.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profile.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
