@@ -5,6 +5,8 @@ require './controller/IndexController.php';
 require './controller/PortfolioController.php';
 require './controller/BlogController.php';
 require './controller/AboutController.php';
+require './controller/ProfileController.php';
+require './controller/LoginController.php';
 //include "./models/Database.php";
 $routes = require 'routes.php';
 

@@ -32,7 +32,7 @@ require './views/layout/header.php';
 //                        echo "<td>$value</td>";
                         echo "<td><form action='/update' method='post'><input name='action' value='update' hidden><input name='id' value=".$row['id']." hidden><button type='submit'>Update</button></form></td>";
                         echo "<td><form action='/delete' method='post'><input name='action' value='delete' hidden><input name='id' value=".$row['id']." hidden><button type='submit'>Delete</button></form></td>";
-                        echo "<td><form action='/view' method='post'><input name='action' value='view' hidden><input name='id' value=".$row['id']." hidden><button type='submit'>View</button></form></td>";
+                        echo "<td><form action='/portfolio' method='post'><input name='action' value='portfolio' hidden><input name='id' value=".$row['id']." hidden><button type='submit'>View</button></form></td>";
                         echo "</tr>\n";
                     }
                 ?>

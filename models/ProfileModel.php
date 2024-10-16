@@ -14,18 +14,18 @@ class profileModel extends Database
     }
 
 
-    public function ProfileRouter()
-    {
-//    Deze variabelen moet ik hier en in de view functie aangeven met global.
-//    Ik wil deze variabelen gebruiken zodat de portfolio pagina zich aanpast naar de userID
-        $pagetitle = "My Profile";
-        global $title;
-        global $degree;
-        global $author;
-        global $lang;
-        global $projects;
-        $data = '';
-    }
+//    public function ProfileRouter()
+//    {
+////    Deze variabelen moet ik hier en in de view functie aangeven met global.
+////    Ik wil deze variabelen gebruiken zodat de portfolio pagina zich aanpast naar de userID
+//        $pagetitle = "My Profile";
+//        global $title;
+//        global $degree;
+//        global $author;
+//        global $lang;
+//        global $projects;
+//        $data = '';
+//    }
 //    hier call ik de functies die ik in deze file definieer
 
 //        if ($_SERVER["REQUEST_METHOD"] == "POST") {

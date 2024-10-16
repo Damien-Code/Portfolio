@@ -1,5 +1,4 @@
 <?php
-include 'ProfileController.php';
 class RoutesController
 {
     public function index()
@@ -34,6 +33,7 @@ class RoutesController
 
     public function profile()
     {
+        $title = "My Profile";
         require './views/profile.view.php';
     }
 

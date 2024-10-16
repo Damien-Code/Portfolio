@@ -6,9 +6,9 @@ return [
         '/about' => 'controller/AboutController::about',
 //        '/about/me' => 'controller/AboutController::me',
         '/blog' => 'controller/BlogController::blog',
-        '/login' => 'controller/RoutesController::login',
+        '/login' => 'controller/LoginController::login',
         '/portfolio' => 'controller/PortfolioController::portfolio',
-        '/profile' => 'controller/RoutesController::profile',
+        '/profile' => 'controller/ProfileController::profile',
         '/update' => 'controller/RoutesController::update',
 ], 'POST' => [
         '/' => 'controller/IndexController::index',
@@ -16,5 +16,6 @@ return [
         '/view' => 'controller/RoutesController::view',
         '/blog/delete' => 'controller/BlogController::delete',
         '/portfolio' => 'controller/RoutesController::portfolio',
+        '/profile' => 'controller/ProfileController::save',
     ]
 ];

@@ -1,13 +1,16 @@
 <?php
 // functie waar in de controller aanstuur. Die functie call ik in switch statement in index.php.
-include "./models/profileModel.php";
+include "./models/ProfileModel.php";
+
 
 class ProfileController {
-public function profileModel()
+    public function profile(): profileModel
 {
-    $profileModel = new profileModel();
-    $profileModel->ProfileRouter();
-    return $profileModel;
+    $title = "My Profile";
+    require "./views/profile.view.php";
+//    $profileModel = new profileModel();
+//    $profileModel->ProfileRouter();
+//    return $profileModel;
 }
 
 //een functie waarbij ik waardes uit de database kan verwijderen.
