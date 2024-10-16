@@ -124,8 +124,6 @@ class profileModel extends Database
 
     public function save($id = '')
     {
-//        global $conn;
-        if (!empty($_POST['title'])) {
 //            include "Database.php";
             try {
                 $title = $_POST['title'];
@@ -147,7 +145,6 @@ class profileModel extends Database
                 echo $sql . "<br>" . $e->getMessage();
             }
         }
-    }
 
 
     public function update($id = null)
@@ -179,7 +176,7 @@ class profileModel extends Database
         global $lang;
 //        include "Database.php";
         try {
-            $sql = "SELECT Author, Title, Degree, Projects, Languages FROM posts WHERE id = $id";
+            $sql = "SELECT Author, Title, Degree, Projects, Languages FROM Posts WHERE id = $id";
 //            $conn = new Database();
             $stmt = $this->conn->pdo->prepare($sql);
             $stmt->execute();

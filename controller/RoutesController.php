@@ -37,10 +37,10 @@ class RoutesController
         require './views/profile.view.php';
     }
 
-    public function view(){
-//        die(var_dump($_POST));
-        $view = new ProfileController();
-
-        $view->view($_POST['id']);
-    }
+//    public function view(){
+////        die(var_dump($_POST));
+//        $view = new ProfileController();
+//
+//        $view->view($_POST['id']);
+//    }
 }

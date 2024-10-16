@@ -5,7 +5,7 @@ use core\Database;
 class IndexController {
     public function index() {
         //include "./core/Database.php";
-        $title = '';
+        $title = 'Working with';
         try {
             $conn = new Database();
             $stmt = $conn->pdo->prepare("SELECT id, Author, Title, Degree, Projects, Languages FROM Posts WHERE isDeleted = 0");
