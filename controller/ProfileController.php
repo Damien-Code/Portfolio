@@ -2,7 +2,9 @@
 // functie waar in de controller aanstuur. Die functie call ik in switch statement in index.php.
 include "./models/profileModel.php";
 
-function profileModel(): profileModel
+class ProfileController {
+
+public function profileModel(): profileModel
 {
     $profileModel = new profileModel();
     $profileModel->ProfileRouter();
@@ -10,8 +12,8 @@ function profileModel(): profileModel
 }
 
 //een functie waarbij ik waardes uit de database kan verwijderen.
-//Ik moet wel de "database.php" includen omdat er anders geen connectie gemaakt wordt met de database.
-function delete($id){
+//Ik moet wel de "Database.php" includen omdat er anders geen connectie gemaakt wordt met de database.
+public function delete($id){
     $delete = new profileModel();
     $delete->delete($id);
 }
@@ -19,7 +21,7 @@ function delete($id){
 
 //een functie waarbij ik ingevoerde waardes in een form kan toevoegen aan de database.
 //function save($id = '')
-function save($id = ''){
+public function save($id = ''){
     $save = new profileModel();
     $save->save($id);
 
@@ -27,7 +29,7 @@ function save($id = ''){
 //een functie waarbij ik de ingevoerde waardes zou kunnen updaten.
 //wel wil ik maar 1 gekozen id updated en niet alle. Daarom gebruik ik WHERE id = $id
 
-function update($id=null)
+public function update($id=null)
 {
     $update = new profileModel();
     return $update->update($id);
@@ -39,7 +41,8 @@ function update($id=null)
 //ik roep deze variabelen in de profile functie aan zodat deze variabelen te zien zijn via de gekozen portfolio
 //anders is de portfolio pagina ingeladen met mijn eigen waardes die ik weer in PortfolioController aanroep.
 
-function view($id){
+public function view($id){
     $view = new profileModel();
     $view->view($id);
+}
 }

@@ -1,6 +1,8 @@
 <?php
 
-include "database.php";
+use core\Database;
+
+include_once "core/Database.php";
 
 class profileModel extends Database
 {
@@ -23,8 +25,32 @@ class profileModel extends Database
         global $lang;
         global $projects;
         $data = '';
+    }
 //    hier call ik de functies die ik in deze file definieer
+
 //        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+////            die(var_dump($_POST));
+//            switch ($_POST["action"]) {
+//                case 'save':
+//                    save($_POST['id']);
+//                    break;
+//                case 'delete':
+//                    delete($_POST['id']);
+//                    break;
+//                case 'update':
+//                    $data = update($_POST['id']);
+//                    break;
+//                case 'view':
+//                    view($_POST['id']);
+//
+////                require 'controller/PortfolioController.php';
+////                portfolioController();
+//                    break;
+//            }
+//            }
+
+
+
 //            $this->save($_POST['id']);
 //        } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
 //            $this->delete($_POST['id']);
@@ -34,56 +60,56 @@ class profileModel extends Database
 //            $this->view($_GET['id']);
 //        } else
 //            require "./views/profileView.php";
+//
+//
+//
+//        if (!empty($_GET['action'])) {
+//            switch ($_GET['action']) {
+//                case 'save':
+//                    save($_POST['id']);
+//                    break;
+//                case 'delete':
+//                    delete($_GET['id']);
+//                    break;
+//                case 'update':
+//                    $data = update($_GET['id']);
+//                    break;
+//                case 'view':
+//                    view($_GET['id']);
+//
+////                require 'controller/PortfolioController.php';
+////                portfolioController();
+//                    break;
+//            }
 
-
-
-        if (!empty($_GET['action'])) {
-            switch ($_GET['action']) {
-                case 'save':
-                    save($_POST['id']);
-                    break;
-                case 'delete':
-                    delete($_GET['id']);
-                    break;
-                case 'update':
-                    $data = update($_GET['id']);
-                    break;
-                case 'view':
-                    view($_GET['id']);
-
-//                require 'controller/PortfolioController.php';
-//                portfolioController();
-                    break;
-            }
-    }
 
 //    een extra if statement toegevoegd omdat ik anders steeds een undefined array key 'action' error kreeg
 //    wel heb ik in deze if statement ervoor gezorgd dat wanneer het bijvoorbeeld delete is, dat hij een andere pagina moet laden.
 //    dit heb ik zo gedaan omdat er anders 2 paginas over elkaar heen laadde.
 //    Het heeft lang geduurd voordat ik dit heb weten op te lossen.
-
-        if (!empty($_GET['action'])) {
-//        die(var_dump($_GET));
-
-            if ($_GET['action'] == 'save') {
-                require "./views/profile.view.php";
-            } elseif ($_GET['action'] == 'delete') {
-                $title = 'Working with';
-                require "./views/index.view.php";
-            } elseif ($_GET['action'] == 'update') {
-                require "./views/profile.view.php";
-            } elseif ($_GET['action'] == 'view') {
-                require "./views/portfolio.view.php";
-            }
-        } else {
-            require "./views/profile.view.php";
-        }
-
-    }
+//
+//        if (!empty($_GET['action'])) {
+////        die(var_dump($_GET));
+//
+//            if ($_GET['action'] == 'save') {
+//                require "./views/profile.view.php";
+//            } elseif ($_GET['action'] == 'delete') {
+//                $title = 'Working with';
+//                require "./views/index.view.php";
+//            } elseif ($_GET['action'] == 'update') {
+//                require "./views/profile.view.php";
+//            } elseif ($_GET['action'] == 'view') {
+//                require "./views/portfolio.view.php";
+//            }
+//        } else {
+//            require "./views/profile.view.php";
+//        }
+//
+//    }
 
 
     public function delete($id)
-//        include "database.php";
+//        include "Database.php";
     {
         try {
             $sql = "UPDATE posts SET isDeleted = true WHERE id = $id";
@@ -100,7 +126,7 @@ class profileModel extends Database
     {
 //        global $conn;
         if (!empty($_POST['title'])) {
-//            include "database.php";
+//            include "Database.php";
             try {
                 $title = $_POST['title'];
                 $degree = $_POST['degree'];
@@ -127,7 +153,7 @@ class profileModel extends Database
     public function update($id = null)
     {
 //        global $conn;
-//        include "database.php";
+//        include "Database.php";
         $ret = '';
 //        $conn = new Database();
         try {
@@ -151,7 +177,7 @@ class profileModel extends Database
         global $degree;
         global $projects;
         global $lang;
-//        include "database.php";
+//        include "Database.php";
         try {
             $sql = "SELECT Author, Title, Degree, Projects, Languages FROM posts WHERE id = $id";
 //            $conn = new Database();

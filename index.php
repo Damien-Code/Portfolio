@@ -1,45 +1,31 @@
 <?php
-//include "./models/database.php";
-$request = $_SERVER['PATH_INFO'] ?? '/';
+require './controller/RoutesController.php';
+require './controller/UserController.php';
+require './controller/IndexController.php';
+//include "./models/Database.php";
+$routes = require 'routes.php';
 
-switch ($request) {
-//    home page
-    case '/':
-        require 'controller/IndexController.php';
-        indexController();
-        break;
-    //        portfolio page
-    case '/portfolio':
-        require 'controller/PortfolioController.php';
-        portfolioController();
-        break;
-//        login scherm
-// Wanneer je naar de pagina profile gaat, moet je eerst inloggen.
-//Je krijgt eerst een inlog scherm en na het inloggen wordt je verwezen naar de profile pagina
-    case '/login':
-        require 'controller/LoginController.php';
-        LoginController();
-        break;
-//        profile page
-    case '/profile':
-        require 'controller/ProfileController.php';
-        ProfileModel();
-        break;
-//        about page
-    case '/about':
-        require 'controller/AboutController.php';
-        aboutController();
-        break;
-    case '/blog':
-//        blog page
-        require 'controller/BlogController.php';
-        blogController();
-        break;
-//        als de request pagina niet bestaat
-    default:
-        echo 'Error 404';
-}
-//var_dump($_SERVER['REQUEST_URI']);
+$page = $_SERVER['REQUEST_URI'];
+$requestMethod  = $_SERVER['REQUEST_METHOD'];
+$route = '';
+array_key_exists($page, $routes[$requestMethod]) ? $route = $routes[$requestMethod][$page] : '';
+
+$parts = explode('::', $route);
+//die(var_dump($page));
+$controller = explode('controller/', $parts[0]);
+$redirect = new $controller[1];
+$method = $parts[1];
+$redirect->$method();
+
+
+
+
+
+
+
+
+
+
 
 
 
