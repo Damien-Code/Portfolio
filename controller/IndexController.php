@@ -2,6 +2,7 @@
 // functie waar in de controller aanstuur. Die functie call ik in switch statement in index.php.
 // Ook definieer ik een titel die ik in index.view.php echo
 use core\Database;
+include "./models/IndexModel.php";
 class IndexController {
     public function index() {
         //include "./core/Database.php";
@@ -19,6 +20,11 @@ class IndexController {
             echo "Error: " . $e->getMessage();
         }
         $conn = null;
+    }
+    public function view($id='')
+    {
+        $view = new profileModel();
+        $view->view($id);
     }
 }
 

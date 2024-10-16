@@ -8,8 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/RoutesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/RoutesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ProfileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ProfileModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/IndexModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/IndexModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/profile.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.view.php" afterDir="false" />

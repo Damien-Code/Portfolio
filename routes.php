@@ -11,6 +11,7 @@ return [
         '/profile' => 'controller/ProfileController::profile',
         '/update' => 'controller/ProfileController::update',
         '/view' => 'controller/ProfileController::view',
+
 ], 'POST' => [
         '/' => 'controller/IndexController::index',
         '/blog/update' => 'controller/BlogController::update',
@@ -20,5 +21,6 @@ return [
         '/save' => 'controller/ProfileController::save',
         '/update' => 'controller/ProfileController::update',
         '/delete' => 'controller/ProfileController::delete',
+        '/profile' => 'controller/ProfileController::save',
     ]
 ];

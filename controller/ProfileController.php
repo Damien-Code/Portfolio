@@ -5,7 +5,7 @@ include "./models/ProfileModel.php";
 
 class ProfileController
 {
-    public function profile(): profileModel
+    public function profile()
     {
         $title = "My Profile";
         require "./views/profile.view.php";
@@ -27,6 +27,8 @@ class ProfileController
 //function save($id = '')
     public function save($id = '')
     {
+        $title = "My Profile";
+        require "./views/profile.view.php";
         $save = new profileModel();
         $save->save($id);
 
