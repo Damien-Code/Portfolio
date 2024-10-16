@@ -3,8 +3,7 @@
 include "./models/profileModel.php";
 
 class ProfileController {
-
-public function profileModel(): profileModel
+public function profileModel()
 {
     $profileModel = new profileModel();
     $profileModel->ProfileRouter();

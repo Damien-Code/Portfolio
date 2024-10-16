@@ -2,6 +2,9 @@
 require './controller/RoutesController.php';
 require './controller/UserController.php';
 require './controller/IndexController.php';
+require './controller/PortfolioController.php';
+require './controller/BlogController.php';
+require './controller/AboutController.php';
 //include "./models/Database.php";
 $routes = require 'routes.php';
 

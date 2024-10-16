@@ -3,11 +3,11 @@
 return [
     'GET' => [
         '/' => 'controller/IndexController::index',
-        '/about' => 'controller/AboutController::index',
+        '/about' => 'controller/AboutController::about',
 //        '/about/me' => 'controller/AboutController::me',
-        '/blog' => 'controller/RoutesController::blog',
+        '/blog' => 'controller/BlogController::blog',
         '/login' => 'controller/RoutesController::login',
-        '/portfolio' => 'controller/RoutesController::portfolio',
+        '/portfolio' => 'controller/PortfolioController::portfolio',
         '/profile' => 'controller/RoutesController::profile',
         '/update' => 'controller/RoutesController::update',
 ], 'POST' => [
