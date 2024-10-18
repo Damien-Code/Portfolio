@@ -5,7 +5,7 @@ return [
         '/' => 'controller/IndexController::index',
         '/about' => 'controller/AboutController::about',
 //        '/about/me' => 'controller/AboutController::me',
-        '/blog' => 'controller/BlogController::blog',
+        '/blog' => 'controller/BlogController::view',
         '/login' => 'controller/LoginController::login',
         '/portfolio' => 'controller/PortfolioController::portfolio',
         '/profile' => 'controller/ProfileController::profile',

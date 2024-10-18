@@ -1,46 +1,27 @@
 <?php
 // functie waar in de controller aanstuur. Die functie call ik in switch statement in index.php.
 // Ook definieer ik een titel die ik in blog.view.php echo
-use core\Database;
+include './models/BlogModel.php';
 class BlogController
 {
     public function blog(){
-        $title = "Blog";
+        $title = "Blogs";
         require "./views/blog.view.php";
     }
 
-    public function save($id = '')
+    public function save()
     {
-        global $conn;
-        if (!empty($_POST['title'])) {
-            include "Database.php";
-            try {
-                $author = $_POST['author'];
-                $title = $_POST['title'];
-                $post = $_POST['post'];
-                if ($id == '') {
-                    $sql = "INSERT INTO blogs (author, title, post) VALUES ('$author', '$title', '$post')";
-                } else {
-                    $sql = "UPDATE blogs SET title = '$title', post = '$post' WHERE id = '$id'";
-                }
-                $conn->exec($sql);
-                echo "New post created successfully";
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-            }
-        }
+        $title = "Blogs";
+        require "./views/blog.view.php";
+        $save = new BlogModel();
+        $save->save();
     }
 
-    public function delete($id)
-    {
-        include "Database.php";
-        try {
-            $sql = "DELETE FROM blogs WHERE id = '$id'";
-            $conn->exec($sql);
-            echo "Blog deleted successfully";
-
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
+    public function view(){
+        $title = "Blogs";
+        $view = new BlogModel();
+        $posts = $view->view();
+//        die(var_dump($row));
+        require "./views/blog.view.php";
     }
 }

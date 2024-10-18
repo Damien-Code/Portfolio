@@ -9,30 +9,17 @@ require './views/layout/header.php';
         <h2 class="pageTitle"><?php echo $title ?></h2>
         <section class="blogs">
             <?php
-            try {
+                    foreach ($posts as $post) {
+                        echo '<div class="input-div">';
+                        foreach ($post as $key => $value) {
 
-                $conn = new Database();
-                $stmt = $conn->pdo->prepare("SELECT id, author, title, post FROM blogs");
-                $stmt->execute();
-
-                $stmt->setFetchMode(PDO::FETCH_ASSOC);
-                $result = $stmt->fetchAll();
-                return $result;
-                foreach ($result as $row) {
-                    echo '<div class="input-div">';
-                    foreach ($row as $key => $value) {
-
-                        echo "<p>$value</p>";
+                            echo "<p>$value</p>";
 //                        echo '<p>$key["title"]</p>';
 //                        echo '<p>$key["post"]</p>';
+                        }
+                        echo "<a href='/blog?action=delete&id=" . $post['id'] . "'><button>Delete</button></a>";
+                        echo '</div>';
                     }
-                    echo "<a href='/blog?action=delete&id=" . $row['id'] . "'><button>Delete</button></a>";
-                    echo '</div>';
-                }
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-            }
-            $conn = null;
             ?>
         </section>
     </main>
