@@ -5,7 +5,7 @@ return [
         '/' => 'controller/IndexController::index',
         '/about' => 'controller/AboutController::about',
 //        '/about/me' => 'controller/AboutController::me',
-        '/blog' => 'controller/BlogController::view',
+        '/blog' => 'controller/BlogController::blog',
         '/login' => 'controller/LoginController::login',
         '/portfolio' => 'controller/PortfolioController::portfolio',
         '/profile' => 'controller/ProfileController::profile',
@@ -14,10 +14,9 @@ return [
 
 ], 'POST' => [
         '/' => 'controller/IndexController::index',
-        '/blog/update' => 'controller/BlogController::update',
         '/view' => 'controller/ProfileController::view',
+        '/blog/save' => 'controller/BlogController::save',
         '/blog/delete' => 'controller/BlogController::delete',
-
         '/save' => 'controller/ProfileController::save',
         '/delete' => 'controller/ProfileController::delete',
         '/profile' => 'controller/ProfileController::save',

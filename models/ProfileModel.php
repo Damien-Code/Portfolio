@@ -13,6 +13,7 @@ class profileModel extends Database
         $this->conn = new Database();
     }
 
+
     public function delete()
 //        include "Database.php";
     {
@@ -34,28 +35,26 @@ class profileModel extends Database
 
     public function save()
     {
-//            include "Database.php";
-            try {
-                $id = $_POST['id'] ?? '';
-                $title = $_POST['title'];
-                $degree = $_POST['degree'];
-                $author = $_POST['author'];
-                $projects = $_POST['projects'];
-                $lang = $_POST['languages'];
-                if ($id == '') {
-                    $sql = "INSERT INTO posts (Title, Degree, Author, Projects, Languages)
+        try {
+            $id = $_POST['id'] ?? '';
+            $title = $_POST['title'];
+            $degree = $_POST['degree'];
+            $author = $_POST['author'];
+            $projects = $_POST['projects'];
+            $lang = $_POST['languages'];
+            if ($id == '') {
+                $sql = "INSERT INTO posts (Title, Degree, Author, Projects, Languages)
             VALUES ('$title', '$degree', '$author', '$projects', '$lang')";
-                } else {
-                    $sql = "UPDATE posts SET Title = '$title', Degree = '$degree', Author = '$author', Projects = '$projects', Languages = '$lang' WHERE id = $id";
-                }
-//                $conn = new Database();
-                $this->conn->pdo->exec($sql);
-                echo "New record created successfully";
-
-            } catch (PDOException $e) {
-                echo $sql . "<br>" . $e->getMessage();
+            } else {
+                $sql = "UPDATE posts SET Title = '$title', Degree = '$degree', Author = '$author', Projects = '$projects', Languages = '$lang' WHERE id = $id";
             }
+            $this->conn->pdo->exec($sql);
+            echo "New record created successfully";
+
+        } catch (PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
         }
+    }
 
 
     public function update()
@@ -81,35 +80,16 @@ class profileModel extends Database
     public function view()
     {
         $id = $_GET['id'];
-//        global $conn;
-//        global $author;
-//        global $title;
-//        global $degree;
-//        global $projects;
-//        global $lang;
-//        include "Database.php";
         try {
             $sql = "SELECT Author, Title, Degree, Projects, Languages FROM Posts WHERE id = $id";
-//            $conn = new Database();
             $stmt = $this->conn->pdo->prepare($sql);
             $stmt->execute();
             $ret = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $row = $stmt->fetch();
-//            foreach ($stmt->fetchAll() as $row) {
-//                foreach ($row as $key => $value) {
-//                }
-//            }
-//        implode('', $row);
-//            $author = $row['Author'];
-//            $title = $row['Title'];
-//            $degree = $row['Degree'];
-//            $projects = $row['Projects'];
-//            $lang = $row['Languages'];
-//
+
             return $row;
         } catch (PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
     }
 }
-

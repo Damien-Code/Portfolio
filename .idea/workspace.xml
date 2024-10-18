@@ -7,6 +7,8 @@
     <list default="true" id="d558ce59-cfb0-4a08-9be3-f1310458456c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/BlogModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BlogModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/ProfileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ProfileModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />

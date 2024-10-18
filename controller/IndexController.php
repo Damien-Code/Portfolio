@@ -21,10 +21,5 @@ class IndexController {
         }
         $conn = null;
     }
-    public function view($id='')
-    {
-        $view = new profileModel();
-        $view->view($id);
-    }
 }
 

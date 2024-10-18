@@ -32,7 +32,6 @@ class ProfileController
         require "./views/profile.view.php";
         $save = new profileModel();
         $save->save();
-
     }
 //een functie waarbij ik de ingevoerde waardes zou kunnen updaten.
 //wel wil ik maar 1 gekozen id updated en niet alle. Daarom gebruik ik WHERE id = $id
