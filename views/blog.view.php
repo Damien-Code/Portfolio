@@ -1,4 +1,7 @@
 <?php
+
+use core\Database;
+
 require './views/layout/header.php';
 ?>
     <main class="main" id="blogpage">
@@ -7,12 +10,15 @@ require './views/layout/header.php';
         <section class="blogs">
             <?php
             try {
-                include "./models/database.php";
-                $stmt = $conn->prepare("SELECT id, author, title, post FROM blogs");
+
+                $conn = new Database();
+                $stmt = $conn->pdo->prepare("SELECT id, author, title, post FROM blogs");
                 $stmt->execute();
 
-                $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-                foreach ($stmt->fetchAll() as $row) {
+                $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                $result = $stmt->fetchAll();
+                return $result;
+                foreach ($result as $row) {
                     echo '<div class="input-div">';
                     foreach ($row as $key => $value) {
 

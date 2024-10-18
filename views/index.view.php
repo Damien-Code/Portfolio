@@ -19,36 +19,20 @@ require './views/layout/header.php';
                     <th colspan="3">Go to profile:</th>
                 </tr>
                 <?php
-//                $servername = "localhost";
-//                $username = "root";
-//                $password = "root";
-//                $dbname = "pa";
-                try {
 //                    oude code bijgewerkt en heb de connectie met de server toegevoegd met include
 //                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 //                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    include "./models/database.php";
-                    $stmt = $conn->prepare("SELECT id, Author, Title, Degree, Projects, Languages FROM Posts");
-                    $stmt->execute();
-
-                    // set the resulting array to associative
-                    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-                    foreach ($stmt->fetchAll() as $row) {
+                    foreach ($data as $row) {
                         echo "<tr>";
                         foreach ($row as $key => $value) {
                             echo "<td>$value</td>";
                         }
 //                        echo "<td>$value</td>";
-                        echo "<td><a href='/profile?action=update&id=". $row['id']."'><button>Update</button></a></td>";
-                        echo "<td><a href='/profile?action=delete&id=". $row['id']."'><button>Delete</button></a></td>";
-                        echo "<td><a href='/portfolio?action=view&id=". $row['id']."'><button>View</button></a></td>";
+                        echo "<td><form action='/profile/update' method='get'><input name='action' value='update' hidden><input name='id' value=".$row['id']." hidden><button type='submit'>Update</button></form></td>";
+                        echo "<td><form action='/delete' method='post'><input name='delete' value='delete' hidden><input name='id' value=".$row['id']." hidden><button type='submit'>Delete</button></form></td>";
+                        echo "<td><form action='/portfolio/view' method='get'><input name='action' value='view' hidden><input name='id' value=".$row['id']." hidden><button type='submit'>View</button></form></td>";
                         echo "</tr>\n";
                     }
-
-                } catch (PDOException $e) {
-                    echo "Error: " . $e->getMessage();
-                }
-                $conn = null;
                 ?>
             </table>
         </section>
@@ -56,7 +40,7 @@ require './views/layout/header.php';
     <!--            Aside           -->
     <aside class="aside-work">
         <!--fotos van recente projecten met animate on scroll of een knop dat je kan switchen tussen fotos-->
-        <img src="./asset/login.pic.png" alt="Login picture" class="login-pic">
+        <img src="../asset/login.pic.png" alt="Login picture" class="login-pic">
 
     </aside>
     <!--            Footer          -->

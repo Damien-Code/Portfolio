@@ -1,46 +1,26 @@
 <?php
-$defaultUser = '';
-switch ($_SERVER['PATH_INFO'] ?? '/') {
-//    home page
-    case '/':
-        require 'controller/IndexController.php';
-        indexController();
-        break;
-    //        portfolio page
-    case '/portfolio':
-        require 'controller/PortfolioController.php';
-        portfolioController();
+require './controller/UserController.php';
+require './controller/IndexController.php';
+require './controller/PortfolioController.php';
+require './controller/BlogController.php';
+require './controller/AboutController.php';
+require './controller/ProfileController.php';
+require './controller/LoginController.php';
+//include "./models/Database.php";
+$routes = require 'routes.php';
 
-        break;
-//        login scherm
-// Wanneer je naar de pagina profile gaat, moet je eerst inloggen.
-//Je krijgt eerst een inlog scherm en na het inloggen wordt je verwezen naar de profile pagina
-    case '/login':
-        require 'controller/LoginController.php';
-        LoginController();
-        break;
-//        process page
-    case '/profile':
-        require 'controller/ProfileController.php';
-        $profile = new ProfileController();
-        $profile->ProfileController();
-        break;
-//        about page
-    case '/about':
-        require 'controller/AboutController.php';
-        aboutController();
-        break;
-    case '/blog':
-//        blog page
-        require 'controller/BlogController.php';
-        blogController();
-        break;
-//        als de request pagina niet bestaat
-    default:
-        echo 'Error 404';
-}
-//var_dump($_SERVER['REQUEST_URI']);
+//$page = $_SERVER['REQUEST_URI'];
+$page = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$requestMethod  = $_SERVER['REQUEST_METHOD'];
+$route = '';
+array_key_exists($page, $routes[$requestMethod]) ? $route = $routes[$requestMethod][$page] : '';
 
+$parts = explode('::', $route);
+//die(var_dump($page));
+$controller = explode('controller/', $parts[0]);
+$redirect = new $controller[1];
+$method = $parts[1];
+$redirect->$method();
 
 
 

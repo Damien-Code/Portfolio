@@ -1,108 +1,69 @@
 <?php
 // functie waar in de controller aanstuur. Die functie call ik in switch statement in index.php.
-include "./models/profileModel.php";
+include "./models/ProfileModel.php";
+
 
 class ProfileController
 {
-        public $author;
-        public $title;
-        public $degree;
-        public $projects;
-        public $lang;
-    public function ProfileController()
+    public function profile()
     {
-//    Deze variabelen moet ik hier en in de view functie aangeven met global.
-//    Ik wil deze variabelen gebruiken zodat de portfolio pagina zich aanpast naar de userID
-        die(var_dump($_SERVER));
-        $data = '';
-        $pagetitle = "My Profile";
-        $author = $this->author;
-        $title = $this->title;
-        $degree = $this->degree;
-        $projects = $this->projects;
-        $lang = $this->lang;
-//    hier call ik de functies die ik in deze file definieer
-        if (!empty($_GET['action'])) {
+        $title = "My Profile";
+        require "./views/profile.view.php";
+//    $profileModel = new profileModel();
+//    $profileModel->ProfileRouter();
+//    return $profileModel;
+    }
 
-            switch ($_GET['action']) {
-                case 'save':
-                    save($_POST['id']);
-                    break;
-                case 'delete':
-                    delete($_GET['id']);
-                    break;
-                case 'update':
-                    $data = $this->update($_GET['id']);
-                    break;
-                case 'view':
-                    $res = $this->view($_GET['id']);
-//                    die(var_dump($res));
-//                    require 'controller/PortfolioController.php';
-//                portfolioController();
-                    break;
-            }
-
-        }
-
-//    een extra if statement toegevoegd omdat ik anders steeds een undefined array key 'action' error kreeg
-//    wel heb ik in deze if statement ervoor gezorgd dat wanneer het bijvoorbeeld delete is, dat hij een andere pagina moet laden.
-//    dit heb ik zo gedaan omdat er anders 2 paginas over elkaar heen laadde.
-//    Het heeft lang geduurd voordat ik dit heb weten op te lossen.
-//
-//        if (!empty($_GET['action'])) {
-////        die(var_dump($_GET));
-//
-//            if ($_GET['action'] == 'save') {
-//                require "./views/profile.view.php";
-//            } elseif ($_GET['action'] == 'delete') {
-//                $title = 'Working with';
-//                require "./views/index.view.php";
-//            } elseif ($_GET['action'] == 'update') {
-//                require "./views/profile.view.php";
-//            } elseif ($_GET['action'] == 'view') {
-//                require "./views/portfolio.view.php";
-//            }
-//        } else {
-            require "./views/profile.view.php";
-        }
-
-//    }
-
-
-    public function delete($id)
+//een functie waarbij ik waardes uit de database kan verwijderen.
+//Ik moet wel de "Database.php" includen omdat er anders geen connectie gemaakt wordt met de database.
+    public function delete()
     {
         $delete = new profileModel();
-        $delete->delete($id);
-
+        $delete->delete();
+        header("Location: /");
     }
 
 
-    public function save($id = '')
+//een functie waarbij ik ingevoerde waardes in een form kan toevoegen aan de database.
+//function save($id = '')
+    public function save()
     {
+        $title = "My Profile";
+        require "./views/profile.view.php";
         $save = new profileModel();
-        $save->save($id);
+        $save->save();
 
     }
+//een functie waarbij ik de ingevoerde waardes zou kunnen updaten.
+//wel wil ik maar 1 gekozen id updated en niet alle. Daarom gebruik ik WHERE id = $id
 
 
-    public function update($id = null)
+    public function update()
     {
+
         $update = new profileModel();
-        return $update->update($id);
+        $data = $update->update();
+        $title = "My Profile";
+        include './views/profile.view.php';
     }
 
+//een functie waarbij ik er voor heb gezorgd dat je een portfolio kunt bekijken.
+//Ik wilde wel dat ik waardes van een id gelijk stelde aan een variabel zodat ik deze kan gebruiken op de portfolio pagina
+//door middel van global is het mij uiteindelijk gelukt om deze waardes uit deze functie te halen
+//ik roep deze variabelen in de profile functie aan zodat deze variabelen te zien zijn via de gekozen portfolio
+//anders is de portfolio pagina ingeladen met mijn eigen waardes die ik weer in PortfolioController aanroep.
 
-    public function view($id)
+    public function view()
     {
         $view = new profileModel();
-        $res = $view->view($id);
-        return $res[0];
-//    foreach ($stmt as $row) {
-//        $author = $row['Author'];
-//        $title = $row['Title'];
-//        $degree = $row['Degree'];
-//        $projects = $row['Projects'];
-//        $lang = $row['Languages'];
-    //}
+        $row = $view->view();
+
+        $author = $row['Author'];
+        $title = $row['Title'];
+        $degree = $row['Degree'];
+        $projects = $row['Projects'];
+        $lang = $row['Languages'];
+
+        include './views/portfolio.view.php';
     }
 }
