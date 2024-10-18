@@ -25,7 +25,7 @@ require './views/layout/header.php';
             <p><?php echo $projects ?></p>
         </section>
         <section class="home-section">
-            <img src="./asset/profielfoto.jpeg" alt="Profile picture" class="profilePic">
+            <img src="/asset/profielfoto.jpeg" alt="Profile picture" class="profilePic">
             <a href="/about" class="portfolio-button">
                 <button>About me!</button>
             </a>
