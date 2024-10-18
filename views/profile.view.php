@@ -28,7 +28,7 @@ require './views/layout/header.php';
     <!--            Aside           -->
     <aside class="profile-aside">
 <!--       Profielfoto van gebruiker die je kan aanpassen-->
-        <img src="./asset/login.pic.png" alt="Profile picture" class="login-pic">
+        <img src="/asset/login.pic.png" alt="Profile picture" class="login-pic">
         <button>Choose new picture</button>
 
     </aside>

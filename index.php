@@ -1,5 +1,4 @@
 <?php
-require './controller/RoutesController.php';
 require './controller/UserController.php';
 require './controller/IndexController.php';
 require './controller/PortfolioController.php';
@@ -10,7 +9,8 @@ require './controller/LoginController.php';
 //include "./models/Database.php";
 $routes = require 'routes.php';
 
-$page = $_SERVER['REQUEST_URI'];
+//$page = $_SERVER['REQUEST_URI'];
+$page = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $requestMethod  = $_SERVER['REQUEST_METHOD'];
 $route = '';
 array_key_exists($page, $routes[$requestMethod]) ? $route = $routes[$requestMethod][$page] : '';

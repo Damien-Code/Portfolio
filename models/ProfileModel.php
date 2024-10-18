@@ -77,8 +77,6 @@ class profileModel extends Database
 //                case 'view':
 //                    view($_GET['id']);
 //
-////                require 'controller/PortfolioController.php';
-////                portfolioController();
 //                    break;
 //            }
 
@@ -108,9 +106,14 @@ class profileModel extends Database
 //    }
 
 
-    public function delete($id)
+    public function delete()
 //        include "Database.php";
     {
+        if (isset($_POST['id'])) {
+            $id = $_POST['id'];
+        } else {
+            return false;
+        }
         try {
             $sql = "UPDATE posts SET isDeleted = true WHERE id = $id";
 //            $conn = new Database();
@@ -122,10 +125,11 @@ class profileModel extends Database
     }
 
 
-    public function save($id = '')
+    public function save()
     {
 //            include "Database.php";
             try {
+                $id = $_POST['id'] ?? '';
                 $title = $_POST['title'];
                 $degree = $_POST['degree'];
                 $author = $_POST['author'];
@@ -147,11 +151,12 @@ class profileModel extends Database
         }
 
 
-    public function update($id = null)
+    public function update()
     {
 //        global $conn;
 //        include "Database.php";
         $ret = '';
+        $id = $_GET['id'];
 //        $conn = new Database();
         try {
             $sql = "SELECT * FROM posts WHERE id = $id";
@@ -166,14 +171,15 @@ class profileModel extends Database
     }
 
 
-    public function view($id = null)
+    public function view()
     {
+        $id = $_GET['id'];
 //        global $conn;
-        global $author;
-        global $title;
-        global $degree;
-        global $projects;
-        global $lang;
+//        global $author;
+//        global $title;
+//        global $degree;
+//        global $projects;
+//        global $lang;
 //        include "Database.php";
         try {
             $sql = "SELECT Author, Title, Degree, Projects, Languages FROM Posts WHERE id = $id";
@@ -181,17 +187,19 @@ class profileModel extends Database
             $stmt = $this->conn->pdo->prepare($sql);
             $stmt->execute();
             $ret = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-            foreach ($stmt->fetchAll() as $row) {
-                foreach ($row as $key => $value) {
-                }
-            }
+            $row = $stmt->fetch();
+//            foreach ($stmt->fetchAll() as $row) {
+//                foreach ($row as $key => $value) {
+//                }
+//            }
 //        implode('', $row);
-            $author = $row['Author'];
-            $title = $row['Title'];
-            $degree = $row['Degree'];
-            $projects = $row['Projects'];
-            $lang = $row['Languages'];
-
+//            $author = $row['Author'];
+//            $title = $row['Title'];
+//            $degree = $row['Degree'];
+//            $projects = $row['Projects'];
+//            $lang = $row['Languages'];
+//
+            return $row;
         } catch (PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }

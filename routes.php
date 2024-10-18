@@ -9,17 +9,16 @@ return [
         '/login' => 'controller/LoginController::login',
         '/portfolio' => 'controller/PortfolioController::portfolio',
         '/profile' => 'controller/ProfileController::profile',
-        '/update' => 'controller/ProfileController::update',
-        '/view' => 'controller/ProfileController::view',
+        '/portfolio/view' => 'controller/ProfileController::view',
+        '/profile/update' => 'controller/ProfileController::update',
 
 ], 'POST' => [
         '/' => 'controller/IndexController::index',
         '/blog/update' => 'controller/BlogController::update',
         '/view' => 'controller/ProfileController::view',
         '/blog/delete' => 'controller/BlogController::delete',
-        '/portfolio' => 'controller/RoutesController::portfolio',
+
         '/save' => 'controller/ProfileController::save',
-        '/update' => 'controller/ProfileController::update',
         '/delete' => 'controller/ProfileController::delete',
         '/profile' => 'controller/ProfileController::save',
     ]

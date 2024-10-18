@@ -16,31 +16,35 @@ class ProfileController
 
 //een functie waarbij ik waardes uit de database kan verwijderen.
 //Ik moet wel de "Database.php" includen omdat er anders geen connectie gemaakt wordt met de database.
-    public function delete($id='')
+    public function delete()
     {
         $delete = new profileModel();
-        $delete->delete($id);
+        $delete->delete();
+        header("Location: /");
     }
 
 
 //een functie waarbij ik ingevoerde waardes in een form kan toevoegen aan de database.
 //function save($id = '')
-    public function save($id = '')
+    public function save()
     {
         $title = "My Profile";
         require "./views/profile.view.php";
         $save = new profileModel();
-        $save->save($id);
+        $save->save();
 
     }
 //een functie waarbij ik de ingevoerde waardes zou kunnen updaten.
 //wel wil ik maar 1 gekozen id updated en niet alle. Daarom gebruik ik WHERE id = $id
 
 
-    public function update($id = null)
+    public function update()
     {
+
         $update = new profileModel();
-        return $update->update($id);
+        $data = $update->update();
+        $title = "My Profile";
+        include './views/profile.view.php';
     }
 
 //een functie waarbij ik er voor heb gezorgd dat je een portfolio kunt bekijken.
@@ -49,9 +53,17 @@ class ProfileController
 //ik roep deze variabelen in de profile functie aan zodat deze variabelen te zien zijn via de gekozen portfolio
 //anders is de portfolio pagina ingeladen met mijn eigen waardes die ik weer in PortfolioController aanroep.
 
-    public function view($id='')
+    public function view()
     {
         $view = new profileModel();
-        $view->view($id);
+        $row = $view->view();
+
+        $author = $row['Author'];
+        $title = $row['Title'];
+        $degree = $row['Degree'];
+        $projects = $row['Projects'];
+        $lang = $row['Languages'];
+
+        include './views/portfolio.view.php';
     }
 }
