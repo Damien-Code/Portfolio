@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Damiën</title>
 <!--    favicon ingeladen-->
-    <link rel="icon" type="image/x-icon" href="/asset/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./asset/favicon.png">
     <meta name="author" content="Damiën van den IJssel">
 <!--    font ingeladen-->
     <link rel="stylesheet" href="/views/css/style.css">

@@ -13,8 +13,8 @@ require './views/layout/header.php';
 //                        echo '<p>$key["title"]</p>';
 //                        echo '<p>$key["post"]</p>';
                 }
-                echo "<form action='blog/delete' method='post'><input name='action' value='delete' hidden><input name='id' value=" . $post['id'] . " hidden><button type='submit'>Delete</button></a>";
-                echo '</div>';
+                echo "<form action='/blog/delete' method='post'><input name='action' value='delete' hidden><input name='id' value=" . $post['id'] . " hidden><button type='submit'>Delete</button></a>";
+                echo "</div>\n";
             }
             ?>
         </section>
