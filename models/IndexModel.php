@@ -1,6 +1,6 @@
 <?php
 use \core\Database;
-include_once "./core/Database.php";
+//include_once "./core/Database.php";
 class IndexModel
 {
 //    public function update($id = null)

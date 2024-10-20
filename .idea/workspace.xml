@@ -10,9 +10,11 @@
       <change beforePath="$PROJECT_DIR$/controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/BlogModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BlogModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/IndexModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/IndexModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/ProfileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ProfileModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/blog.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/blog.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

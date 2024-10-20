@@ -13,7 +13,7 @@ return [
         '/profile/update' => 'controller/ProfileController::update',
 
 ], 'POST' => [
-        '/' => 'controller/IndexController::index',
+//        '/' => 'controller/IndexController::index',
         '/view' => 'controller/ProfileController::view',
         '/blog/save' => 'controller/BlogController::save',
         '/blog/delete' => 'controller/BlogController::delete',

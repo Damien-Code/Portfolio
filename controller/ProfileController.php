@@ -62,7 +62,6 @@ class ProfileController
         $degree = $row['Degree'];
         $projects = $row['Projects'];
         $lang = $row['Languages'];
-
         include './views/portfolio.view.php';
     }
 }

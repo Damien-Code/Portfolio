@@ -10,47 +10,52 @@ class BlogModel extends Database
     {
         $this->conn = new Database();
     }
+    public function blog() {
+        try {
+            $conn = new Database();
+            $stmt = $conn->pdo->prepare("SELECT id, author, title, post FROM blogs");
+            $stmt->execute();
+            // set the resulting array to associative
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $posts = $stmt->fetchAll();
+            return $posts;
 
-    public function view()
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+    public function save()
     {
         try {
-            $stmt = $this->conn->pdo->prepare("SELECT id, author, title, post FROM blogs");
-            $stmt->execute();
-            $stmt->setFetchMode(PDO::FETCH_ASSOC);
-            $result = $stmt->fetch();
-            return $result;
+            $id = $_POST['id'] ?? '';
+            $author = $_POST['author'];
+            $title = $_POST['title'];
+            $post = $_POST['post'];
+            if ($id == '') {
+                $sql = "INSERT INTO blogs (author, title, post) VALUES ('$author', '$title', '$post')";
+            } else {
+                $sql = "UPDATE blogs SET title = '$title', post = '$post' WHERE id = '$id'";
+            }
+            $this->conn->pdo->exec($sql);
+            echo "New post created successfully";
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
     }
 
-    public function save()
+    public function delete()
     {
-        $id = $_POST['id'] ?? '';
-
-            try {
-                $author = $_POST['author'];
-                $title = $_POST['title'];
-                $post = $_POST['post'];
-                if ($id == '') {
-                    $sql = "INSERT INTO blogs (author, title, post) VALUES ('$author', '$title', '$post')";
-                } else {
-                    $sql = "UPDATE blogs SET title = '$title', post = '$post' WHERE id = '$id'";
-                }
-                $this->conn->pdo->exec($sql);
-                echo "New post created successfully";
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-            }
+        if (isset($_POST['id'])) {
+            $id = $_POST['id'];
+        } else {
+            return false;
         }
-
-        public function delete(){
-        $id = $_POST['id'];
-            try {
-                $sql = "DELETE FROM blogs WHERE id = '$id'";
-                return $this->conn->pdo->exec($sql);
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-            }
+        try {
+            $sql = "DELETE FROM blogs WHERE id = '$id'";
+            return $this->conn->pdo->exec($sql);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
         }
+    }
+
 }

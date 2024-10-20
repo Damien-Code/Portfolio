@@ -5,7 +5,6 @@ use core\Database;
 include "./models/IndexModel.php";
 class IndexController {
     public function index() {
-        //include "./core/Database.php";
         $title = 'Working with';
         try {
             $conn = new Database();

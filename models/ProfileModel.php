@@ -52,7 +52,7 @@ class profileModel extends Database
             echo "New record created successfully";
 
         } catch (PDOException $e) {
-            echo $sql . "<br>" . $e->getMessage();
+            echo $e->getMessage();
         }
     }
 
