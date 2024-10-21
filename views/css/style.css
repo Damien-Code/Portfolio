@@ -284,13 +284,6 @@ footer {
 
 /*Layout main van de pagina's portfolio, my profile, about en blog*/
 
-
-.blogs button {
-    width: 100%;
-    height: 1.5em;
-    font-size: 20px;
-}
-
 /*Titel van de pagina's about, work en process*/
 .pageTitle {
     font-size: 6vw;
@@ -319,10 +312,11 @@ footer {
 /*Rock, paper and scissors spel*/
 /*Layout aside about*/
 .about-text {
-    height: 80%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    height: 80%;
+    margin-top: 20px;
 }
 #asideGame {
     display: flex;
@@ -371,15 +365,14 @@ footer {
     font-family: "Instrument Serif", serif;
 }
 
-/*max-height aangeven anders worden de blogs heel groot en is de website niet verhouding*/
+/*max-height aangeven inplaats van height anders worden de blogs heel groot en is de website niet verhouding*/
 .blogs {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     width: 90%;
-    height: 75%;
+    max-height: 55vh;
     margin-top: 20px;
-    /*width: 100%;*/
     flex-wrap: wrap;
     overflow-y: scroll;
 }
@@ -392,6 +385,10 @@ footer {
     margin-bottom: 5%;
     padding: 1rem;
     background-color: aliceblue;
+}
+.blogs button {
+    width: 100%;
+    font-size: 20px;
 }
 
 /*Titel van de aside blog*/
@@ -469,7 +466,6 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     width: 60%;
-
 }
 
 /*omdat de button de child is van a moet ik eerst a een width geven om daarna*/
