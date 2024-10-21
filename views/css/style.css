@@ -46,6 +46,8 @@ header {
     text-decoration: none;
     font-size: larger;
 }
+
+/*styling voor de navbar*/
 nav {
     background-color: white;
     padding-right: 20px;
