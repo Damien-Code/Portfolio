@@ -150,6 +150,10 @@ a {
     border: white 1px solid;
 }
 
+.dark-mode nav {
+    background-color: black;
+}
+
 /*Layout main*/
 
 main {
@@ -235,6 +239,7 @@ th {
 td {
     background-color: aliceblue;
 }
+
 
 /*Layout aside*/
 /*Hier moet ik nog even kijken hoe dit ik mooier kan maken*/
@@ -527,9 +532,6 @@ button:hover {
     }
 }
 
-@media screen and (max-width: 872) {
-
-}
 
 @media screen and (max-width: 740px ) {
     body {
@@ -541,10 +543,15 @@ button:hover {
                       "footer" 0.1fr
     / 1fr;
     }
+    /*height definieren voor header, kom ik onder de 740px dan wordt de header heel klein*/
+    header {
+        height: 10vh;
+    }
 
     main {
         padding: 5%;
     }
+
     #main-portfolio {
         height: 35vh;
     }
@@ -575,9 +582,9 @@ button:hover {
     body {
         display: grid;
         grid-template:
-                      "header" 0.1fr
+                      "header" 0.2fr
                       "main" 0.2fr
-                      "aside" 0.6fr
+                      "aside" 0.5fr
                       "footer" 0.1fr
     / 1fr;
     }
