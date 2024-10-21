@@ -57,9 +57,7 @@ nav ul {
     justify-content: flex-end;
     align-items: center;
 }
-nav li {
-    height: 50px;
-}
+
 nav a {
     height: 100%;
     padding: 0 30px;
@@ -75,10 +73,12 @@ a {
     font-size: 20px;
 }
 /*Underline weggehaald want ik wil graag dat hij bij hover het juist laat zien*/
-nav a:hover {
+ a:hover {
     text-decoration: underline;
 }
-
+ nav button {
+     font-size: 20px;
+ }
 .sidebar {
     position: fixed;
     top: 0;
@@ -96,6 +96,7 @@ nav a:hover {
 
 .sidebar li {
     width: 100%;
+    height: 50px;
 }
 .sidebar a {
     width: 100%;
@@ -303,7 +304,6 @@ footer {
     padding: 0 20px 0 20px;
     border-top: black solid 1px;
 }
-
 /*Layout main van de pagina's portfolio, my profile, about en blog*/
 
 /*Titel van de pagina's about, work en process*/
