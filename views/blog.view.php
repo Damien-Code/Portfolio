@@ -14,8 +14,9 @@ require './views/layout/header.php';
                         <?php
                         foreach ($post as $key => $value) {
                             echo "<p>$value</p>";
-        //                        echo '<p>$key["title"]</p>';
-        //                        echo '<p>$key["post"]</p>';
+
+//                                echo '<p>$value["title"]</p>';
+//                                echo '<p>$value["post"]</p>';
                         }
                         ?>
                     </div>
@@ -37,11 +38,11 @@ require './views/layout/header.php';
         <form method="post" class="blog-form" action="/blog/save">
             <input type="hidden" id="id" name="id">
             <label for="author">Author:</label>
-            <input type="text" id="author" name="author">
+            <input type="text" id="author" name="author" required>
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title">
+            <input type="text" id="title" name="title" required>
             <label for="post">Content:</label>
-            <input type="text" id="post" name="post">
+            <input type="text" id="post" name="post" required>
             <button type="submit">Add</button>
         </form>
     </aside>
