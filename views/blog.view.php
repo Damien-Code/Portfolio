@@ -34,7 +34,7 @@ require './views/layout/header.php';
         <section>
             <p class="blog-title">What's on your mind?</p>
         </section>
-        <form method="post" class="blog-form" action="/blog/save">
+        <form method="post" class="blog-form" action="/save">
             <input type="hidden" id="id" name="id">
             <label for="author">Author:</label>
             <input type="text" id="author" name="author">
@@ -44,7 +44,6 @@ require './views/layout/header.php';
             <input type="text" id="post" name="post">
             <button type="submit">Add</button>
         </form>
-
     </aside>
 <?php
 require './views/layout/footer.php';
