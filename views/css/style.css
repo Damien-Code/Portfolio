@@ -34,10 +34,8 @@ header {
 
 /*Layout links*/
 /*Een width van 60% gegeven zodat de links genoeg ruimte hebben.*/
-.linkTo {
-    display: flex;
-    justify-content: space-evenly;
-}
+
+
 
 /*Transition hier gedefinieerd zodat wanneer je pointer er niet meer overheen hovert hij ook een transition heeft */
 #headerTitle {
@@ -50,6 +48,7 @@ header {
 }
 nav {
     background-color: white;
+    padding-right: 20px;
 }
 nav ul {
     width: 100%;
@@ -86,7 +85,7 @@ nav a:hover {
     right: 0;
     height: 100vh;
     width: 250px;
-    z-index: 999;
+    z-index: 1;
     background-color: lightsteelblue;
     border-left: black 3px solid;
     display: none;
@@ -108,23 +107,6 @@ nav a:hover {
 
 .hideOnFullscreen {
     display: none;
-}
-
-/*Opmaak van de darkmode button*/
-#button {
-    background-color: lightsteelblue;
-    border: black solid 1px;
-    padding: 5px;
-}
-
-#button:hover {
-    background-color: steelblue;
-
-}
-
-#button:active {
-    background-color: midnightblue;
-    color: white;
 }
 
 /*Hier geef ik aan wat er moet gebeuren nadat mijn JS darkmode functie wordt uitgevoerd.*/
@@ -227,14 +209,7 @@ main {
     margin-top: 20px;
 }
 
-.profile-description {
-    width: 100%;
-}
-
-.profile-description tr {
-    height: 5rem;
-}
-
+/*styling van de table en de data*/
 table, th, td {
     border: black 1px solid;
     border-collapse: collapse;
@@ -244,6 +219,10 @@ table, th, td {
 /*om de th sticky te maken moet ik eerst de table als relative definieren*/
 table {
     position: relative;
+    width: 100%;
+}
+table tr {
+    height: 5rem;
 }
 
 th {
@@ -255,8 +234,6 @@ th {
 td {
     background-color: aliceblue;
 }
-
-
 
 /*Layout aside*/
 /*Hier moet ik nog even kijken hoe dit ik mooier kan maken*/
@@ -271,10 +248,9 @@ aside {
     border-left: black solid 1px;
     font-size: 20px;
     padding: 5%;
-
 }
 
-/*Profielfoto*/
+/*Profielfoto op de portfolio pagina*/
 .profilePic {
     height: auto;
     width: 40%;
@@ -284,10 +260,7 @@ aside {
     border: 1px solid black;
 }
 
-.portfolio-button button {
-    background-color: lightsteelblue;
-}
-
+/*Een hover effect voor de profielfoto op de portfolio pagina*/
 .profilePic:hover {
     transform: scale(1.15);
 }
@@ -304,10 +277,10 @@ aside {
     align-items: end;
 }
 
+/*Wel oude styling weghalen anders wordt je button nooit blauw :)*/
 .home-section button {
     height: 3rem;
-    background: white;
-    border: black 1px solid;
+    font-size: 20px;
 }
 
 /*De tekst boven de variabelen op de portfolio pagina*/
@@ -367,6 +340,7 @@ footer {
     height: 80%;
     margin-top: 20px;
 }
+
 #asideGame {
     display: flex;
     justify-content: start;
@@ -387,18 +361,11 @@ footer {
     font-family: "Instrument Serif", serif;
 }
 
-/*Spel button*/
+
+/*Veel code verwijderd hier omdat ik dit dus nu een button in het algemeen stijl, alleen deze regel is specifiek voor deze knop*/
 .buttonGame {
     width: 25%;
-    height: 30px;
-    border: black solid 1px;
-    font-family: "Instrument Serif", serif;
     font-size: 20px;
-    background-color: lightsteelblue;
-}
-
-.buttonGame:hover {
-    background-color: steelblue;
 }
 
 .profile-aside {
@@ -411,7 +378,6 @@ footer {
 .profile-aside button {
     margin-top: 25%;
     font-size: 20px;
-    font-family: "Instrument Serif", serif;
 }
 
 /*max-height aangeven inplaats van height anders worden de blogs heel groot en is de website niet verhouding*/
@@ -437,7 +403,6 @@ footer {
 }
 .blogs button {
     width: 100%;
-    font-size: 20px;
 }
 
 /*Titel van de aside blog*/
@@ -463,6 +428,9 @@ footer {
 .blog-form #post {
     height: 20vh;
     margin-bottom: 5%;
+}
+.blog-form button {
+    font-size: 20px;
 }
 
 
@@ -555,12 +523,11 @@ button:hover {
         display: none;
     }
     .hideOnFullscreen {
-        display: flex;
+        display: block;
     }
 }
 
 @media screen and (max-width: 872) {
-
 
 }
 
@@ -684,5 +651,8 @@ button:hover {
     }
     .input-div {
         width: 70vw;
+    }
+    .sidebar {
+        width: 100%;
     }
 }

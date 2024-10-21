@@ -8,7 +8,8 @@ require './views/layout/header.php';
         <h2 class="pageTitle"><?php echo $title ?></h2>
         <!--            Main text        -->
         <section class ="table-container">
-            <table class="profile-description">
+<!--            Eerst had ik de table nog een class gegeven. Nu verwijderd voor minder herhalende code-->
+            <table>
                 <tr>
                     <th>ID:</th>
                     <th>Author:</th>
@@ -38,10 +39,9 @@ require './views/layout/header.php';
         </section>
     </main>
     <!--            Aside           -->
-    <aside class="aside-work">
+    <aside>
         <!--fotos van recente projecten met animate on scroll of een knop dat je kan switchen tussen fotos-->
         <img src="../asset/login.pic.png" alt="Login picture" class="login-pic">
-
     </aside>
     <!--            Footer          -->
 <?php
