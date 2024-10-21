@@ -3,18 +3,29 @@ require './views/layout/header.php';
 ?>
     <main class="main" id="blogpage">
         <!--        echo de titel die ik in de controller definieer-->
-        <h2 class="pageTitle"><?php echo $title ?></h2>
+        <section>
+            <h2 class="pageTitle"><?php echo $title ?></h2>
+        </section>
         <section class="blogs">
             <?php
-            foreach ($posts as $post) {
-                echo '<div class="input-div">';
-                foreach ($post as $key => $value) {
-                    echo "<p>$value</p>";
-//                        echo '<p>$key["title"]</p>';
-//                        echo '<p>$key["post"]</p>';
-                }
-                echo "<form action='/blog/delete' method='post'><input name='action' value='delete' hidden><input name='id' value=" . $post['id'] . " hidden><button type='submit'>Delete</button></a>";
-                echo "</div>\n";
+            foreach ($posts as $post) { ?>
+                <div class="input-div">
+                    <div class="input-list">
+                        <?php
+                        foreach ($post as $key => $value) {
+                            echo "<p>$value</p>";
+        //                        echo '<p>$key["title"]</p>';
+        //                        echo '<p>$key["post"]</p>';
+                        }
+                        ?>
+                    </div>
+                    <form action='/blog/delete' method='post'>
+                        <input name='id' value="<?= $post['id'] ?>" hidden>
+                        <input name='action' value='delete' hidden>
+                        <button type='submit'>Delete</button>
+                    </form>
+                </div>
+            <?php
             }
             ?>
         </section>

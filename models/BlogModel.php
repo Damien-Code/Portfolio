@@ -19,7 +19,6 @@ class BlogModel extends Database
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $posts = $stmt->fetchAll();
             return $posts;
-
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }

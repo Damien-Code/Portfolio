@@ -15,7 +15,7 @@ return [
 ], 'POST' => [
 //        '/' => 'controller/IndexController::index',
         '/view' => 'controller/ProfileController::view',
-        '/blog/save' => 'controller/BlogController::save',
+        'blog/save' => 'controller/BlogController::save',
         '/blog/delete' => 'controller/BlogController::delete',
         '/save' => 'controller/ProfileController::save',
         '/delete' => 'controller/ProfileController::delete',

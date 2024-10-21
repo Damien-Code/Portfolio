@@ -31,9 +31,9 @@ class BlogController
     public function save()
     {
         $title = "Blogs";
-        require "./views/blog.view.php";
         $save = new BlogModel();
         $save->save();
+        require "./views/blog.view.php";
     }
 
     public function delete(){
