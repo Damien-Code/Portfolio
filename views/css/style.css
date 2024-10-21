@@ -37,7 +37,6 @@ header {
 .linkTo {
     display: flex;
     justify-content: space-evenly;
-    width: 60%;
 }
 
 /*Transition hier gedefinieerd zodat wanneer je pointer er niet meer overheen hovert hij ook een transition heeft */
@@ -49,16 +48,61 @@ header {
     text-decoration: none;
     font-size: larger;
 }
-
-/*Underline weggehaald want ik wil graag dat hij bij hover het juist laat zien*/
-a {
+nav {
+    background-color: white;
+}
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li {
+    height: 50px;
+}
+nav a {
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
     color: black;
     font-size: 20px;
 }
-
-a:hover {
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+/*Underline weggehaald want ik wil graag dat hij bij hover het juist laat zien*/
+nav a:hover {
     text-decoration: underline;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+}
+
+.hideOnFullscreen {
+    display: none;
 }
 
 /*Opmaak van de darkmode button*/
@@ -501,6 +545,22 @@ button:hover {
     background-color: steelblue;
 }
 
+@media screen and (max-width: 1000px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .hideOnFullscreen {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 872) {
+    .login-pic {
+        width: 100%;
+    }
+
+}
+
 @media screen and (max-width: 740px ) {
     body {
         display: grid;
@@ -537,6 +597,7 @@ button:hover {
         height: 40vh;
         border-top: none;
     }
+
 }
 
 /*Media query tablet portrait*/

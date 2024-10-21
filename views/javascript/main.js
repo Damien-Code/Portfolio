@@ -32,6 +32,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex';
+}
+
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none';
+}
+
 
 // Rock paper scissors
 // Een functie waar ik de input naar kleine letters verander, zodat het spel daar niet op kan vastlopen.
