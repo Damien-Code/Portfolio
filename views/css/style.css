@@ -79,8 +79,10 @@ a {
 
  svg:hover {
      cursor: pointer;
-
+     background-color: lightgrey;
+     border-radius: 50%;
  }
+
  nav button {
      font-size: 20px;
  }
@@ -158,6 +160,7 @@ a {
 .dark-mode nav {
     background-color: black;
 }
+
 
 /*Layout main*/
 
@@ -620,6 +623,13 @@ button:hover {
     .blog-title {
         font-size: 7vw;
     }
+    .dark-mode aside {
+        border-left: none;
+        border-top: white 1px solid;
+    }
+    .about-text {
+        overflow-y: scroll;
+    }
 
 }
 
@@ -666,5 +676,9 @@ button:hover {
     }
     .sidebar {
         width: 100%;
+    }
+    .dark-mode aside {
+        border-left: none;
+        border-top: white 1px solid;
     }
 }
