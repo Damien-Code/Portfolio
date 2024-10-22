@@ -10,15 +10,15 @@ require './views/layout/header.php';
         <form method="post" class="account-form" action="/profile" >
             <input type="hidden" id="id" name="id" value="<?= (empty($data)) ? '' : $data['id'] ?>">
             <label for="author">Author:</label>
-            <input type="text" id="author" name="author" value="<?= (empty($data))?'':$data['Author'] ?>">
+            <input type="text" id="author" name="author" value="<?= (empty($data))?'':$data['Author'] ?>" required>
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title" value="<?=(empty($data))?'':$data['Title'] ?>">
+            <input type="text" id="title" name="title" value="<?=(empty($data))?'':$data['Title'] ?>" required>
             <label for="content">Degree:</label>
-            <input type="text" id="content" name="degree" value="<?= (empty($data))?'':$data['Degree'] ?>">
+            <input type="text" id="content" name="degree" value="<?= (empty($data))?'':$data['Degree'] ?>" required>
             <label for="projects">Projects:</label>
-            <input type="text" id="project" name="projects" value="<?= (empty($data))?'':$data['Projects'] ?>">
+            <input type="text" id="project" name="projects" value="<?= (empty($data))?'':$data['Projects'] ?>" required>
             <label for="languages">Languages:</label>
-            <input type="text" id="languages" name="languages" value="<?= (empty($data))?'':$data['Languages'] ?>">
+            <input type="text" id="languages" name="languages" value="<?= (empty($data))?'':$data['Languages'] ?>" required>
                                                                     <!-- shortcut php echo         -->
             <button type="submit">Save</button>
         </form>

@@ -33,6 +33,7 @@ class BlogController
         $title = "Blogs";
         $save = new BlogModel();
         $save->save();
+        $posts = $save->blog();
         require "./views/blog.view.php";
     }
 
@@ -40,6 +41,7 @@ class BlogController
         $title = "Blogs";
         $delete = new BlogModel();
         $delete->delete();
+        $posts = $delete->blog();
         require "./views/blog.view.php";
     }
 }

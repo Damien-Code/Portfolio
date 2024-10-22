@@ -7,8 +7,8 @@ require './views/layout/header.php';
         <!--        echo de titel die ik in de controller definieer-->
         <h2 class="pageTitle"><?php echo $title ?></h2>
         <!--            Main text        -->
-        <section class ="table-container">
-<!--            Eerst had ik de table nog een class gegeven. Nu verwijderd voor minder herhalende code-->
+        <section class="table-container">
+            <!--            Eerst had ik de table nog een class gegeven. Nu verwijderd voor minder herhalende code-->
             <table>
                 <tr>
                     <th>ID:</th>
@@ -20,20 +20,38 @@ require './views/layout/header.php';
                     <th colspan="3">Go to profile:</th>
                 </tr>
                 <?php
-//                    oude code bijgewerkt en heb de connectie met de server toegevoegd met include
-//                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-//                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    foreach ($data as $row) {
-                        echo "<tr>";
-                        foreach ($row as $key => $value) {
-                            echo "<td>$value</td>";
-                        }
-//                        echo "<td>$value</td>";
-                        echo "<td><form action='/profile/update' method='get'><input name='action' value='update' hidden><input name='id' value=".$row['id']." hidden><button type='submit'>Update</button></form></td>";
-                        echo "<td><form action='/delete' method='post'><input name='delete' value='delete' hidden><input name='id' value=".$row['id']." hidden><button type='submit'>Delete</button></form></td>";
-                        echo "<td><form action='/portfolio/view' method='get'><input name='action' value='view' hidden><input name='id' value=".$row['id']." hidden><button type='submit'>View</button></form></td>";
-                        echo "</tr>\n";
+                //                    oude code bijgewerkt en heb de connectie met de server toegevoegd met include
+                //                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                //                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                foreach ($data as $row) {
+                    echo "<tr>";
+                    foreach ($row as $key => $value) {
+                        echo "<td>$value</td>";
                     }
+//                        echo "<td>$value</td>";
+                    echo "<td>
+                                <form action='/profile/update' method='get'>
+                                    <input name='action' value='update' hidden>
+                                    <input name='id' value=" . $row['id'] . " hidden>
+                                    <button type='submit'>Update</button>
+                                </form>
+                              </td>";
+                    echo "<td>
+                                <form action='/delete' method='post'>
+                                    <input name='delete' value='delete' hidden>
+                                    <input name='id' value=" . $row['id'] . " hidden>
+                                    <button type='submit'>Delete</button>
+                                </form>
+                              </td>";
+                    echo "<td>
+                                <form action='/portfolio/view' method='get'>
+                                    <input name='action' value='view' hidden>
+                                    <input name='id' value=" . $row['id'] . " hidden>
+                                    <button type='submit'>View</button>
+                                </form>
+                              </td>";
+                    echo "</tr>\n";
+                }
                 ?>
             </table>
         </section>
