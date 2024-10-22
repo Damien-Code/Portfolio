@@ -22,6 +22,7 @@ require './views/layout/header.php';
                 <?php
 //                Hier komen de waardes uit de controller te staan
 //                Door een foreach zorg ik ervoor dat elke geplaatste portfolio een eigen table row krijgt.
+
                 foreach ($data as $row) {
                     echo "<tr>";
                     foreach ($row as $key => $value) {
