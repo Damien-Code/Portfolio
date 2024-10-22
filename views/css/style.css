@@ -16,7 +16,6 @@ body {
     /*color: #DED5CB;*/
 
     min-height: 100vh;
-    letter-spacing: .15rem;
 }
 
 /*Layout header*/
@@ -543,6 +542,8 @@ button:hover {
 }
 
 
+
+
 @media screen and (max-width: 740px ) {
     body {
         display: grid;
@@ -557,6 +558,7 @@ button:hover {
     header {
         height: 10vh;
     }
+    /*header,footer{width: 100%}*/
 
     main {
         padding: 5%;

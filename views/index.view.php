@@ -59,7 +59,7 @@ require './views/layout/header.php';
         </section>
     </main>
     <!--            Aside           -->
-    <aside>
+    <aside class="profile-aside">
 <!--        De standaard profielfoto naast de portfolios-->
         <img src="../asset/login.pic.png" alt="Login picture" class="login-pic">
     </aside>
