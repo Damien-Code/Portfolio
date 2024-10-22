@@ -1,6 +1,11 @@
 <?php
 
-// De routing voor alle GET requests
+/**
+ * @author Damien-Code
+ * @description De routing voor alle GET requests
+ * @return void
+ */
+
 return [
     'GET' => [
         '/' => 'controller/IndexController::index',
@@ -12,7 +17,11 @@ return [
         '/portfolio/view' => 'controller/ProfileController::view',
         '/profile/update' => 'controller/ProfileController::update',
 
-//        De routing voor alle POST requests
+        /**
+         * @author
+         * @description De routing voor alle post requests
+         * @return void
+         */
 ], 'POST' => [
         '/view' => 'controller/ProfileController::view',
         '/blog/save' => 'controller/BlogController::save',

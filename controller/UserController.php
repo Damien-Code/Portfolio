@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * @author Damien-Code
+ * @todo Zodra er gebruikers aangemaakt gaan worden heb ik hier alvast een opzet voor gemaakt.
+ */
 class UserController
 {
     public function __construct()

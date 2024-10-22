@@ -7,15 +7,24 @@ include_once "core/Database.php";
 class profileModel extends Database
 {
     private $conn;
-
+    /**
+     * @author Damien-Code
+     * @description Deze methode zorgt ervoor dat de connectie met de database moet worden uitgevoerd.
+     * @return void
+     */
     function __construct()
     {
         $this->conn = new Database();
     }
 
 
+    /**
+     * @author Damien-Code
+     * @description Deze methode zorgt ervoor dat er waardes kunnen worden verwijderd.
+     * Wel heb ik voor een soft delete gekozen
+     * @return false|int|void
+     */
     public function delete()
-//        include "Database.php";
     {
         if (isset($_POST['id'])) {
             $id = $_POST['id'];
@@ -33,6 +42,12 @@ class profileModel extends Database
     }
 
 
+    /**
+     * @author Damien-Code
+     * @description Deze methode zorgt ervoor dat er ingevoerde waardes kunnen worden opgeslagen op de database.
+     * Ook heb ik er een update in verwerkt omdat de al ingevoerde waardes ook geupdate moeten worden.
+     * @return void
+     */
     public function save()
     {
         try {
@@ -57,16 +72,17 @@ class profileModel extends Database
     }
 
 
+    /**
+     * @author Damien-Code
+     * @description Deze methode zorgt ervoor dat er waardes geupdate kunnen worden.
+     * @return mixed|string
+     */
     public function update()
     {
-//        global $conn;
-//        include "Database.php";
         $ret = '';
         $id = $_GET['id'];
-//        $conn = new Database();
         try {
             $sql = "SELECT * FROM posts WHERE id = $id";
-//            $conn = new Database();
             $sth = $this->conn->pdo->prepare($sql);
             $sth->execute();
             $ret = $sth->fetch(PDO::FETCH_ASSOC);
@@ -77,6 +93,11 @@ class profileModel extends Database
     }
 
 
+    /**
+     * @author Damien-Code
+     * @description Deze methode zorgt ervoor dat er ingevoerde waardes uit de database gehaald worden om te laten zien.
+     * @return mixed|void
+     */
     public function view()
     {
         $id = $_GET['id'];
@@ -86,7 +107,6 @@ class profileModel extends Database
             $stmt->execute();
             $ret = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $row = $stmt->fetch();
-
             return $row;
         } catch (PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();

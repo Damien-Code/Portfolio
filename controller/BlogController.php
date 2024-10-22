@@ -32,7 +32,9 @@ class BlogController
 
 
     /**
-     *
+     * @author Damien-Code
+     * @description Deze methode zorgt ervoor dat er blogs verwijderd kunnen worden van de blog pagina
+     * @return void
      */
     public function delete(){
         $title = "Blogs";

@@ -1,25 +1,43 @@
 
-// // Nieuwe functie voor darkmode. Dit werkt veel makkelijker want ik switch nu twee CSS code blocks.
-// function darkMode() {
-//     document.body.classList.toggle('dark-mode');
-// }
-
-
+/**
+ * @author Damien-Code
+ * @description Deze functie zorgt ervoor dat er geswitched kan worden tussen twee CSS code blocks.
+ * Door het internet ben ik erachter gekomen dat je door localStorage de darkmode functie kunt behouden na reload.
+ * @return void
+ */
 function darkMode() {
     let isDark = document.body.classList.toggle('dark-mode');
-    localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled'); //
+    localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
 }
+
+/**
+ * @author Damien-COde
+ * @description Hier wordt er eerst gekeken naar of alle HTML elementen zijn geladen
+ * Hierna wordt er een class toegevoegd
+ * @return void
+ */
 document.addEventListener('DOMContentLoaded', (event) => {
     if (localStorage.getItem('darkMode') === 'enabled') {
         document.body.classList.add('dark-mode');
     }
 });
 
+/**
+ * @author Damien-Code
+ * @description Een functie waar ik de display property van .sidebar verander in flex
+ * Dit zorgt ervoor dat de sidebar te zien is bij een bepaalde schermgrootte
+ * @return void
+ */
 function showSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'flex';
 }
 
+/**
+ * @author Damien-Code
+ * @description Een functie waar ik de display property van .sidebar verander in none
+ * Dit zorgt ervoor dat de sidebar niet te zien is boven een bepaalde schermgrootte
+ */
 function hideSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none';
@@ -36,9 +54,6 @@ const getUserChoice = userInput => {
         console.log('Error');
     }
 }
-
-// test
-// console.log(getUserChoice('rock'));
 
 // Een functie waar ik een random nummer koppel aan een bepaalde waarde. van 0 tot 2.
 function getComputerChoice() {
