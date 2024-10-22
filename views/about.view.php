@@ -52,7 +52,6 @@ require './views/layout/header.php';
         <section>
             <div id="result"></div>
         </section>
-
     </aside>
 
     <!--            Footer          -->

@@ -6,7 +6,8 @@ require './views/layout/header.php';
         <!--            Main titel      -->
         <!--    echo de titel die ik in de controller definieer-->
         <h2 class="pageTitle"><?php echo $title ?></h2>
-        <!--            Form voor een niewe portfolio       -->
+        <!--            Form voor een nieuwe portfolio       -->
+<!--     Ook zorg ik ervoor dat er al ingevoerde waardes worden weergeven als je ze wilt updaten   -->
         <form method="post" class="account-form" action="/profile" >
             <input type="hidden" id="id" name="id" value="<?= (empty($data)) ? '' : $data['id'] ?>">
             <label for="author">Author:</label>
@@ -22,8 +23,6 @@ require './views/layout/header.php';
                                                                     <!-- shortcut php echo         -->
             <button type="submit">Save</button>
         </form>
-<!--        input velden waar je je profiel kunt updaten-->
-
     </main>
     <!--            Aside           -->
     <aside class="profile-aside">
