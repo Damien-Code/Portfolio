@@ -1,10 +1,10 @@
 <?php
 
+// De routing voor alle GET requests
 return [
     'GET' => [
         '/' => 'controller/IndexController::index',
         '/about' => 'controller/AboutController::about',
-//        '/about/me' => 'controller/AboutController::me',
         '/blog' => 'controller/BlogController::blog',
         '/login' => 'controller/LoginController::login',
         '/portfolio' => 'controller/PortfolioController::portfolio',
@@ -12,8 +12,8 @@ return [
         '/portfolio/view' => 'controller/ProfileController::view',
         '/profile/update' => 'controller/ProfileController::update',
 
+//        De routing voor alle POST requests
 ], 'POST' => [
-//        '/' => 'controller/IndexController::index',
         '/view' => 'controller/ProfileController::view',
         '/blog/save' => 'controller/BlogController::save',
         '/blog/delete' => 'controller/BlogController::delete',

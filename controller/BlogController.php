@@ -1,33 +1,26 @@
 <?php
-// functie waar in de controller aanstuur. Die functie call ik in switch statement in index.php.
-// Ook definieer ik een titel die ik in blog.view.php echo
-use Couchbase\View;
-
 include './models/BlogModel.php';
 class BlogController
 {
+    /**
+     * @author Damien-Code
+     * @description Deze methode zorgt ervoor dat de waardes van de blogs te zien zijn op de blog pagina
+     * @return void
+     */
     public function blog(){
         $view = new BlogModel();
         $posts = $view->blog();
         $title = "Blogs";
         require './views/blog.view.php';
     }
-//    public function blog() {
-//        $title = 'Working with';
-//        try {
-//            $conn = new Database();
-//            $stmt = $conn->pdo->prepare("SELECT id, author, title, post FROM blogs");
-//            $stmt->execute();
-//            // set the resulting array to associative
-//            $stmt->setFetchMode(PDO::FETCH_ASSOC);
-//            $posts = $stmt->fetchAll();
-//            include './views/blog.view.php';
-//        } catch (PDOException $e) {
-//            echo "Error: " . $e->getMessage();
-//        }
-//        $conn = null;
-//    }
 
+    /**
+     * @author Damien-Code
+     * @description Deze methode zorgt ervoor dat de invoer van de form opgeslagen wordt op de database.
+     * Hierna wordt de pagina opnieuw geladen.
+     * Als deze niet wordt gerequired wordt de pagina niet geladen.
+     * @return void
+     */
     public function save()
     {
         $title = "Blogs";
@@ -37,6 +30,10 @@ class BlogController
         require "./views/blog.view.php";
     }
 
+
+    /**
+     *
+     */
     public function delete(){
         $title = "Blogs";
         $delete = new BlogModel();

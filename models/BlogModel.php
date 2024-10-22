@@ -13,7 +13,7 @@ class BlogModel extends Database
     public function blog() {
         try {
             $conn = new Database();
-            $stmt = $conn->pdo->prepare("SELECT id, author, title, post FROM blogs");
+            $stmt = $conn->pdo->prepare("SELECT id, author, title, post FROM blogs WHERE isDeleted = 0");
             $stmt->execute();
             // set the resulting array to associative
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -50,7 +50,7 @@ class BlogModel extends Database
             return false;
         }
         try {
-            $sql = "DELETE FROM blogs WHERE id = '$id'";
+            $sql = "UPDATE blogs SET isDeleted = true WHERE id = $id";
             return $this->conn->pdo->exec($sql);
         } catch (PDOException $e) {
             echo $e->getMessage();
