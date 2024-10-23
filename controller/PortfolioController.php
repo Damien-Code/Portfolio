@@ -10,7 +10,7 @@ class PortfolioController
     public function portfolio()
     {
         $author = "Damiën";
-        $title = "Web <br> Developer";
+        $title = "Software <br> Developer";
         $lang = " HTML, CSS, JavaScript, PHP and MySQL.";
         $degree = "I study Software Development";
         $projects = "My own web application";

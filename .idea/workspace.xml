@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d558ce59-cfb0-4a08-9be3-f1310458456c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/AboutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/AboutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/PortfolioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/profile.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,33 +58,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.about.html.executor": "Run",
-    "Node.js.main.js.executor": "Run",
-    "PHP Script.about.view.php.executor": "Run",
-    "PHP Script.blog.view.php.executor": "Run",
-    "PHP Script.header.php.executor": "Debug",
-    "PHP Script.index.php.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editing.templates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.about.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.main.js.executor&quot;: &quot;Run&quot;,
+    &quot;PHP Script.about.view.php.executor&quot;: &quot;Run&quot;,
+    &quot;PHP Script.blog.view.php.executor&quot;: &quot;Run&quot;,
+    &quot;PHP Script.header.php.executor&quot;: &quot;Debug&quot;,
+    &quot;PHP Script.index.php.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/asset" />
@@ -98,7 +100,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHP Script.header.php" />
         <item itemvalue="PHP Script.header.php" />
       </list>
     </recent_temporary>
@@ -138,6 +139,14 @@
       <workItem from="1728323440693" duration="4000" />
       <workItem from="1728326143894" duration="109453000" />
       <workItem from="1728839555348" duration="33019000" />
+      <workItem from="1729621691602" duration="117000" />
+      <workItem from="1729621819697" duration="194000" />
+      <workItem from="1729623018915" duration="197000" />
+      <workItem from="1729623222557" duration="82000" />
+      <workItem from="1729623310455" duration="1082000" />
+      <workItem from="1729634366928" duration="264000" />
+      <workItem from="1729634639248" duration="107000" />
+      <workItem from="1729634756384" duration="5295000" />
     </task>
     <servers />
   </component>

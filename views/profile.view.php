@@ -28,6 +28,8 @@ require './views/layout/header.php';
     <aside class="profile-aside">
 <!--       Profielfoto van gebruiker die je kan aanpassen-->
         <img src="/asset/login.pic.png" alt="Profile picture" class="login-pic">
+<!--        Deze knop heeft nog geen werking. In een later stadium wil ik dit wel werkend hebben-->
+<!--        Ik ga dan gebruik maken van BLOBs maar omdat ik dit nog niet begrijp heb ik alleen een knop verwerkt-->
         <button>Choose new picture</button>
 
     </aside>

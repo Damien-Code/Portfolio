@@ -564,10 +564,6 @@ button:hover {
         padding: 5%;
     }
 
-    #main-portfolio {
-        height: 35vh;
-    }
-
     aside {
         border-left: none;
         border-top: black solid 1px;
@@ -605,6 +601,9 @@ button:hover {
         padding-top: 7%;
         height: 50vh;
     }
+    #main-portfolio {
+        height: 45vh;
+    }
 
     .typewriter h1 {
         font-size: 20vw;
@@ -635,6 +634,15 @@ button:hover {
         overflow-y: scroll;
     }
 
+}
+
+@media screen and (max-width: 540px) {
+    .blogs {
+        justify-content: center;
+    }
+    .input-div {
+        width: 70vw;
+    }
 }
 
 /*Media query mobile*/
