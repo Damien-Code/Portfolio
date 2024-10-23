@@ -150,8 +150,14 @@ a {
     border: white 1px solid;
 }
 
-.dark-mode table {
-    color: black;
+.dark-mode table, .dark-mode th, .dark-mode td {
+    border: grey solid 1px;
+}
+.dark-mode th {
+    background-color: #3f3f3f;
+}
+.dark-mode td {
+    background-color: #626262;
 }
 
 .dark-mode .input-div {
@@ -162,8 +168,30 @@ a {
     background-color: #1f1d1d;
 }
 .dark-mode .sidebar {
-    background-color: rgb(27, 48, 94);
+    background-color: #3f3f3f;
 }
+
+.dark-mode .input-div {
+    background-color: #3f3f3f;
+}
+.dark-mode input {
+    background-color: #3f3f3f;
+    color: white;
+    border: white solid 1px;
+}
+.dark-mode button {
+    background-color: lightgray;
+}
+.dark-mode button:hover {
+    background-color: #797979;
+}
+.dark-mode .login-buttons button {
+    background-color: lightgray;
+}
+.dark-mode .login-buttons button:hover {
+    background-color: #797979;
+}
+
 
 /*Layout main*/
 
