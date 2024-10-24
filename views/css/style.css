@@ -522,7 +522,6 @@ footer {
 .login-form input {
     margin-top: 10%;
     height: 3rem;
-    border-radius: 4rem;
     text-align: center;
     font-family: "Instrument Serif", serif;
     font-size: 20px;
@@ -547,7 +546,6 @@ footer {
     width: 100%;
     margin-top: 20px;
     background-color: lightsteelblue;
-    border-radius: 20px;
     font-family: "Instrument Serif", serif;
     font-size: 20px;
 }
