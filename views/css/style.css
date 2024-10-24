@@ -144,6 +144,9 @@ a {
 .dark-mode footer {
     border-top: white solid 1px;
 }
+.dark-mode #blogpage {
+    border-top: white solid 1px;
+}
 
 /*Profielfoto niet vergeten anders blijft de border zwart*/
 .dark-mode .profilePic {
@@ -191,7 +194,6 @@ a {
 .dark-mode .login-buttons button:hover {
     background-color: #797979;
 }
-
 
 /*Layout main*/
 
@@ -441,9 +443,14 @@ footer {
     width: 40%;
     height: 60%;
     border: 1px solid black;
-    margin-bottom: 5%;
+    margin-bottom: 3rem;
     padding: 1rem;
     background-color: aliceblue;
+    display: flex;
+    flex-direction: column;justify-content: space-between;
+}
+.input-div p:nth-child(2) {
+    font-size: 20px;
 }
 .blogs button {
     width: 100%;
@@ -597,12 +604,14 @@ button:hover {
         border-left: none;
         border-top: black solid 1px;
     }
+    footer {
+        height: 10vh;
+    }
     .dark-mode aside {
         border-left: none;
         border-top: white solid 1px;
     }
 
-;
     .profilePic {
         margin-top: 10%;
     }
@@ -696,6 +705,9 @@ button:hover {
 
     main {
         height: 50vh;
+    }
+    #main-portfolio {
+        height: 30vh;
     }
 
     .typewriter h1 {

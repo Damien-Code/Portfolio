@@ -12,7 +12,7 @@ class PortfolioController
         $author = "Damiën";
         $title = "Software <br> Developer";
         $lang = " HTML, CSS, JavaScript, PHP and MySQL.";
-        $degree = "I study Software Development";
+        $degree = "I study Software Development at Windesheim";
         $projects = "My own web application";
         require "./views/portfolio.view.php";
     }
