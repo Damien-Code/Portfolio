@@ -10,15 +10,15 @@ require './views/layout/header.php';
 <!--     Ook zorg ik ervoor dat er al ingevoerde waardes worden weergeven als je ze wilt updaten   -->
         <form method="post" class="account-form" action="/profile" >
             <input type="hidden" id="id" name="id" value="<?= (empty($data)) ? '' : $data['id'] ?>">
-            <label for="author">Author:</label>
+            <label for="author">Who are you?</label>
             <input type="text" id="author" name="author" value="<?= (empty($data))?'':$data['Author'] ?>" required>
-            <label for="title">Title:</label>
+            <label for="title">What is your job title?</label>
             <input type="text" id="title" name="title" value="<?=(empty($data))?'':$data['Title'] ?>" required>
-            <label for="content">Degree:</label>
+            <label for="content">What do you study?</label>
             <input type="text" id="content" name="degree" value="<?= (empty($data))?'':$data['Degree'] ?>" required>
-            <label for="projects">Projects:</label>
+            <label for="projects">What are your recent projects?</label>
             <input type="text" id="project" name="projects" value="<?= (empty($data))?'':$data['Projects'] ?>" required>
-            <label for="languages">Languages:</label>
+            <label for="languages">What coding languages do you use?</label>
             <input type="text" id="languages" name="languages" value="<?= (empty($data))?'':$data['Languages'] ?>" required>
                                                                     <!-- shortcut php echo         -->
             <button type="submit">Save</button>

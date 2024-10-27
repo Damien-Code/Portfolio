@@ -19,7 +19,7 @@
     <script src="./views/javascript/main.js"></script>
 </head>
 <body class="login-page">
-<!--Een simpel login scherm-->
+<!--header voor login pagina-->
 <header class="login-header">
     <h1>Web App</h1>
 </header>

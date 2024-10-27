@@ -11,7 +11,7 @@ CREATE TABLE Posts(
                       Languages VARCHAR(32) NOT NULL,
                       Created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                       Updated_at DATETIME DEFAULT  CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-                      isDeleted boolean DEFAULT false);
+                      isDeleted BOOLEAN DEFAULT FALSE);
 
 CREATE TABLE blogs(
                     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -20,4 +20,4 @@ CREATE TABLE blogs(
                     post VARCHAR(128) NOT NULL,
                     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-                    isDeleted boolean DEFAULT false);
+                    isDeleted BOOLEAN DEFAULT FALSE);

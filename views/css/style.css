@@ -12,9 +12,6 @@ body {
                   "footer footer" 0.1fr
 / 0.6fr 0.4fr;
     font-family: "Instrument Serif", serif;
-    /*background-color: #12403C;*/
-    /*color: #DED5CB;*/
-
     min-height: 100vh;
 }
 
@@ -41,6 +38,7 @@ header {
     transition: all ease-in-out 0.5s;
 }
 
+/*Hover effect voor de titel in de header*/
 #headerTitle:hover {
     text-decoration: none;
     font-size: larger;
@@ -51,6 +49,7 @@ nav {
     background-color: white;
     padding-right: 20px;
 }
+/* De styling voor de ul in de nav bar*/
 nav ul {
     width: 100%;
     list-style: none;
@@ -58,35 +57,34 @@ nav ul {
     justify-content: flex-end;
     align-items: center;
 }
-
+/* De styling voor de links in de navbar/ul */
 nav a {
     height: 100%;
     padding: 0 30px;
-    text-decoration: none;
     display: flex;
     align-items: center;
     color: black;
-    font-size: 20px;
 }
+
+/* De styling voor alle links op de gehele website */
 a {
     color: black;
     text-decoration: none;
     font-size: 20px;
 }
 /*Underline weggehaald want ik wil graag dat hij bij hover het juist laat zien*/
- a:hover {
+a:hover {
     text-decoration: underline;
 }
 
- svg:hover {
+/* De styling voor de darkmode link*/
+svg:hover {
      cursor: pointer;
      background-color: lightgrey;
      border-radius: 50%;
- }
+}
 
- nav button {
-     font-size: 20px;
- }
+/* Hier stijl ik de sidebar wanneer er op de knop van het hamburger menu wordt gedrukt*/
 .sidebar {
     position: fixed;
     top: 0;
@@ -101,49 +99,61 @@ a {
     align-items: flex-start;
     justify-content: flex-start;
 }
-
+/* De styling voor de list items in de sidebar*/
 .sidebar li {
     width: 100%;
     height: 50px;
 }
+/*De styling voor alle links in de sidebar*/
 .sidebar a {
     width: 100%;
 }
+
 .sidebar button {
     margin-left: 10%;
     width: 80%;
 }
-
+/*De knop voor het hamburger menu moet niet te zien zijn wanneer alle links in de navbar te zien zijn*/
+/*De laatste list item deze class gegeven zodat hij niet te zien is*/
 .hideOnFullscreen {
     display: none;
 }
 
 /*Hier geef ik aan wat er moet gebeuren nadat mijn JS darkmode functie wordt uitgevoerd.*/
-/*Ik toggle mijn JS met deze css class want dat bespaard veel code*/
+/*Ik toggle mijn JS met deze css class want dat bespaart veel code*/
 /*Ik moet wel aangegeven dat ook mijn a-tags etc moeten veranderen. Anders werkt het niet*/
-/*Darkmode body*/
+/*Dark mode body*/
 .dark-mode {
     color: white;
     background-color: #1f1d1d;
 }
 
-/*Darkmode voor links*/
+/*Dark mode voor links*/
 .dark-mode a {
     color: white;
 }
 
-/*Darkmode voor de borders*/
+/*Dark mode voor de borders*/
 .dark-mode header {
     border-bottom: white solid 1px;
 }
-
+/*Dark mode voor de navbar*/
+.dark-mode nav {
+    background-color: #1f1d1d;
+}
+/*Dark mode voor de sidebar*/
+.dark-mode .sidebar {
+    background-color: #3f3f3f;
+}
+/*Dark mode voor de aside*/
 .dark-mode aside {
     border-left: white solid 1px;
 }
-
+/*Dark mode voor de footer*/
 .dark-mode footer {
     border-top: white solid 1px;
 }
+/*Omdat op de blogpage mijn aside boven de main staat bij kleinere schermformaten moet ik extra deze id aangeven*/
 .dark-mode #blogpage {
     border-top: white solid 1px;
 }
@@ -152,42 +162,38 @@ a {
 .dark-mode .profilePic {
     border: white 1px solid;
 }
-
+/* Dark mode voor de table en alle inhoud*/
 .dark-mode table, .dark-mode th, .dark-mode td {
     border: grey solid 1px;
 }
+/* Dark mode voor de table head*/
 .dark-mode th {
     background-color: #3f3f3f;
 }
+/* Dark mode voor de table data*/
 .dark-mode td {
     background-color: #626262;
 }
-
+/* Dark mode voor de blogs*/
 .dark-mode .input-div {
     border: white 1px solid;
-}
-
-.dark-mode nav {
-    background-color: #1f1d1d;
-}
-.dark-mode .sidebar {
     background-color: #3f3f3f;
 }
 
-.dark-mode .input-div {
-    background-color: #3f3f3f;
-}
+/* Dark mode voor alle input fields */
 .dark-mode input {
     background-color: #3f3f3f;
     color: white;
     border: white solid 1px;
 }
+/* Dark mode voor alle buttons */
 .dark-mode button {
     background-color: lightgray;
 }
 .dark-mode button:hover {
     background-color: #797979;
 }
+/*De login buttons extra moeten aangeven anders worden ze niet lightgray*/
 .dark-mode .login-buttons button {
     background-color: lightgray;
 }
@@ -201,8 +207,6 @@ main {
     display: flex;
     grid-area: main;
     padding-left: 20px;
-    /*margin-right: 20px;*/
-    /*justify-content: space-between;*/
     flex-direction: column;
     align-items: flex-start;
     padding-bottom: 20px;
@@ -267,23 +271,25 @@ table {
     position: relative;
     width: 100%;
 }
-table tr {
+/* Styling voor alle table rows*/
+tr {
     height: 5rem;
 }
 
+/* De styling voor de table head*/
 th {
     background-color: lightsteelblue;
     top: 0;
     position: sticky;
 }
 
+/*De styling voor de table data*/
 td {
     background-color: aliceblue;
 }
 
 
 /*Layout aside*/
-/*Hier moet ik nog even kijken hoe dit ik mooier kan maken*/
 /*Ik heb deze indeling gemaakt kijkend naar mijn homepage maar dit heeft invloed op elke aside. Niet zo handig*/
 /*Misschien mijn aside op mijn homepage een class geven en die met padding etc sturen. Dan kan ik dat bij deze tag weghalen.*/
 /*Werkt inderdaad beter! Wel een beetje padding behouden. Geen specifieke style meer.*/
@@ -294,16 +300,17 @@ aside {
     grid-area: aside;
     border-left: black solid 1px;
     font-size: 20px;
-    padding: 5%;
+    padding: 20px;
 }
 
 /*Profielfoto op de portfolio pagina*/
 .profilePic {
     height: auto;
     width: 40%;
-    padding: 3% 3% 3% 3%;
+    /*Wel margin moeten aangeven anders overlapte de border de footer*/
+    margin-bottom: 10px;
+    padding: 10px;
     transition: all ease-in 0.5s;
-    /*box-shadow: darkgray 20px -20px;*/
     border: 1px solid black;
 }
 
@@ -313,6 +320,7 @@ aside {
 }
 
 /*Styling voor de aside op de homepage.*/
+/*Extra line height voor de tekst*/
 .homepage {
     line-height: 35px;
 }
@@ -336,7 +344,7 @@ aside {
     font-weight: 900;
     text-decoration: underline;
 }
-
+/* De styling voor de afbeelding op de home pagina*/
 .login-pic {
     width: 50%;
 }
@@ -350,9 +358,8 @@ footer {
     padding: 0 20px 0 20px;
     border-top: black solid 1px;
 }
-/*Layout main van de pagina's portfolio, my profile, about en blog*/
 
-/*Titel van de pagina's about, work en process*/
+/*Styling voor de titel op Home, My Profile, About en Blog*/
 .pageTitle {
     font-size: 6vw;
     text-decoration: underline;
