@@ -29,6 +29,5 @@ return [
         '/save' => 'controller/ProfileController::save',
         '/delete' => 'controller/ProfileController::delete',
         '/profile' => 'controller/ProfileController::save',
-
     ]
 ];
