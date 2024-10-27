@@ -32,7 +32,6 @@ class IndexModel extends Database
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $data = $stmt->fetchAll();
             return $data;
-//            include './views/index.view.php';
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }

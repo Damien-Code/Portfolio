@@ -456,7 +456,9 @@ button:hover {
     justify-content: space-between;
     padding: 20px;
     width: 90%;
-    max-height: 55vh;
+    /* Geen max-height aangeven anders versprint de layout na een delete of save */
+    height: 55vh;
+    /*max-height: 55vh;*/
     margin-top: 20px;
     flex-wrap: wrap;
     overflow-y: scroll;

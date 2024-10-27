@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS portfolioDamienCode;
 use portfolioDamienCode;
 
 CREATE TABLE Posts(
-                      PostID INT AUTO_INCREMENT PRIMARY KEY ,
+                      id INT AUTO_INCREMENT PRIMARY KEY ,
                       Author VARCHAR(32) NOT NULL,
                       Title VARCHAR(32) NOT NULL,
                       Degree VARCHAR(32) NOT NULL,
