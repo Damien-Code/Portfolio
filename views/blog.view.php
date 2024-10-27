@@ -2,7 +2,7 @@
 require './views/layout/header.php';
 ?>
 <!--Main-->
-    <main class="main" id="blogpage">
+    <main id="blogpage">
         <!--        echo de titel die ik in de controller definieer-->
         <section>
             <h2 class="pageTitle"><?php echo $title ?></h2>

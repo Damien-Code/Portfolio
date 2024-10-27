@@ -42,7 +42,7 @@ require './views/layout/header.php';
         </section>
     </main>
     <!--            Aside           -->
-    <aside id="asideGame">
+    <aside id="aside-about">
         <!--            Game            -->
         <section class="game">
             <input type="text" name="input" id="input">

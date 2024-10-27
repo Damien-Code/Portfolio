@@ -308,7 +308,7 @@ aside {
     height: auto;
     width: 40%;
     /*Wel margin moeten aangeven anders overlapte de border de footer*/
-    margin-bottom: 10px;
+    margin: 20px;
     padding: 10px;
     transition: all ease-in 0.5s;
     border: 1px solid black;
@@ -359,6 +359,19 @@ footer {
     border-top: black solid 1px;
 }
 
+/*De styling voor elke button op de website*/
+button {
+    font-family: "Instrument Serif", serif;
+    background-color: lightsteelblue;
+    border: black 1px solid;
+    padding: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: steelblue;
+}
+
 /*Styling voor de titel op Home, My Profile, About en Blog*/
 .pageTitle {
     font-size: 6vw;
@@ -366,7 +379,7 @@ footer {
     font-weight: normal;
     width: 100%;
 }
-/*opmaak van de invoervelden van my profile*/
+/*opmaak van de form op my profile*/
 .account-form {
     display: flex;
     flex-direction: column;
@@ -374,6 +387,7 @@ footer {
     min-height: 80%;
     width: 100%;
 }
+/*opmaak van de input velden*/
 .account-form input {
     height: 3em;
 }
@@ -384,43 +398,43 @@ footer {
 }
 
 
-/*Rock, paper and scissors spel*/
-/*Layout aside about*/
+
+/*Layout main about pagina*/
 .about-text {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     height: 80%;
-    margin-top: 20px;
+    margin: 20px;
 }
-
-#asideGame {
+/*Aside voor about pagina*/
+#aside-about {
     display: flex;
     justify-content: start;
     flex-direction: column;
 }
 
-/*Layout spel*/
+/*Rock, paper and scissors spel*/
 .game {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-/*Text Field*/
+/*Opmaak voor het invoerveld van het spel*/
 #input {
     width: 50%;
     font-size: 20px;
     font-family: "Instrument Serif", serif;
 }
 
-
 /*Veel code verwijderd hier omdat ik dit dus nu een button in het algemeen stijl, alleen deze regel is specifiek voor deze knop*/
 .buttonGame {
     width: 25%;
-    font-size: 20px;
+        font-size: 20px;
 }
 
+/*Layout voor de aside van de my profile pagina*/
 .profile-aside {
     display: flex;
     flex-direction: column;
@@ -428,12 +442,15 @@ footer {
     align-items: center;
 }
 
+/* Opmaak voor de aside my profile button*/
 .profile-aside button {
-    margin-top: 25%;
+    margin-top: 7rem;
     font-size: 20px;
 }
 
+/*Opmaak voor de section blogs*/
 /*max-height aangeven inplaats van height anders worden de blogs heel groot en is de website niet verhouding*/
+/*Overflow omdat anders mijn website niet meer in verhouding was */
 .blogs {
     display: flex;
     justify-content: space-between;
@@ -456,9 +473,12 @@ footer {
     display: flex;
     flex-direction: column;justify-content: space-between;
 }
+/*Styling van de tweede child van de blog*/
+/*De userid moet geen groter lettertype krijgen maar de author*/
 .input-div p:nth-child(2) {
     font-size: 20px;
 }
+/*De button van elke blog*/
 .blogs button {
     width: 100%;
 }
@@ -467,7 +487,7 @@ footer {
 .blog-title {
     text-align: center;
     font-size: 4vw;
-    margin-bottom: 5%;
+    margin-bottom: 20px;
 }
 /*form van de blog*/
 .blog-form {
@@ -487,6 +507,7 @@ footer {
     height: 20vh;
     margin-bottom: 5%;
 }
+/*De button van de form blogs*/
 .blog-form button {
     font-size: 20px;
 }
@@ -517,7 +538,7 @@ footer {
     align-items: center;
 }
 
-/*Username en Password form*/
+/*Indeling van de login form*/
 .login-form {
     display: flex;
     flex-direction: column;
@@ -525,7 +546,7 @@ footer {
     height: 40%;
 }
 
-/*Username en password apart*/
+/*Opmaak voor de input velden van de login pagina*/
 .login-form input {
     margin-top: 10%;
     height: 3rem;
@@ -534,7 +555,7 @@ footer {
     font-size: 20px;
 }
 
-/*de section voor de buttons*/
+/*De section voor de buttons*/
 .login-buttons {
     display: flex;
     flex-direction: row;
@@ -542,13 +563,13 @@ footer {
     width: 60%;
 }
 
-/*omdat de button de child is van a moet ik eerst a een width geven om daarna*/
-/*de breedte van elke a is dus 40% van de beschikbare ruimte*/
+/*Omdat de button de child is van a moet ik eerst a een width geven om daarna*/
+/*De breedte van elke a is dus 40% van de beschikbare ruimte*/
 .login-buttons a {
     width: 40%;
 }
 
-/*de buttons in a moeten wel 100% van de breedte vullen*/
+/*De buttons in a moeten wel 100% van de breedte vullen*/
 .login-buttons a button {
     width: 100%;
     margin-top: 20px;
@@ -561,17 +582,9 @@ footer {
     background-color: steelblue;
 }
 
-button {
-    font-family: "Instrument Serif", serif;
-    background-color: lightsteelblue;
-    border: black 1px solid;
-    padding: 5px;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: steelblue;
-}
+/* Media query voor max 1000px */
+/* Alleen nog maar de navbar*/
+/* De navbar had nog een mooie layout tot 1000px dus daarom moet de sidebar pas van pas komen onder 1000px */
 
 @media screen and (max-width: 1000px) {
     .hideOnMobile {
@@ -581,10 +594,8 @@ button:hover {
         display: block;
     }
 }
-
-
-
-
+/*Media query voor 740px*/
+/*Omdat de website geen mooie layout kreeg met de main en aside naast elkaar heb ik ervoor gekozen om alles onder elkaar te weergeven */
 @media screen and (max-width: 740px ) {
     body {
         display: grid;
@@ -599,12 +610,8 @@ button:hover {
     header {
         height: 10vh;
     }
-    /*header,footer{width: 100%}*/
-
-    main {
-        padding: 5%;
-    }
-
+    /* Borders opnieuw moeten aangeven omdat ze anders niet goed werden weergeven*/
+    /*Dat komt omdat alles nu onder elkaar wordt weergeven*/
     aside {
         border-left: none;
         border-top: black solid 1px;
@@ -617,10 +624,7 @@ button:hover {
         border-top: white solid 1px;
     }
 
-    .profilePic {
-        margin-top: 10%;
-    }
-
+    /*Aside en main moeten omgewisseld worden dus dat heb ik zo opgelost */
     #blogpage {
         grid-area: aside;
         border-top: black 1px solid;
@@ -634,7 +638,7 @@ button:hover {
 
 }
 
-/*Media query tablet portrait*/
+/*Media query voor  620px*/
 @media screen and (max-width: 620px) {
     body {
         display: grid;
@@ -645,11 +649,14 @@ button:hover {
                       "footer" 0.1fr
     / 1fr;
     }
-
+    /*Styling voor de main*/
+    /*Extra padding en een hoogte aangegeven*/
+    /* Zonder deze hoogte werd de tabel erg groot*/
     main {
-        padding-top: 7%;
+        padding-top: 20px;
         height: 50vh;
     }
+    /* De main op de portfolio een hoogte aangegeven omdat er anders veel lege ruimte was */
     #main-portfolio {
         height: 45vh;
     }
@@ -657,21 +664,21 @@ button:hover {
     .typewriter h1 {
         font-size: 20vw;
     }
-
+    /*Extra styling voor de aside*/
     aside {
         border-left: none;
         border-top: black solid 1px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-right: 5%;
     }
-
+    /*Extra styling voor de tabel div*/
     .table-container {
-        margin-bottom: 5%;
+        margin-bottom: 20px;
         max-width: 90vw;
         overflow-x: scroll;
     }
+    /* Styling voor de aside titel op de blog pagina*/
     .blog-title {
         font-size: 7vw;
     }
@@ -679,12 +686,10 @@ button:hover {
         border-left: none;
         border-top: white 1px solid;
     }
-    .about-text {
-        overflow-y: scroll;
-    }
-
 }
 
+/*Media query voor 540px*/
+/*Ik wilde elke blog nu onder elkaar laten weergeven omdat het anders een rommelige weergave kreeg waar de blogs heel klein werden en strak tegen elkaar aan kwamen */
 @media screen and (max-width: 540px) {
     .blogs {
         justify-content: center;
@@ -694,10 +699,10 @@ button:hover {
     }
 }
 
-/*Media query mobile*/
-/*Hier moet ik de hamburger menu gaan maken.*/
-/*Ik weet alleen nog niet goed hoe het moet.*/
+/*Media query voor 400px*/
 @media screen and (max-width: 400px) {
+    /*nieuwe layout voor de body*/
+    /* Aside moet een nieuwe height krijgen*/
     body {
         display: grid;
         grid-template:
@@ -708,9 +713,8 @@ button:hover {
     / 1fr;
     }
 
-    main {
-        height: 50vh;
-    }
+
+    /*Main portfolio weer een nieuwe height gegeven om zo minder lege ruimte te maken in de main zelf*/
     #main-portfolio {
         height: 30vh;
     }
@@ -719,30 +723,17 @@ button:hover {
         font-size: 25vw;
     }
 
-    aside {
-        padding-right: 5%;
-    }
-
+    /*Ook een overflow x aangegeven omdat het anders niet meer responsive was*/
     .table-container {
         overflow-x: scroll;
     }
 
-    a {
-        font-size: 15px;
-    }
-
-    .blogs {
-        display: flex;
-        justify-content: center;
-    }
+    /* Elke blog krijgt nu een breedere weergave*/
     .input-div {
         width: 70vw;
     }
+    /*Hier zorg ik ervoor dat de sidebar de hele schermbreedte inneemt*/
     .sidebar {
         width: 100%;
-    }
-    .dark-mode aside {
-        border-left: none;
-        border-top: white 1px solid;
     }
 }
