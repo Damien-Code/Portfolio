@@ -405,7 +405,7 @@ button:hover {
     justify-content: space-between;
     flex-direction: column;
     height: 80%;
-    margin: 20px;
+    padding-top: 20px;
 }
 /*Aside voor about pagina*/
 #aside-about {
