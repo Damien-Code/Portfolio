@@ -518,6 +518,14 @@ button:hover {
     font-size: 20px;
 }
 
+.socmedlinks {
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
 
 /*Indeling Login pagina*/
 .login-page {
@@ -601,7 +609,7 @@ button:hover {
     }
 }
 
-/*Media query voor 740px*/
+/*Media query voor 830px*/
 /*Omdat de website geen mooie layout kreeg met de main en aside naast elkaar heb ik ervoor gekozen om alles onder elkaar te weergeven */
 @media screen and (max-width: 830px ) {
     body {
@@ -616,6 +624,9 @@ button:hover {
     /*height definieren voor header, kom ik onder de 740px dan wordt de header heel klein*/
     header {
         height: 10vh;
+    }
+    .typewriter h1 {
+        font-size: 20vw;
     }
 
     /* Borders opnieuw moeten aangeven omdat ze anders niet goed werden weergeven*/
