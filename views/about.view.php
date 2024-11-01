@@ -12,31 +12,29 @@ require './views/layout/header.php';
         <!--            Main text        -->
         <section class="about-text">
             <section>
-                <p>For whom is this website?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto doloribus eaque earum explicabo
-                    quisquam, sint? Ex impedit nisi nostrum quisquam vitae. Autem cum, dolore fugit minima reprehenderit
-                    ullam
-                    vitae voluptatem?</p>
+                <p class="descr">For whom is this website?</p>
+                <p>For everyone who wants to show the world their portfolio. Upload, show and update your profile and
+                    show the world the creations you make!</p>
             </section>
             <section>
-                <p>Employers and Employees</p>
+                <p class="descr">Who am i?</p>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cupiditate debitis delectus deleniti
-                    dicta
-                    eligendi facilis incidunt ipsa quam reprehenderit sapiente vel, vero. A id illo molestiae recusandae
-                    tempora
-                    voluptatem!
+                    I am Damiën. A software developer who is just starting out, but already fell in love with coding!
+                    The task of this project was to create a portfolio website for my own, but I also wanted to create a
+                    hub for other programmers to show off their work!
                 </p>
             </section>
             <section>
-                <p>Contact</p>
+                <p class="descr">About the website</p>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, dolorem est ex facilis fugit ipsam
-                    minima
-                    placeat, quibusdam reprehenderit tempora tenetur voluptatibus! Aliquam blanditiis dicta esse illo,
-                    ipsam
-                    nam
-                    quos!
+                    This website is to display my skills as a software developer. You can view my own portfolio by
+                    visiting the "Portfolio" page or you can contact me at the "contact" page.
+                </p>
+            </section>
+            <section>
+                <p class="descr">The programming languages behind this project:</p>
+                <p>
+                    For this website, I used HTML, CSS, JavaScript, PHP and MySQL.
                 </p>
             </section>
         </section>

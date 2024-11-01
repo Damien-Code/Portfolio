@@ -700,7 +700,7 @@ button:hover {
     }
     /* De main op de portfolio een hoogte aangegeven omdat er anders veel lege ruimte was */
     #main-portfolio {
-        height: 45vh;
+        height: 40vh;
     }
 
     .typewriter h1 {
