@@ -21,3 +21,15 @@ CREATE TABLE blogs(
                     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
                     isDeleted BOOLEAN DEFAULT FALSE);
+
+-- Dummy data zodat er al data zichtbaar is
+INSERT INTO Posts (Author, Title, Degree, Projects, Languages )
+VALUES ('Mischa', 'Software Developer', 'ADSD', 'Learning Go', 'JavaScript and PHP'),
+       ('Stephan', 'Software Engineer', 'ADSD', 'Teaching how to code', 'Laravel and much more'),
+       ('Jan', 'Fullstack engineer', 'ADSD', 'Teaching how to code', 'C and much more'),
+       ('Ron', 'Backend developer', 'ADSD', 'Teaching how to code', 'C# and much more');
+
+
+INSERT INTO blogs (author, title, post)
+VALUES ('Mischa', 'Go', 'Learning go is a pain in the ***'),
+       ('Damiën', 'What i did this weekend', 'Finished my webapp');
