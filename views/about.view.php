@@ -42,16 +42,29 @@ require './views/layout/header.php';
         </section>
     </main>
     <!--            Aside           -->
-    <aside id="aside-about">
+    <aside>
         <!--            Game            -->
         <section class="game">
-            <input type="text" name="input" id="input">
-            <button class="buttonGame" onclick="playGame()">Play!</button>
+            <p class="gameexpl">Rock, Paper or Scissors</p>
+            <section class="gameinput">
+                <input type="text" name="input" id="input">
+                <button class="buttonGame" onclick="playGame()">Play!</button>
+            </section>
+            <!--            Game result         -->
+            <section>
+                <div id="result"></div>
+            </section>
         </section>
-        <!--            Game result         -->
+        <section >
+            <p>My code when i first started out:</p>
+            <img src="/asset/Codeafbeelding.png" alt="Code" class="about-pic">
+            <p>My code now:</p>
+            <img src="/asset/recentcode.png" alt="Code" class="about-pic">
+        </section>
         <section>
-            <div id="result"></div>
+
         </section>
+
     </aside>
 
     <!--            Footer          -->

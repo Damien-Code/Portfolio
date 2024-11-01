@@ -400,8 +400,6 @@ button:hover {
     font-size: 20px;
 }
 
-
-
 /*Layout main about pagina*/
 .about-text {
     display: flex;
@@ -410,18 +408,19 @@ button:hover {
     height: 80%;
     padding-top: 20px;
 }
-/*Aside voor about pagina*/
-#aside-about {
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-}
 
 /*Rock, paper and scissors spel*/
 .game {
+    height: 40%;
+}
+.gameinput {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+.gameexpl {
+    text-align: center;
+    text-decoration: underline;
 }
 
 /*Opmaak voor het invoerveld van het spel*/
@@ -431,11 +430,17 @@ button:hover {
     font-family: "Instrument Serif", serif;
 }
 
+
 /*Veel code verwijderd hier omdat ik dit dus nu een button in het algemeen stijl, alleen deze regel is specifiek voor deze knop*/
 .buttonGame {
     width: 25%;
         font-size: 20px;
 }
+/*afbeeldingen about*/
+.about-pic {
+    width: 60%;
+}
+
 
 /*Layout voor de aside van de my profile pagina*/
 .profile-aside {
@@ -657,9 +662,12 @@ button:hover {
     .login-pic {
         width: 30%;
     }
-
     .profilePic {
         width: 30%;
+    }
+    /*Game extra aangegeven, anders versprong de layout na elke game ronde*/
+    .game {
+        height: 20vh;
     }
 
 }

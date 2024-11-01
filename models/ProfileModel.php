@@ -7,10 +7,11 @@ include_once "core/Database.php";
 class profileModel extends Database
 {
     private $conn;
+
     /**
+     * @return void
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat de connectie met de database moet worden uitgevoerd.
-     * @return void
      */
     function __construct()
     {
@@ -19,10 +20,10 @@ class profileModel extends Database
 
 
     /**
+     * @return false|int|void
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat er waardes kunnen worden verwijderd.
      * Wel heb ik voor een soft delete gekozen
-     * @return false|int|void
      */
     public function delete()
     {
@@ -43,10 +44,10 @@ class profileModel extends Database
 
 
     /**
+     * @return void
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat er ingevoerde waardes kunnen worden opgeslagen op de database.
      * Ook heb ik er een update in verwerkt omdat de al ingevoerde waardes ook geupdate moeten worden.
-     * @return void
      */
     public function save()
     {
@@ -71,11 +72,10 @@ class profileModel extends Database
         }
     }
 
-
     /**
+     * @return mixed|string
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat er waardes geupdate kunnen worden.
-     * @return mixed|string
      */
     public function update()
     {
@@ -94,9 +94,9 @@ class profileModel extends Database
 
 
     /**
+     * @return mixed|void
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat er ingevoerde waardes uit de database gehaald worden om te laten zien.
-     * @return mixed|void
      */
     public function view()
     {
