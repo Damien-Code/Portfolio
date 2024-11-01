@@ -204,11 +204,11 @@ svg:hover {
 /*Layout main*/
 
 main {
-    display: flex;
+    /*display: flex;*/
     grid-area: main;
     padding-left: 20px;
-    flex-direction: column;
-    align-items: flex-start;
+    /*flex-direction: column;*/
+    /*align-items: flex-start;*/
     padding-bottom: 20px;
     padding-right: 20px;
 }

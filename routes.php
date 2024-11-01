@@ -17,13 +17,13 @@ return [
         '/contact' => 'controller/ContactController::contact',
         '/portfolio/view' => 'controller/ProfileController::view',
         '/profile/update' => 'controller/ProfileController::update',
-
-        /**
-         * @author
-         * @description De routing voor alle post requests
-         * @return void
-         */
-], 'POST' => [
+],
+    /**
+     * @author
+     * @description De routing voor alle post requests
+     * @return void
+     */
+    'POST' => [
         '/view' => 'controller/ProfileController::view',
         '/blog/save' => 'controller/BlogController::save',
         '/blog/delete' => 'controller/BlogController::delete',

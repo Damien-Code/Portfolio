@@ -34,11 +34,10 @@ class profileModel extends Database
         }
         try {
             $sql = "UPDATE posts SET isDeleted = true WHERE id = $id";
-//            $conn = new Database();
             return $this->conn->pdo->exec($sql);
 
         } catch (PDOException $e) {
-            echo $sql . "<br>" . $e->getMessage();
+            echo $e->getMessage();
         }
     }
 

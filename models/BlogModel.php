@@ -57,7 +57,6 @@ class BlogModel extends Database
                 $sql = "UPDATE blogs SET title = '$title', post = '$post' WHERE id = '$id'";
             }
             $this->conn->pdo->exec($sql);
-            echo "New post created successfully";
         } catch (PDOException $e) {
             echo $e->getMessage();
         }

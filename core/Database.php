@@ -16,7 +16,8 @@ class Database
         $servername = "localhost";
         $username = "root";
         $password = "root";
-        $dbname = "pa";
+        $dbname = "portfolioDamienCode";
+//        $dbname = "pa";
         $options = [
             \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
         ];
