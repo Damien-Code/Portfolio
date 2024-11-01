@@ -630,9 +630,7 @@ button:hover {
     header {
         height: 10vh;
     }
-    .typewriter h1 {
-        font-size: 20vw;
-    }
+
 
     /* Borders opnieuw moeten aangeven omdat ze anders niet goed werden weergeven*/
     /*Dat komt omdat alles nu onder elkaar wordt weergeven*/
@@ -696,7 +694,7 @@ button:hover {
     /* Zonder deze hoogte werd de tabel erg groot*/
     main {
         padding-top: 20px;
-        height: 50vh;
+        /*height: 50vh;*/
     }
     /* De main op de portfolio een hoogte aangegeven omdat er anders veel lege ruimte was */
     #main-portfolio {
@@ -764,9 +762,7 @@ button:hover {
         height: 30vh;
     }
 
-    .typewriter h1 {
-        font-size: 25vw;
-    }
+
 
     /*Ook een overflow x aangegeven omdat het anders niet meer responsive was*/
     .table-container {
