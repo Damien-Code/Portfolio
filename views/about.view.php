@@ -28,7 +28,7 @@ require './views/layout/header.php';
                 <p class="descr">About the website</p>
                 <p>
                     This website is to display my skills as a software developer. You can view my own portfolio by
-                    visiting the "Portfolio" page or you can contact me at the "contact" page.
+                    visiting the "Portfolio" page or you can contact me at the "Contact" page.
                 </p>
             </section>
             <section>

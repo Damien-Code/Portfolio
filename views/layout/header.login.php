@@ -21,6 +21,6 @@
 <body class="login-page">
 <!--header voor login pagina-->
 <header class="login-header">
-    <h1>Web App</h1>
+    <h1>Portfolio</h1>
 </header>
 
