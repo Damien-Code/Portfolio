@@ -55,7 +55,7 @@ require './views/layout/header.php';
                 <div id="result"></div>
             </section>
         </section>
-        <section >
+        <section class="about-pics">
             <p>My code when i first started out:</p>
             <img src="/asset/Codeafbeelding.png" alt="Code" class="about-pic">
             <p>My code now:</p>

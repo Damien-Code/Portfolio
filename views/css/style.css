@@ -669,6 +669,14 @@ button:hover {
     .game {
         height: 20vh;
     }
+    .about-pics {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .about-pic {
+        width: 40%;
+    }
 
 }
 
@@ -719,6 +727,9 @@ button:hover {
     .dark-mode aside {
         border-left: none;
         border-top: white 1px solid;
+    }
+    .about-pic {
+        width: 60%;
     }
 }
 
