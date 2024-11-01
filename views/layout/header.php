@@ -37,6 +37,7 @@
                 <li><a href="/login">My Profile</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
                 <li onclick="darkMode()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="grey"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z"/></svg></a></li>
 
             </ul>
@@ -46,6 +47,7 @@
                 <li class="hideOnMobile"><a href="/login">My Profile</a></li>
                 <li class="hideOnMobile"><a href="/about">About</a></li>
                 <li class="hideOnMobile"><a href="/blog">Blog</a></li>
+                <li class="hideOnMobile"><a href="/contact">Contact</a></li>
                 <li class="hideOnMobile" onclick="darkMode()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="grey"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z"/></svg></a></li>
 <!--                <li class="hideOnMobile"><button type="button" onclick="darkMode()" id="button">Change</button></li>-->
                 <li onclick=showSidebar() class="hideOnFullscreen"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="grey"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>

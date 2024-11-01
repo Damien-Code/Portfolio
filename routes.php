@@ -14,6 +14,7 @@ return [
         '/login' => 'controller/LoginController::login',
         '/portfolio' => 'controller/PortfolioController::portfolio',
         '/profile' => 'controller/ProfileController::profile',
+        '/contact' => 'controller/ContactController::contact',
         '/portfolio/view' => 'controller/ProfileController::view',
         '/profile/update' => 'controller/ProfileController::update',
 

@@ -6,6 +6,7 @@ require './controller/BlogController.php';
 require './controller/AboutController.php';
 require './controller/ProfileController.php';
 require './controller/LoginController.php';
+require './controller/ContactController.php';
 
 $routes = require 'routes.php';
 /**
