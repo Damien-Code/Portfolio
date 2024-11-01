@@ -213,6 +213,7 @@ main {
     padding-right: 20px;
 }
 
+
 /*main titel met typewriter animatie. Mijn oude styling van H1 weggehaald want dat was overbodig met deze nieuwe style*/
 /*uiteindelijk wat divs weggehaald want die hadden blijkbaar geen functie. */
 /*Ik moet er op letten dat ik niet teveel code herhaal.*/
@@ -257,6 +258,7 @@ main {
     max-height: 60vh;
     overflow-y: scroll;
     margin-top: 20px;
+
 }
 
 /*styling van de table en de data*/
@@ -601,7 +603,7 @@ button:hover {
 
 /*Media query voor 740px*/
 /*Omdat de website geen mooie layout kreeg met de main en aside naast elkaar heb ik ervoor gekozen om alles onder elkaar te weergeven */
-@media screen and (max-width: 740px ) {
+@media screen and (max-width: 830px ) {
     body {
         display: grid;
         grid-template:
@@ -615,6 +617,7 @@ button:hover {
     header {
         height: 10vh;
     }
+
     /* Borders opnieuw moeten aangeven omdat ze anders niet goed werden weergeven*/
     /*Dat komt omdat alles nu onder elkaar wordt weergeven*/
     aside {
@@ -639,6 +642,13 @@ button:hover {
         grid-area: main;
         height: 40vh;
         border-top: none;
+    }
+    .login-pic {
+        width: 30%;
+    }
+
+    .profilePic {
+        width: 30%;
     }
 
 }
