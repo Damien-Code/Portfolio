@@ -1,9 +1,9 @@
 <?php
 
 /**
+ * @return void
  * @author Damien-Code
  * @description De routing voor alle GET requests
- * @return void
  */
 
 return [
@@ -17,11 +17,11 @@ return [
         '/contact' => 'controller/ContactController::contact',
         '/portfolio/view' => 'controller/ProfileController::view',
         '/profile/update' => 'controller/ProfileController::update',
-],
+    ],
     /**
+     * @return void
      * @author
      * @description De routing voor alle post requests
-     * @return void
      */
     'POST' => [
         '/view' => 'controller/ProfileController::view',

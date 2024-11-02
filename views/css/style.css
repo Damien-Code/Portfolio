@@ -32,7 +32,6 @@ header {
 /*Een width van 60% gegeven zodat de links genoeg ruimte hebben.*/
 
 
-
 /*Transition hier gedefinieerd zodat wanneer je pointer er niet meer overheen hovert hij ook een transition heeft */
 #headerTitle {
     transition: all ease-in-out 0.5s;
@@ -49,6 +48,7 @@ nav {
     background-color: white;
     padding-right: 20px;
 }
+
 /* De styling voor de ul in de nav bar*/
 nav ul {
     width: 100%;
@@ -57,6 +57,7 @@ nav ul {
     justify-content: flex-end;
     align-items: center;
 }
+
 /* De styling voor de links in de navbar/ul */
 nav a {
     height: 100%;
@@ -72,6 +73,7 @@ a {
     text-decoration: none;
     font-size: 20px;
 }
+
 /*Underline weggehaald want ik wil graag dat hij bij hover het juist laat zien*/
 a:hover {
     text-decoration: underline;
@@ -79,9 +81,9 @@ a:hover {
 
 /* De styling voor de darkmode link*/
 svg:hover {
-     cursor: pointer;
-     background-color: lightgrey;
-     border-radius: 50%;
+    cursor: pointer;
+    background-color: lightgrey;
+    border-radius: 50%;
 }
 
 /* Hier stijl ik de sidebar wanneer er op de knop van het hamburger menu wordt gedrukt*/
@@ -99,11 +101,13 @@ svg:hover {
     align-items: flex-start;
     justify-content: flex-start;
 }
+
 /* De styling voor de list items in de sidebar*/
 .sidebar li {
     width: 100%;
     height: 50px;
 }
+
 /*De styling voor alle links in de sidebar*/
 .sidebar a {
     width: 100%;
@@ -113,6 +117,7 @@ svg:hover {
     margin-left: 10%;
     width: 80%;
 }
+
 /*De knop voor het hamburger menu moet niet te zien zijn wanneer alle links in de navbar te zien zijn*/
 /*De laatste list item deze class gegeven zodat hij niet te zien is*/
 .hideOnFullscreen {
@@ -137,22 +142,27 @@ svg:hover {
 .dark-mode header {
     border-bottom: white solid 1px;
 }
+
 /*Dark mode voor de navbar*/
 .dark-mode nav {
     background-color: #1f1d1d;
 }
+
 /*Dark mode voor de sidebar*/
 .dark-mode .sidebar {
     background-color: #3f3f3f;
 }
+
 /*Dark mode voor de aside*/
 .dark-mode aside {
     border-left: white solid 1px;
 }
+
 /*Dark mode voor de footer*/
 .dark-mode footer {
     border-top: white solid 1px;
 }
+
 /*Omdat op de blogpage mijn aside boven de main staat bij kleinere schermformaten moet ik extra deze id aangeven*/
 .dark-mode #blogpage {
     border-top: white solid 1px;
@@ -162,18 +172,22 @@ svg:hover {
 .dark-mode .profilePic {
     border: white 1px solid;
 }
+
 /* Dark mode voor de table en alle inhoud*/
 .dark-mode table, .dark-mode th, .dark-mode td {
     border: grey solid 1px;
 }
+
 /* Dark mode voor de table head*/
 .dark-mode th {
     background-color: #3f3f3f;
 }
+
 /* Dark mode voor de table data*/
 .dark-mode td {
     background-color: #626262;
 }
+
 /* Dark mode voor de blogs*/
 .dark-mode .input-div {
     border: white 1px solid;
@@ -186,17 +200,21 @@ svg:hover {
     color: white;
     border: white solid 1px;
 }
+
 /* Dark mode voor alle buttons */
 .dark-mode button {
     background-color: lightgray;
 }
+
 .dark-mode button:hover {
     background-color: #797979;
 }
+
 /*De login buttons extra moeten aangeven anders worden ze niet lightgray*/
 .dark-mode .login-buttons button {
     background-color: lightgray;
 }
+
 .dark-mode .login-buttons button:hover {
     background-color: #797979;
 }
@@ -222,6 +240,7 @@ main {
     display: flex;
     align-items: end;
 }
+
 .typewriter h1 {
     font-size: 15vw;
     font-weight: normal;
@@ -274,6 +293,7 @@ table {
     width: 100%;
 
 }
+
 /* Styling voor alle table rows*/
 tr {
     height: 5rem;
@@ -347,6 +367,7 @@ aside {
     font-weight: 900;
     text-decoration: underline;
 }
+
 /* De styling voor de afbeelding op de home pagina*/
 .login-pic {
     width: 50%;
@@ -382,6 +403,7 @@ button:hover {
     font-weight: normal;
     width: 100%;
 }
+
 /*opmaak van de form op my profile*/
 .account-form {
     display: flex;
@@ -390,10 +412,12 @@ button:hover {
     min-height: 80%;
     width: 100%;
 }
+
 /*opmaak van de input velden*/
 .account-form input {
     height: 3em;
 }
+
 /*knop van profile page*/
 .account-form button {
     margin-top: 2rem;
@@ -413,11 +437,13 @@ button:hover {
 .game {
     height: 40%;
 }
+
 .gameinput {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 .gameexpl {
     text-align: center;
     text-decoration: underline;
@@ -434,8 +460,9 @@ button:hover {
 /*Veel code verwijderd hier omdat ik dit dus nu een button in het algemeen stijl, alleen deze regel is specifiek voor deze knop*/
 .buttonGame {
     width: 25%;
-        font-size: 20px;
+    font-size: 20px;
 }
+
 /*afbeeldingen about*/
 .about-pic {
     width: 60%;
@@ -484,11 +511,13 @@ button:hover {
     flex-direction: column;
     justify-content: space-between;
 }
+
 /*Styling van de tweede child van de blog*/
 /*De userid moet geen groter lettertype krijgen maar de author*/
 .input-div p:nth-child(2) {
     font-size: 20px;
 }
+
 /*De button van elke blog*/
 .blogs button {
     width: 100%;
@@ -500,6 +529,7 @@ button:hover {
     font-size: 4vw;
     margin-bottom: 20px;
 }
+
 /*form van de blog*/
 .blog-form {
     display: flex;
@@ -508,6 +538,7 @@ button:hover {
     height: 80%;
     width: 100%;
 }
+
 /*invoerveld van author en title*/
 .blog-form #author, .blog-form #title {
     height: 10%;
@@ -518,6 +549,7 @@ button:hover {
     height: 20vh;
     margin-bottom: 5%;
 }
+
 /*De button van de form blogs*/
 .blog-form button {
     font-size: 20px;
@@ -609,6 +641,7 @@ button:hover {
     .hideOnMobile {
         display: none;
     }
+
     .hideOnFullscreen {
         display: block;
     }
@@ -626,6 +659,7 @@ button:hover {
                       "footer" 0.1fr
     / 1fr;
     }
+
     /*height definieren voor header, kom ik onder de 740px dan wordt de header heel klein*/
     header {
         height: 10vh;
@@ -638,9 +672,11 @@ button:hover {
         border-left: none;
         border-top: black solid 1px;
     }
+
     footer {
         height: 10vh;
     }
+
     .dark-mode aside {
         border-left: none;
         border-top: white solid 1px;
@@ -657,21 +693,26 @@ button:hover {
         height: 40vh;
         border-top: none;
     }
+
     .login-pic {
         width: 30%;
     }
+
     .profilePic {
         width: 30%;
     }
+
     /*Game extra aangegeven, anders versprong de layout na elke game ronde*/
     .game {
         height: 20vh;
     }
+
     .about-pics {
         display: flex;
         align-items: center;
         flex-direction: column;
     }
+
     .about-pic {
         width: 40%;
     }
@@ -689,6 +730,7 @@ button:hover {
                       "footer" 0.1fr
     / 1fr;
     }
+
     /*Styling voor de main*/
     /*Extra padding en een hoogte aangegeven*/
     /* Zonder deze hoogte werd de tabel erg groot*/
@@ -696,6 +738,7 @@ button:hover {
         padding-top: 20px;
         /*height: 50vh;*/
     }
+
     /* De main op de portfolio een hoogte aangegeven omdat er anders veel lege ruimte was */
     #main-portfolio {
         height: 40vh;
@@ -704,6 +747,7 @@ button:hover {
     .typewriter h1 {
         font-size: 20vw;
     }
+
     /*Extra styling voor de aside*/
     aside {
         border-left: none;
@@ -712,20 +756,24 @@ button:hover {
         flex-direction: column;
         justify-content: space-between;
     }
+
     /*Extra styling voor de tabel div*/
     .table-container {
         margin-bottom: 20px;
         max-width: 90vw;
         overflow-x: scroll;
     }
+
     /* Styling voor de aside titel op de blog pagina*/
     .blog-title {
         font-size: 7vw;
     }
+
     .dark-mode aside {
         border-left: none;
         border-top: white 1px solid;
     }
+
     .about-pic {
         width: 60%;
     }
@@ -737,6 +785,7 @@ button:hover {
     .blogs {
         justify-content: center;
     }
+
     .input-div {
         width: 70vw;
     }
@@ -756,13 +805,10 @@ button:hover {
     / 1fr;
     }
 
-
     /*Main portfolio weer een nieuwe height gegeven om zo minder lege ruimte te maken in de main zelf*/
     #main-portfolio {
         height: 30vh;
     }
-
-
 
     /*Ook een overflow x aangegeven omdat het anders niet meer responsive was*/
     .table-container {
@@ -773,6 +819,7 @@ button:hover {
     .input-div {
         width: 70vw;
     }
+
     /*Hier zorg ik ervoor dat de sidebar de hele schermbreedte inneemt*/
     .sidebar {
         width: 100%;

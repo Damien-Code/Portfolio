@@ -7,29 +7,31 @@ require './views/layout/header.php';
         <!--    echo de titel die ik in de controller definieer-->
         <h2 class="pageTitle"><?php echo $title ?></h2>
         <!--            Form voor een nieuwe portfolio       -->
-<!--     Ook zorg ik ervoor dat er al ingevoerde waardes worden weergeven als je ze wilt updaten   -->
-        <form method="post" class="account-form" action="/profile" >
+        <!--     Ook zorg ik ervoor dat er al ingevoerde waardes worden weergeven als je ze wilt updaten   -->
+        <form method="post" class="account-form" action="/profile">
             <input type="hidden" id="id" name="id" value="<?= (empty($data)) ? '' : $data['id'] ?>">
             <label for="author">Who are you?</label>
-            <input type="text" id="author" name="author" value="<?= (empty($data))?'':$data['Author'] ?>" required>
+            <input type="text" id="author" name="author" value="<?= (empty($data)) ? '' : $data['Author'] ?>" required>
             <label for="title">What is your job title?</label>
-            <input type="text" id="title" name="title" value="<?=(empty($data))?'':$data['Title'] ?>" required>
+            <input type="text" id="title" name="title" value="<?= (empty($data)) ? '' : $data['Title'] ?>" required>
             <label for="content">What do you study?</label>
-            <input type="text" id="content" name="degree" value="<?= (empty($data))?'':$data['Degree'] ?>" required>
+            <input type="text" id="content" name="degree" value="<?= (empty($data)) ? '' : $data['Degree'] ?>" required>
             <label for="projects">What are your recent projects?</label>
-            <input type="text" id="project" name="projects" value="<?= (empty($data))?'':$data['Projects'] ?>" required>
+            <input type="text" id="project" name="projects" value="<?= (empty($data)) ? '' : $data['Projects'] ?>"
+                   required>
             <label for="languages">What coding languages do you use?</label>
-            <input type="text" id="languages" name="languages" value="<?= (empty($data))?'':$data['Languages'] ?>" required>
-                                                                    <!-- shortcut php echo         -->
+            <input type="text" id="languages" name="languages" value="<?= (empty($data)) ? '' : $data['Languages'] ?>"
+                   required>
+            <!-- shortcut php echo         -->
             <button type="submit">Save</button>
         </form>
     </main>
     <!--            Aside           -->
     <aside class="profile-aside">
-<!--       Profielfoto van gebruiker die je kan aanpassen-->
+        <!--       Profielfoto van gebruiker die je kan aanpassen-->
         <img src="/asset/login.pic.png" alt="Profile picture" class="login-pic">
-<!--        Deze knop heeft nog geen werking. In een later stadium wil ik dit wel werkend hebben-->
-<!--        Ik ga dan gebruik maken van BLOBs maar omdat ik dit nog niet begrijp heb ik alleen een knop verwerkt-->
+        <!--        Deze knop heeft nog geen werking. In een later stadium wil ik dit wel werkend hebben-->
+        <!--        Ik ga dan gebruik maken van BLOBs maar omdat ik dit nog niet begrijp heb ik alleen een knop verwerkt-->
         <button>Choose new picture</button>
 
     </aside>

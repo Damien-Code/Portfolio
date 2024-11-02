@@ -1,4 +1,3 @@
-
 /**
  * @author Damien-Code
  * @description Deze functie zorgt ervoor dat er geswitched kan worden tussen twee CSS code blocks.
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
  * Dit zorgt ervoor dat de sidebar te zien is bij een bepaalde schermgrootte
  * @return void
  */
-function showSidebar(){
+function showSidebar() {
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'flex';
 }
@@ -38,7 +37,7 @@ function showSidebar(){
  * @description Een functie waar ik de display property van .sidebar verander in none
  * Dit zorgt ervoor dat de sidebar niet te zien is boven een bepaalde schermgrootte
  */
-function hideSidebar(){
+function hideSidebar() {
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none';
 }

@@ -10,12 +10,12 @@ require './controller/ContactController.php';
 
 $routes = require 'routes.php';
 /**
+ * @return void
  * @author Damien-Code
  * @description Hier zorg ik ervoor dat de uri uit elkaar gehaald wordt en deze apart kan worden aangestuurd in routes.php
- * @return void
  */
 $page = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$requestMethod  = $_SERVER['REQUEST_METHOD'];
+$requestMethod = $_SERVER['REQUEST_METHOD'];
 $route = '';
 array_key_exists($page, $routes[$requestMethod]) ? $route = $routes[$requestMethod][$page] : '';
 

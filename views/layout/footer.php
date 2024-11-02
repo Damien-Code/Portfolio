@@ -8,7 +8,7 @@
             date_default_timezone_set('Europe/Amsterdam');
             echo "© " . date("Y-M-d"); ?></p>
         <?php
-//        deze statement zorgt ervoor dat je op het moment dat je de website bezoekt gegroet wordt met de bijbehorende waarde.
+        //        deze statement zorgt ervoor dat je op het moment dat je de website bezoekt gegroet wordt met de bijbehorende waarde.
         $hour = date("H-i");
         if ($hour < "04-59") {
             echo "Good night!";

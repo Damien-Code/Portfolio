@@ -9,20 +9,22 @@ class IndexModel extends Database
     private $conn;
 
     /**
+     * @return void
      * @author Damien-Code
      * @description In deze methode moet de connectie gemaakt worden met de database.
-     * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->conn = new Database();
     }
 
     /**
+     * @return array|false|void
      * @author Damien-Code
      * @description In deze methode zorg ik ervoor dat alle waardes uit de database gehaald worden en stuur ik door naar de controller.
-     * @return array|false|void
      */
-    public function index() {
+    public function index()
+    {
         try {
             $conn = new Database();
             $stmt = $conn->pdo->prepare("SELECT id, Author, Title, Degree, Projects, Languages FROM Posts WHERE isDeleted = 0");

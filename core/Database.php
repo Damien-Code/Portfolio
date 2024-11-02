@@ -5,11 +5,12 @@ namespace core;
 class Database
 {
     public $pdo;
+
     /**
+     * @return void
      * @author Damien-Code
      * @description In deze contruct methode maak ik connectie met de database.
      * Deze methode gebruik ik daarna in elke model zodat ik niet steeds code moet herhalen
-     * @return void
      */
     public function __construct()
     {

@@ -1,11 +1,12 @@
 <?php
 include "./models/ProfileModel.php";
+
 class ProfileController
 {
     /**
+     * @return void
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat de profile pagina correct wordt geladen.
-     * @return void
      */
     public function profile()
     {
@@ -14,9 +15,9 @@ class ProfileController
     }
 
     /**
+     * @return void
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat je op de pagina Index blijft na een portfolio te hebben verwijderd.
-     * @return void
      */
     public function delete()
     {
@@ -26,10 +27,10 @@ class ProfileController
     }
 
     /**
+     * @return void
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat je een portfolio kunt aanmaken en dat deze wordt opgeslagen op de database.
      * Wel wil ik dat de profile pagina wordt geladen.
-     * @return void
      */
     public function save()
     {
@@ -40,9 +41,9 @@ class ProfileController
     }
 
     /**
+     * @return void
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat je een geplaatste portfolio kunt updaten. Wel moet de profile pagina geladen worden.
-     * @return void
      */
     public function update()
     {
@@ -55,10 +56,10 @@ class ProfileController
 
 
     /**
+     * @return void
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat de portfolio pagina omgebouwd naar de gekozen portfolio.
      * In deze methode geef ik variabelen mee die dan worden weergeven op de portfolio pagina.
-     * @return void
      */
     public function view()
     {
