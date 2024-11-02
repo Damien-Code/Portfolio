@@ -20,9 +20,7 @@ require './views/layout/header.php';
         </section>
         <section>
             <p class="descr">Phone:</p>
-            <p>
-                +31 6 12345678
-            </p>
+            <p>+31 6 12345678</p>
         </section>
         <section>
             <p class="descr">Email:</p>
@@ -49,17 +47,13 @@ require './views/layout/header.php';
                       d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"></path>
             </svg>
         </a>
+        <!--        Downloadbare CV-->
         <p>Or download my resume!</p>
         <a href="/asset/CV-Damien-van-den-IJssel.docx" download="resume">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="grey">
                 <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/>
             </svg>
         </a>
-
-    </section>
-    <!--    Downloadbare CV-->
-    <section>
-
     </section>
 
 </aside>

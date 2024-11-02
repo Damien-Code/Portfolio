@@ -27,7 +27,8 @@ INSERT INTO Posts (Author, Title, Degree, Projects, Languages )
 VALUES ('Mischa', 'Software Developer', 'ADSD', 'Learning Go', 'JavaScript and PHP'),
        ('Stephan', 'Software Engineer', 'ADSD', 'Teaching how to code', 'Laravel and much more'),
        ('Jan', 'Fullstack engineer', 'ADSD', 'Teaching how to code', 'C and much more'),
-       ('Ron', 'Backend developer', 'ADSD', 'Teaching how to code', 'C# and much more');
+       ('Ron', 'Backend developer', 'ADSD', 'Teaching how to code', 'C# and much more'),
+       ('Floris', 'Java specialist', 'ADSD', 'Minecraft plugin', 'Java and C++');
 
 
 INSERT INTO blogs (author, title, post)

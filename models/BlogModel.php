@@ -9,6 +9,7 @@ class BlogModel extends Database
     private $conn;
 
     /**
+     * @return void
      * @author Damien-Code
      * @description In deze methode moet de database connectie uitgevoerd worden
      */
