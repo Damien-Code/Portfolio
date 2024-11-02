@@ -41,11 +41,11 @@ require './views/layout/header.php';
         <form method="post" class="blog-form" action="/blog/save">
             <input type="hidden" id="id" name="id">
             <label for="author">Author:</label>
-            <input type="text" id="author" name="author" required>
+            <input type="text" id="author" name="author" required maxlength="32">
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title" required>
+            <input type="text" id="title" name="title" required maxlength="32">
             <label for="post">Content:</label>
-            <input type="text" id="post" name="post" required>
+            <input type="text" id="post" name="post" required maxlength="128">
             <button type="submit">Add</button>
         </form>
     </aside>

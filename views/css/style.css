@@ -510,6 +510,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /*oplossing voor blogs als input groter is dan de breedte van de blog zelf*/
+    overflow-wrap: break-word;
 }
 
 /*Styling van de tweede child van de blog*/
