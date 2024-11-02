@@ -824,4 +824,7 @@ button:hover {
     .sidebar {
         width: 100%;
     }
+    .pageTitle {
+        font-size: 8vw;
+    }
 }
