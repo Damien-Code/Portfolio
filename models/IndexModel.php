@@ -29,7 +29,6 @@ class IndexModel extends Database
             $conn = new Database();
             $stmt = $conn->pdo->prepare("SELECT id, Author, Title, Degree, Projects, Languages FROM Posts WHERE isDeleted = 0");
             $stmt->execute();
-
             // set the resulting array to associative
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $data = $stmt->fetchAll();

@@ -47,6 +47,7 @@ class profileModel extends Database
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat er ingevoerde waardes kunnen worden opgeslagen op de database.
      * Ook heb ik er een update in verwerkt omdat de al ingevoerde waardes ook geupdate moeten worden.
+     *
      */
     public function save()
     {
@@ -58,14 +59,25 @@ class profileModel extends Database
             $projects = $_POST['projects'];
             $lang = $_POST['languages'];
             if ($id == '') {
-                $sql = "INSERT INTO posts (Title, Degree, Author, Projects, Languages)
-            VALUES ('$title', '$degree', '$author', '$projects', '$lang')";
+                $stmt = $this->conn->pdo->prepare("INSERT INTO posts (Title, Degree, Author, Projects, Languages) VALUES (:title, :degree, :author, :projects, :lang)");
+                $stmt->bindParam(':title', $title);
+                $stmt->bindParam(':degree', $degree);
+                $stmt->bindParam(':author', $author);
+                $stmt->bindParam(':projects', $projects);
+                $stmt->bindParam(':lang', $lang);
+                $stmt->execute();
+                echo "New record created successfully";
             } else {
-                $sql = "UPDATE posts SET Title = '$title', Degree = '$degree', Author = '$author', Projects = '$projects', Languages = '$lang' WHERE id = $id";
+                $stmt = $this->conn->pdo->prepare("UPDATE posts SET Title = :title, Degree = :degree, Author = :author, Projects = :projects, Languages = :lang WHERE id = :id");
+                $stmt->bindParam(':id', $id);
+                $stmt->bindParam(':title', $title);
+                $stmt->bindParam(':degree', $degree);
+                $stmt->bindParam(':author', $author);
+                $stmt->bindParam(':projects', $projects);
+                $stmt->bindParam(':lang', $lang);
+                $stmt->execute();
+                echo "Record updated successfully";
             }
-            $this->conn->pdo->exec($sql);
-            echo "New record created successfully";
-
         } catch (PDOException $e) {
             echo $e->getMessage();
         }

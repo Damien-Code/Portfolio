@@ -45,22 +45,37 @@ class BlogModel extends Database
      * @description In deze methode zorg ik ervoor dat ingevoerde waardes opgeslagen worden in de database.
      * Ook heb ik hier een update in verwerkt omdat ingevoerde waardes ook geupdate moeten worden.
      */
+//    public function save()
+//    {
+//        try {
+//            $id = $_POST['id'] ?? '';
+//            $author = $_POST['author'];
+//            $title = $_POST['title'];
+//            $post = $_POST['post'];
+//            if ($id == '') {
+//                $sql = "INSERT INTO blogs (author, title, post) VALUES ('$author', '$title', '$post')";
+//            }
+//            $this->conn->pdo->exec($sql);
+//        } catch (PDOException $e) {
+//            echo $e->getMessage();
+//        }
+//    }
+
     public function save()
     {
         try {
-            $id = $_POST['id'] ?? '';
             $author = $_POST['author'];
             $title = $_POST['title'];
             $post = $_POST['post'];
-            if ($id == '') {
-                $sql = "INSERT INTO blogs (author, title, post) VALUES ('$author', '$title', '$post')";
-            } else {
-                $sql = "UPDATE blogs SET title = '$title', post = '$post' WHERE id = '$id'";
-            }
-            $this->conn->pdo->exec($sql);
+            $stmt = $this->conn->pdo->prepare("INSERT INTO blogs (author, title, post) VALUES (:author, :title, :post)");
+            $stmt->bindParam(':author', $author);
+            $stmt->bindParam(':title', $title);
+            $stmt->bindParam(':post', $post);
+            $stmt->execute();
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
+
     }
 
     /**
