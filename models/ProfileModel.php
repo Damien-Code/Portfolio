@@ -47,7 +47,7 @@ class profileModel extends Database
      * @author Damien-Code
      * @description Deze methode zorgt ervoor dat er ingevoerde waardes kunnen worden opgeslagen op de database.
      * Ook heb ik er een update in verwerkt omdat de al ingevoerde waardes ook geupdate moeten worden.
-     *
+     * Omdat het een if statement is heb ik bij elke SQL query de bindparam opnieuw moeten aangeven.
      */
     public function save()
     {
