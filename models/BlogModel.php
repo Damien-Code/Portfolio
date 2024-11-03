@@ -60,7 +60,6 @@ class BlogModel extends Database
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
-
     }
 
     /**
@@ -83,5 +82,4 @@ class BlogModel extends Database
             echo $e->getMessage();
         }
     }
-
 }
